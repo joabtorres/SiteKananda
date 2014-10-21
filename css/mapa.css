@@ -1,0 +1,23 @@
+div#filtro-mapa *{font-size: 12pt;}
+div#filtro-mapa{
+	background: #1C3589;
+	border-radius: 8px;
+	margin: 10px 140px;
+	padding: 0;
+	position: absolute;
+	top: 480px;
+	z-index:120;
+}
+div#filtro-mapa .form-group{
+	margin: 0;
+}
+.checkbox{
+	margin-bottom: 1px;
+}
+div#filtro-mapa label{
+margin: 5px;
+padding: 3px 10px;
+}
+div#filtro-mapa button{
+float: right;
+}

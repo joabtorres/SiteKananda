@@ -1,19 +1,24 @@
+body{
+	background: url(/img/fundo-kananda.jpg) no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+
+}
 @font-face{
 	font-family: "travelcons";
 	src: url(/fontes/travelcons.ttf);
+}
+@font-face{
+	font-family: "nyala-menu";
+	src: url(/fontes/nyala.ttf);
 }
 span.icone-imovel{
 	font-family: "travelcons"
 }
 .container{
+	background: white;
 	width: 970px!important;
 	padding: 0px 5px;
-}
-#interface{
-	background-image: -webkit-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
-background-image: -o-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
-background-image: -webkit-gradient(linear,left top,left bottom,from(#5bc0de),to(#2aabd2));
-background-image: linear-gradient(to bottom,#5bc0de 0,#2aabd2 100%);
 }
 /*CABECALHO*/
 div#cabecalho{
@@ -27,32 +32,35 @@ div.logo-imagem{
 }
 ul#menu-head{
 	position: relative;
-	top: -44px;
+	top: -45px;
 	left: 180px;
 	text-align: center;
 	padding: 5px;
 }
 ul#menu-head li a {
-font-size: 14pt;
-border-radius: 5px;
-padding: 5px 20px;
-color: white;
+	font-size: 14pt;
+	border-radius: 5px;
+	padding: 3px 20px;
+	color: white;
 }
 ul#menu-head li a:hover{
-	background-image: -webkit-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
-background-image: -o-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
-background-image: -webkit-gradient(linear,left top,left bottom,from(#5bc0de),to(#2aabd2));
-background-image: linear-gradient(to bottom,#5bc0de 0,#2aabd2 100%);
+	background-image:-moz-linear-gradient(50% 0% -180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%); 
+	background-image:-ms-linear-gradient(-180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
+	background-image:linear-gradient(-180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
 }
 ul#menu-head li ul{
 	display: none;
-	width: 100px;
+	width: 170px;
 	position: absolute;
 	z-index: 62;
+	border-radius: 0 0 10px 10px;
 	background-color: #004F9E;
+	transition: display 1s;
+	
 }
 ul#menu-head li:hover ul{
-display: block;
+	z-index: 100;
+	display: block;
 }
 ul#menu-head li ul li {
 	margin: 3px;
@@ -61,56 +69,74 @@ ul#menu-head li ul li {
 }
 ul#menu-head li ul li  a{
 	padding: 5px;
-	font-size: 12pt;
+	font-size: 13pt;
 }
-/*FILTRO*/
-form#filtro-home{
-	margin-top: 10px;
-	position: absolute;
-	background: rgba(0,0,0,0.7);
-	z-index: 30;
-	padding: 6px 0;
-	padding-left: 10px;
-	opacity: 0.3;
-	-webkit-transition: opacity 0.8s;
-	-moz-transition: opacity 0.8s;
+ul#menu-head li ul li ul{
+	border-radius: 0 10px 10px 0;
+	top: 0px;
+	left: 165px;
+	z-index: 64;
+	visibility: hidden;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	-moz-opacity: 0.00;
+	opacity: 0.00;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=0);
 }
-form#filtro-home:hover{
+ul#menu-head li ul li:hover ul{
+	visibility: visible;
+	-moz-opacity: 1;
 	opacity: 1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);
 }
-form#filtro-home *{
+.form-inline{display: inline!important;}
+/*FILTRO*/
+/*******************************
+		filtro
+**********************************/
+div#filtro-detalhe{
+	background: #1a5dae;
+	margin: 5px 50px;
+	border-radius: 10px;
+	padding: 0;
+}div#filtro-detalhe .form-group{
+	margin-bottom: 10px;
+}
+div#filtro-detalhe label{
+	color: white;
+	font-weight: 500;
 	font-size: 12pt;
 }
-form#filtro-home .form-group{
-	margin: 4px 4px;
+div#filtro-detalhe .col-xs-1{
+	padding: 0;
+	margin: 0;
+	margin-top: 25px;
 }
-form#filtro-home .form-group .input-group-addon{
-	background-image: -webkit-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
-	background-image: -o-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
-	background-image: -webkit-gradient(linear,left top,left bottom,from(#5bc0de),to(#2aabd2));
-	background-image: linear-gradient(to bottom,#5bc0de 0,#2aabd2 100%);
-	color: white;
+div#filtro-detalhe .col-xs-2{
+	width: 180px;
 }
-form#filtro-home label{
-	margin-bottom: 0;
-	font-weight: 600;
-}
-form#filtro-home button{
-	float: right;
-	margin-right: 40px;
+div#filtro-detalhe button{
+	font-size: 12pt;
+	font-weight: 700;
 }
 /*SLIDE*/
 div#slideshow-home{
 	margin: 5px auto;
+	margin-top: -5px;
+	margin-bottom: 0;
 }
 div#slideshow-home div.item div.carousel-caption{
-	background: rgba(255,255,255,0.3);
-	width: 930px;
+	background: rgba(0,0,0,0.4);
+	width: 100%;
 	left: 4px;
 	padding: 0;
+	margin: 0;
+	margin-left: -4px;
+	margin-bottom: -20px;
 }
 div#slideshow-home:hover div.item div.carousel-caption{
-	background: rgba(255,255,255,0.5);
+	background: rgba(0,0,0,0.7);
 }
 div#slideshow-home div.item div.carousel-caption h3,p{
 	text-align: left;
@@ -135,25 +161,62 @@ height: 20px;
 width: 20%;
 }
 
+
 /******************************
 	IMOVEIS
 *******************************/
+div#imovel-home * {
+text-decoration: none;
+}
 div#imovel-home{
-	position: absolute;
-	top: 80px;
-	left: 30px;
+background: url(/img/img-imovel-home.png)no-repeat;
+padding: 10px;
+margin: 5px 50px;
+width: 820px;
+height: 420px;
+	padding-left:25px; 
 }
-div#imovel-home .thumbnail .caption{
-	padding: 0;
+
+div#imovel-home .col-xs-4{
+	background: url(/img/imovel-select.png) no-repeat;
+	width: 245px;
+	margin: 15px 10px 10px 10px;
+	padding: 17px 3px 	5px 3px;
+	-moz-transition: transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transition: transform 0.5s;
 }
-h3.titulo-imovel-home{
-	position: absolute;
-	top: 2px;
-	left: 30px;
-	font-size: 23pt;
-	font-weight: 700;
+#primeiro-imovel-select{
+margin-left: 20px;
+}
+.home-imovel *{
+	color: black;
+}
+#imovel-home .col-xs-4:hover{
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+}
+.home-legenda-imovel{
+padding: 8px;
+}
+h3.imovel-nome{
 	color: #405192;
-	text-shadow: 0 1px 2px rgba(0,0,0,.6);
+	font-weight: 700;
+	font-size: 25pt;
+	padding:  0;
+	margin-left: 0px;
+	margin-top: 3px;
+}
+h3.imovel-ver-mais{
+	float: right;
+	margin: 0;
+	margin-top: -20px;
+	margin-right: 20px;
+	padding: 5px;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 16pt;
 }
 /*************************************
 		RODAPE
@@ -179,4 +242,17 @@ div#rodape ul li{
 }
 div#rodape ul li a{
 	font-size: 12pt;
+	color: #ccc;
+}
+div#rodape .form-group * {font-weight: 600}
+div#rodape .form-group {
+margin-bottom: 10px;
+padding: 2px;
+}
+
+/*****************************************
+	.pagination
+****************************************/
+.pagination{
+	margin: 5px;
 }

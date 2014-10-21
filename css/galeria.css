@@ -1,0 +1,30 @@
+div#galeria-show{
+	margin-top: -10px;
+	padding: 1px;
+}div#galeria-show .fotorama{
+border-radius: 0 0 10px 10px;
+padding: 0 5px 5px 5px;
+}
+
+
+
+div#imovel-home{
+	margin-top: 0;
+}
+div.home-legenda-imovel{
+
+}
+p{
+	text-align: center;
+	font-size: 12pt;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+}
+p.class-titulo{
+	color: red;
+}
+
+p.class-data{
+	color: #6f6d6d;
+}

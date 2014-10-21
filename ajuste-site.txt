@@ -1,0 +1,12 @@
+imovel:
+quarto: quantidade
+
+remover observação do imovel-detalhe
+descrição: Referencia: xxx
+Fazer aba do imovel-detalhe
+fazer slide show proximos imoveis
+
+inserir as bordas no fundo de vendas
+
+subistitui outros por referencia
+
