@@ -118,10 +118,18 @@ textarea.contato-mensagem{
 *************************/
 div#outros-imoveis {
 	padding: 5px;
-	margin: 5px;
-	background: #ccc;
-}div#outros-imoveis .col-xs-12{
+	margin: 5px auto;
+	width: 900px;
+	border-radius: 10px;
+}div#outros-imoveis h2.title-kananda{
+	font-weight: 800;
+	font-size: 18pt;
+	margin-top: 0px;
+	padding: 5px;
+	border-bottom: 3px solid #C4C3C8;
+	color: #345196;
+}
+div#outros-imoveis .col-xs-12{
 	padding: 0px;
 	margin: 0px;
-	background: red;
 }

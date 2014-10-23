@@ -1,15 +1,17 @@
 <?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/header.php" ?>
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<link href="/paginas/galeria/fotorama.css" rel="stylesheet">
-<script src="/paginas/galeria/fotorama.js"></script>
 <link rel="stylesheet" href="/css/imovel-categoria.css">
 <link rel="stylesheet" href="/css/galeria.css">
+<!--FOTORAMA-->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<link href="/paginas/galeria/css/fotorama.css" rel="stylesheet">
+<script src="/paginas/galeria/js/fotorama.js"></script>
+<!---->
 <di class="row" >
 	<!--FOTO selecionada-->
 
 	<div class="col-xs-12"class id="galeria-show">
-		<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="950"data-max-width="100%" data-allowfullscreen="true">
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
+		<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="950" data-max-width="" data-allowfullscreen="true">
+      <a href="/img/test1.jpg"><img src="/img/test1.jpg"></a>
       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>  
       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
@@ -17,17 +19,8 @@
       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>  
       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>  
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>  
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-        
 		</div>
 	</div>
 </di>

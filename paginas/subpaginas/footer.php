@@ -18,8 +18,8 @@
           </ul>
         </div>
         <div class="col-xs-4">
+          <p class="text-center" style="margin-top:10px;"><img src="/img/plug-facebook.jpg" ></p>
           
-          <p class="text-center"><img src="/img/plug-facebook.jpg" ></p>
         </div>
         <div class="col-xs-4">
           <h3>CONTATOS</h3>
@@ -54,15 +54,16 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row" id="rodape-2">
     <div class="col-md-12">
+      <a href="http://www.endogenese.com.br/" target="_blank"><img src="/img/endogenese.png" alt="Empresa Desenvolvedora Endogense Soluções" id="logo-endogenese"></a>
       <p class="text-center">© 2004-2014 - kananda.imb.br | Todos os direitos reservados <br>
-É proibida a reprodução total ou parcial de qualquer conteúdo deste site.</p>
+É proibida a reprodução total ou parcial de qualquer conteúdo deste site.
+         </p>
     </div>
   </div>
   </div><!--FIM DO CONTAINER -->
   <script type="text/javascript" src="/js/holder.js"></script>
-  <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
   <script type="text/javascript" src="/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/js/docs.min.js"></script>
 </body>

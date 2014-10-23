@@ -8,16 +8,31 @@ div#filtro-mapa{
 	top: 480px;
 	z-index:120;
 }
+/*********************************
+	formulario do mapa
+*********************************/
+
 div#filtro-mapa .form-group{
 	margin: 0;
+	color: white;
 }
 .checkbox{
-	margin-bottom: 1px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+div#form-1{
+	background: #3b66b4;
+	border-radius: 0 0 10px 10px;
+	padding: 3px;
+}
+div#form-2{
+	padding: 5px;
 }
 div#filtro-mapa label{
 margin: 5px;
-padding: 3px 10px;
+font-size: 12pt;
 }
 div#filtro-mapa button{
 float: right;
+font-weight: 700;
 }

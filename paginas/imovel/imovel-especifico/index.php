@@ -6,8 +6,13 @@
 <link href="/paginas/imovel/imovel-especifico/css/fotorama.css" rel="stylesheet">
 <script src="/paginas/imovel/imovel-especifico/js/fotorama.js"></script>
 <!--SLIDE IMOVEL SELECIONADO-->
-<!--SLIDE SHOW-->
 
+<!--SLIDE SHOW OUTRO IMOVEIS-->
+	<link rel="stylesheet" href="css/jssor.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jssor.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
+    <script src="js/jssor-effect.js"></script>
 <!---->
 <div class="row" id="imovel-detalhes">
 	<div class="col-xs-12" >
@@ -109,9 +114,43 @@
 			<!--OUTROS IMOVEIS-->
 			<div class="row" id="outros-imoveis">
 				<div class="col-xs-12">
-					<h1>outros imoveis</h1>
+					<h2 class="title-kananda">IMÓVEIS SIMILARES</h2>
+				</div>
+				<div class="col-xs-12" style="background: #C0BFC4; padding:5px;">
+					<div id="slider1_container" class="container-slide">
+				        <!-- Loading Screen -->
+				        <div u="loading" class="loading-screen">
+				            <div class="loading-1">
+				            </div>
+				            <div class="loading-2">
+				            </div>
+				        </div>
+				        <!-- Slides Container -->
+				        <div u="slides" class="slide-container">
+				            <div><img u="image" src="img/ancient-lady/005.jpg" /></div>
+				            <div><img u="image" src="img/ancient-lady/006.jpg" /></div>
+				            <div><img u="image" src="img/ancient-lady/011.jpg" /></div>
+				            <div><img u="image" src="img/ancient-lady/013.jpg" /></div>
+				            <div><img u="image" src="img/ancient-lady/014.jpg" /></div>
+				            <div><img u="image" src="img/ancient-lady/019.jpg" /></div>
+				            <div><img u="image" src="img/ancient-lady/020.jpg" /></div>
+				        </div>
+				        <!-- bullet navigator container -->
+				        <div u="navigator" class="jssorb03" id="navigator-slide" style="position: absolute; bottom: 4px; right: 6px;">
+				            <!-- bullet navigator item prototype -->
+				            <div u="prototype" style="position: absolute; width: 21px; height: 21px; text-align:center; line-height:21px; color:white; font-size:12px;"><NumberTemplate></NumberTemplate></div>
+				        </div>
+				        <!-- Bullet Navigator Skin End -->
+				        <!-- Arrow Left -->
+				        <span u="arrowleft" class="jssora03l" style="width: 55px; height: 55px; top: 123px; left: 8px; display:block;">
+				        </span>
+				        <!-- Arrow Right -->
+				        <span u="arrowright" class="jssora03r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+				        </span> 
+				    </div>
 				</div>
 			</div>
 	</div><!--Fim do detalhes imoveis-->
 </div>
+
 <?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/footer.php" ?>

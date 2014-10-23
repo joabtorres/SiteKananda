@@ -37,6 +37,5 @@
 				
 			</div>
 	</div>
-
 </div>
 <?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/footer.php" ?>

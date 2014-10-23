@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/css/bootstrap/bootstrap-theme.min.css">
   <link rel="stylesheet" href="/css/templete.css">
-  <link rel="stylesheet" href="/css/imovel-detalhado.css">
+  <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
 </head>
 <body>
   <div class="container" id="interface">

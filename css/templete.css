@@ -249,7 +249,21 @@ div#rodape .form-group {
 margin-bottom: 10px;
 padding: 2px;
 }
-
+div#rodape-2 {
+	margin: 0;
+	padding: 0;
+}div#rodape-0 a{
+	margin: 0;
+	padding: 0;
+}
+img#logo-endogenese{
+	display: block;
+	float: left;
+	margin-left: -15px;
+}
+div#rodape-2 p{
+	font-size: 13pt;
+}
 /*****************************************
 	.pagination
 ****************************************/
