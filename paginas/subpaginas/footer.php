@@ -60,6 +60,7 @@
       <p class="text-center">© 2004-2014 - kananda.imb.br | Todos os direitos reservados <br>
 É proibida a reprodução total ou parcial de qualquer conteúdo deste site.
          </p>
+        <a href="http://www.endogenese.com.br/" target="_blank"><img src="/img/endogenese2.png" alt="Empresa Desenvolvedora Endogense Soluções" id="logo-endogenese-2"></a>
     </div>
   </div>
   </div><!--FIM DO CONTAINER -->

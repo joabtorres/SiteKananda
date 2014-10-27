@@ -5,7 +5,7 @@
 					  <div class="form-group col-xs-4">
 					      <label for="selecionaImovel">Imóvel: </label>
 					      <select name="select" id="selecionaImovel" class="form-control">
-		                    <option value="areas-portuarias">Áreas Portuarías</option>
+		                    <option value="areas-portuarias">Áreas Portuárias</option>
 		                    <optgroup label="Casas">
 		                    <option value="casaAluguel">Aluguel</option>
 		                    <option value="casaVenda">A Venda</option>

@@ -10,7 +10,7 @@
 	<!--FOTO selecionada-->
 
 	<div class="col-xs-12"class id="galeria-show">
-		<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="950" data-max-width="" data-allowfullscreen="true">
+		<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="950" data-height="400" data-allowfullscreen="true">
       <a href="/img/test1.jpg"><img src="/img/test1.jpg"></a>
       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>  
       <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
