@@ -1,18 +1,14 @@
 div#galeria-show{
+	margin: 0 5px;
 	margin-top: -10px;
-	padding: 1px;
-}div#galeria-show .fotorama{
+	padding: 2px;
+	background: #345195;
+	border-radius: 10px;
+	width: 950px;
+}
+div#galeria-show .fotorama{
 border-radius: 0 0 10px 10px;
 padding: 0 5px 5px 5px;
-}
-
-
-
-div#imovel-home{
-	margin-top: 0;
-}
-div.home-legenda-imovel{
-
 }
 p{
 	text-align: center;

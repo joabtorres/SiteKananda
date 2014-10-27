@@ -86,6 +86,45 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-xs-4">
+                  <a href="/paginas/imovel/imovel-especifico/">
+                      <div class="home-imovel">
+                        <img src="/img/venda-residencia.png" alt="...">
+                        <div class="home-legenda-imovel">
+                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
+                             <span class="icone-imovel">x</span> Garagem 1 <br>
+                             <span class="icone-imovel">V</span> Área 90 m2</p>
+                        </div>
+                      </div>
+                   </a>
+                </div>
+                <div class="col-xs-4">
+                  <a href="/paginas/imovel/imovel-especifico/">
+                      <div class="home-imovel">
+                        <img src="/img/venda-residencia.png" alt="...">
+                        <div class="home-legenda-imovel">
+                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
+                             <span class="icone-imovel">x</span> Garagem 1 <br>
+                             <span class="icone-imovel">V</span> Área 90 m2</p>
+                        </div>
+                      </div>
+                   </a>
+                </div>
+                <div class="col-xs-4">
+                  <a href="/paginas/imovel/imovel-especifico/">
+                      <div class="home-imovel">
+                        <img src="/img/venda-residencia.png" alt="...">
+                        <div class="home-legenda-imovel">
+                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
+                             <span class="icone-imovel">x</span> Garagem 1 <br>
+                             <span class="icone-imovel">V</span> Área 90 m2</p>
+                        </div>
+                      </div>
+                   </a>
+                </div>
+            </div>
+
             
 				<!--PAGINAÇÃO-->
 	            	<div class="row">

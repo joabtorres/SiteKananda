@@ -92,7 +92,8 @@ div#fotos-detalhes .col-xs-8{
 div#formulario-contato *{
 	color: #345196;
 }
-div#formulario-contato {
+div#formulario-contato {margin-top: 10px;
+
 	width: 310px;
 	background: #c0bfc4;
 	border-radius: 10px;

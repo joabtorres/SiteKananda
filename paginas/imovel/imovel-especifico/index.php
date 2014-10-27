@@ -27,7 +27,7 @@
 
 				<!--SLIDE IMOVEL SELECIONADO-->
 				<div class="col-xs-8">
-					<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="600" data-ratio="700/467" data-max-width="100%">
+					<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="600" data-height="400" data-max-width="100%">
 					  <a href="/img/residencia-a.png"><img src="/img/residencia-a.png"></a>
 					  <a href="/img/residencia-a.png"><img src="/img/residencia-a.png"></a>	
 					  <a href="/img/residencia-a.png"><img src="/img/residencia-a.png"></a>

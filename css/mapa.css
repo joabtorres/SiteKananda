@@ -2,7 +2,8 @@ div#filtro-mapa *{font-size: 12pt;}
 div#filtro-mapa{
 	background: #1C3589;
 	border-radius: 8px;
-	margin: 10px 140px;
+	width: 850px;
+	margin: 10px 50px;
 	padding: 0;
 	position: absolute;
 	top: 480px;
@@ -16,23 +17,20 @@ div#filtro-mapa .form-group{
 	margin: 0;
 	color: white;
 }
-.checkbox{
-	margin-left: 20px;
-	margin-bottom: 10px;
-}
 div#form-1{
 	background: #3b66b4;
 	border-radius: 0 0 10px 10px;
 	padding: 3px;
 }
 div#form-2{
-	padding: 5px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 }
 div#filtro-mapa label{
-margin: 5px;
-font-size: 12pt;
+font-size: 13pt;
 }
 div#filtro-mapa button{
 float: right;
 font-weight: 700;
+font-size: 13pt;
 }

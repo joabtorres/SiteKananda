@@ -262,7 +262,14 @@ img#logo-endogenese{
 	margin-left: -15px;
 }
 div#rodape-2 p{
+	float: left;
 	font-size: 13pt;
+	width: 840px;
+}
+img#logo-endogenese-2{
+	display: block;
+	float: right;
+	margin-right: -15px;
 }
 /*****************************************
 	.pagination

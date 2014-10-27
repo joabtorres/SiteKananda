@@ -9,27 +9,29 @@
 				<div class="col-xs-12">
 					<form action="" role="form">
 						<div class="form-group col-xs-12" id="form-1">
-							<div class="checkbox">
-							    <label for="cVenda">
-							      <input type="checkbox" name="tVenda" id="cVenda" value="aVenda"> A Venda
+							<div class="btn-group" data-toggle="buttons">
+							    <label for="cVenda" class="btn btn-primary">
+							      <input type="radio" name="tVenda" id="cVenda" value="aVenda"> A Venda
 							    </label>
-							    <label label="cAluguel">
-							      <input type="checkbox" name="tAluguel" id="cAluguel" value="aAluguel"> Aluguel
+							    <label label="cAluguel" class="btn btn-primary">
+							      <input type="radio" name="tAluguel" id="cAluguel" value="aAluguel"> Aluguel
 							    </label>
-							    <label label="cTerrenosUrbanos">
-							      <input type="checkbox" name="tTerrenosUrbanos" id="cTerrenosUrbanos" value="aTerrenosUrbanos"> Terrenos Urbanos
+							    <label label="cTerrenosUrbanos" class="btn btn-primary">
+							      <input type="radio" name="tTerrenosUrbanos" id="cTerrenosUrbanos" value="aTerrenosUrbanos"> Terrenos Urbanos
 							    </label>
-							    <label label="cTerrenosRuarais">
-							      <input type="checkbox" name="tTerrenosRuarais" id="cTerrenosRuarais" value="aTerrenosRuarais"> Terrenos Ruarais
+							    <label label="cTerrenosRuarais" class="btn btn-primary">
+							      <input type="radio" name="tTerrenosRuarais" id="cTerrenosRuarais" value="aTerrenosRuarais" class="btn btn-primary"> Terrenos Ruarais
 							    </label>
-							    <label label="cLoteamento">
-							      <input type="checkbox" name="tLoteamento" id="cLoteamento" value="aLoteamento"> Loteamento
+							    <label label="cLoteamento" class="btn btn-primary">
+							      <input type="radio" name="tAreaPortuaria" id="cAreaPortuaria" value="aAreaPortuaria"> Área Portuária
+							    </label><label label="cLoteamento" class="btn btn-primary">
+							      <input type="radio" name="tLoteamento" id="cLoteamento" value="aLoteamento"> Loteamento
 							    </label>
 							</div>
 						</div>
 						<div class="form-group col-xs-12" id="form-2">
 							<label for="cBairro" class="col-xs-1 col-xs-offset-1 control-label">Bairro:</label>
-							<div class="col-xs-6">
+							<div class="col-xs-5">
 								<select name="select" id="selecionaBairro" class="form-control">
 				                    <option value="bairroBomRemedio">Bom Remédio</option>
 				                    <option value="bairroBoaEsperanca">Boa Esperança</option>
