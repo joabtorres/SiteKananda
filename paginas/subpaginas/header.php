@@ -19,13 +19,13 @@
       <img src="/img/header.png">
       <ul class="nav nav-pills" id="menu-head">
         <li style="margin-left: 10px;"><a href="/">Home</a></li>
-        <li><a href="">Imóvel</a>
+        <li><a>Imóvel</a>
           <ul class="nav nav-pills">
             <li><a href="/paginas/imovel/areas-portuarias.php">Áreas Portuárias</a></li>
-            <li class="submenu-2"><a href="">Casas</a>
+            <li class="submenu-2"><a>Casas</a>
             <ul class="nav nav-pills">
               <li><a href="/paginas/imovel/casa/aluguel.php">Aluguel</a></li>
-              <li><a href="/paginas/imovel/casa/venda.php">Venda</a></li>
+              <li><a href="/paginas/imovel/casa/venda.php">A Venda</a></li>
             </ul>
             </li>
             <li><a href="/paginas/imovel/loteamentos.php">Loteamentos</a></li>

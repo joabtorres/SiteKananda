@@ -7,7 +7,7 @@
 <!--CATEGORIA DE IMOVEL-->
 
 	<div id="imovel-home">
-          <h3 class="imovel-nome">A Venda</h3>
+          <h3 class="imovel-nome">Áreas Portuárias</h3>
             <div class="row">
                 <div class="col-xs-4">
                   <a href="/paginas/imovel/imovel-especifico/">

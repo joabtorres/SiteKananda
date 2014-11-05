@@ -7,8 +7,8 @@
 					      <select name="select" id="selecionaImovel" class="form-control">
 		                    <option value="areas-portuarias">Áreas Portuárias</option>
 		                    <optgroup label="Casas">
-		                    <option value="casaAluguel">Aluguel</option>
-		                    <option value="casaVenda">A Venda</option>
+		                    <option value="casaAluguel">Casas para Aluguar</option>
+		                    <option value="casaVenda">Casas a Venda</option>
 		                  </optgroup>
 		                  <option value="loteamento">Loteamentos</option>
 		                  <option value="terrenosUrbanos">Terrenos Urbanos</option>
@@ -76,7 +76,7 @@
 		                </select>
 					  </div>
 					  <div class="form-group col-xs-2">
-					    	<label for="cOutros">Referencia: </label>
+					    	<label for="cOutros">Referência: </label>
                  		 	<input type="text" class="form-control" id="cOutros" name="tOutros">
 					  </div>
 					<div class="form-group col-xs-1">
