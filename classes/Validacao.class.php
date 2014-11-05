@@ -1,6 +1,8 @@
 <?php
 require_once('Objeto.class.php');
-require_once('../paginas/subpaginas/constantes.php');
+
+if(file_exists('../paginas/subpaginas/constantes.php'))
+	require_once('../paginas/subpaginas/constantes.php');
 
 /*
 * Por Fabrício Ribeiro

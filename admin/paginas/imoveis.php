@@ -40,7 +40,7 @@ $mensagem_erro =  false;
 						$tabela->setValor('video',$_POST['video']);
 						
 						if($tabela->inserir() != false){
-							$diretorio = "imagens/imoveis/".$tabela->getId()."-".$_POST['referencia'];
+							$diretorio = "img/imoveis/".$tabela->getId()."-".$_POST['referencia'];
 							mkdir('../'.$diretorio, 0644);
 							$tabela->limparDados();
 							$tabela->addConsulta('id',$tabela->getId());
@@ -48,7 +48,7 @@ $mensagem_erro =  false;
 
 							if($tabela->atualizar()){
 
-								$upload = new Upload("../imagens/imoveis/".$tabela->getId()."-".$_POST['referencia']);
+								$upload = new Upload("../img/imoveis/".$tabela->getId()."-".$_POST['referencia']);
 								
 								for ($i=1; $i <= $_POST['qtd_fotos']; $i++) { 
 									
@@ -166,22 +166,22 @@ $mensagem_erro =  false;
 			</li>
 
 			<li>
-				<label>Área Edificada</label><input obg="Área edificada" name="area_edificada" type='text'>
+				<label>Área Edificada</label><input obg="Área edificada" class='area' name="area_edificada" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Área do Terreno</label><input obg="Área do Terreno" name="area_terreno" type='text'>
+				<label>Área do Terreno</label><input obg="Área do Terreno" class='area' name="area_terreno" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Largura</label><input obg="Largura" name="largura" type='text'>
+				<label>Largura</label><input obg="Largura" name="largura" class='metros_medida' type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Comprimento</label><input obg="Comprimento" name="comprimento" type='text'>
+				<label>Comprimento</label><input obg="Comprimento" class='metros_medida' name="comprimento" type='text'>
 				<div class="clear"></div>
 			</li>
 
@@ -499,22 +499,22 @@ $mensagem_erro =  false;
 			</li>
 
 			<li>
-				<label>Área Edificada</label><input obg="Área edificada" name="area_edificada" type='text' value="<?= $imovel['area_edi']?>">
+				<label>Área Edificada</label><input obg="Área edificada" class='area' name="area_edificada" type='text' value="<?= $imovel['area_edi']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Área do Terreno</label><input obg="Área do Terreno" name="area_terreno" type='text' value="<?= $imovel['area_ter']?>">
+				<label>Área do Terreno</label><input obg="Área do Terreno" class='area' name="area_terreno" type='text' value="<?= $imovel['area_ter']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Largura</label><input obg="Largura" name="largura" type='text' value="<?= $imovel['perimetro_l']?>">
+				<label>Largura</label><input obg="Largura" name="largura" class='metros_medida' type='text' value="<?= $imovel['perimetro_l']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Comprimento</label><input obg="Comprimento" name="comprimento" type='text' value="<?= $imovel['perimetro_c']?>">
+				<label>Comprimento</label><input obg="Comprimento" name="comprimento" class='metros_medida' type='text' value="<?= $imovel['perimetro_c']?>">
 				<div class="clear"></div>
 			</li>
 

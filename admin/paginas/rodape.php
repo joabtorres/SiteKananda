@@ -19,6 +19,12 @@
 
 		<script type="text/javascript">
 		$(document).ready(function() {
+
+			$(".area").mask("9?99 m²");
+
+			$(".metros_medida").mask("9?99 metros");
+
+
 			//quantidade de fotos na página de eventos
 		    var i = $('div.foto').filter(function(idx){
 		        return $(this);

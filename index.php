@@ -22,21 +22,33 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" id="slideshow-home">
-    <div class="item active">
-      <img src="<?= RAIZ ?>img/slide1.fw.png" alt="legenda">
+
+  <?php
+    $slide_objeto = new Objeto('slideshow');
+    $slide_objeto->selecionarTudo();
+    $i = 0;
+    foreach ($slide_objeto->retornarDados() as $key => $value) {    
+  ?>
+      <div class="item <?= ($i==0)? 'active': ''?>">
+        <img src="<?= RAIZ.$value['slide'] ?>" alt="legenda">
+        <div class="carousel-caption">
+         <h3><?= $value['titulo']?></h3>
+         <p><?= $value['descricao']?></p>
+        </div>
+      </div>
+    <?php
+      $i++;
+      }
+    ?>
+
+<!--     <div class="item">
+      <img src="img/slide1.fw.png" alt="legenda">
       <div class="carousel-caption">
        <h3>Lorem ipsum</h3>
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis exercitationem, delectus nemo totam atque non magnam sapiente voluptatum, voluptas, sit amet deserunt aliquid quos optio molestias dolorum magni odio voluptates.</p>
       </div>
-    </div>
-    <div class="item">
-      <img src="<?= RAIZ ?>img/slide1.fw.png" alt="legenda">
-      <div class="carousel-caption">
-       <h3>Lorem ipsum</h3>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis exercitationem, delectus nemo totam atque non magnam sapiente voluptatum, voluptas, sit amet deserunt aliquid quos optio molestias dolorum magni odio voluptates.</p>
-      </div>
-    </div>
-  </div>
+    </div>-->
+  </div> 
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -56,42 +68,36 @@
       <div id="imovel-home">
           <h3 class="imovel-nome">A Venda</h3>
             <div class="row">
+              <?php
+                $imovel = new Objeto('produto');
+                $imovel->addConsulta('tipo_imovel', 'casa a venda');
+                $imovel->addExtras('LIMIT 3');
+                $imovel->selecionarTudo();
+
+                $foto_imovel = new Objeto('foto_produto');
+
+                foreach ($imovel->retornarDados() as $key => $value) {
+                  $foto_imovel->limparDados();
+                  $foto_imovel->addConsulta('id_produto', $value['id'] );
+                  $foto_imovel->addExtras('LIMIT 1');
+                  $foto_imovel->selecionarTudo();
+                  $foto = $foto_imovel->retornar();
+              ?>
                 <div class="col-xs-4" >
                   <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
                       <div class="home-imovel">
-                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
                         <div class="home-legenda-imovel">
-                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
-                             <span class="icone-imovel">x</span> Garagem 1 <br>
-                             <span class="icone-imovel">V</span> Área 90 m2</p>
+                           <p><span class="icone-imovel">Quartos</span> <?=$value['quartos']?><br>
+                             <span class="icone-imovel">Garagem</span> <?=$value['garagem']?><br>
+                             <span class="icone-imovel">Área</span> <?=$value['area_ter']?></p>
                         </div>
                       </div>
                    </a>
                 </div>
-                <div class="col-xs-4">
-                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
-                             <span class="icone-imovel">x</span> Garagem 1 <br>
-                             <span class="icone-imovel">V</span> Área 90 m2</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
-                             <span class="icone-imovel">x</span> Garagem 1 <br>
-                             <span class="icone-imovel">V</span> Área 90 m2</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
+                <?php
+                  }
+                ?>
 
                 <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
@@ -103,42 +109,35 @@
   <div id="imovel-home">
           <h3 class="imovel-nome">Loteamentos</h3>
             <div class="row">
+              <?php
+
+                $imovel->limparDados();
+                $imovel->addConsulta('tipo_imovel', 'loteamento');
+                $imovel->addExtras('LIMIT 3');
+                $imovel->selecionarTudo();
+
+                foreach ($imovel->retornarDados() as $key => $value) {
+                  $foto_imovel->limparDados();
+                  $foto_imovel->addConsulta('id_produto', $value['id'] );
+                  $foto_imovel->addExtras('LIMIT 1');
+                  $foto_imovel->selecionarTudo();
+                  $foto = $foto_imovel->retornar();
+              ?>
                 <div class="col-xs-4" >
                   <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
                       <div class="home-imovel">
-                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
                         <div class="home-legenda-imovel">
-                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
-                             <span class="icone-imovel">x</span> Garagem 1 <br>
-                             <span class="icone-imovel">V</span> Área 90 m2</p>
+                           <p><span class="icone-imovel">Quartos</span> <?=$value['quartos']?><br>
+                             <span class="icone-imovel">Garagem</span> <?=$value['garagem']?><br>
+                             <span class="icone-imovel">Área</span> <?=$value['area_ter']?></p>
                         </div>
                       </div>
                    </a>
                 </div>
-                <div class="col-xs-4">
-                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
-                             <span class="icone-imovel">x</span> Garagem 1 <br>
-                             <span class="icone-imovel">V</span> Área 90 m2</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
-                             <span class="icone-imovel">x</span> Garagem 1 <br>
-                             <span class="icone-imovel">V</span> Área 90 m2</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
+                <?php
+                  }
+                ?>
 
                 <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>

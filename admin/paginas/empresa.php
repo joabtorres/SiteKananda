@@ -12,7 +12,7 @@ $mensagem_erro =  false;
 	if(isset($_POST['acao'])){
 		if($_POST['acao'] == "salvar"){
 
-			$upload = new Upload("../imagens/site");
+			$upload = new Upload("../img/site");
 			$upload->addFile($_FILES['foto1'],array("jpg","png","gif"),NULL,1);
 			$files = $upload->retornaFiles(true);
 
@@ -99,7 +99,7 @@ $mensagem_erro =  false;
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Logotipo</label><input obg="Logotipo" name="foto1" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['logotipo'] : '' ; ?>" type="file"  onchange="readURL(this);"/><img id='preview1' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['logotipo'] : '' ; ?>" class='preview_foto'/>
+				<label>Logotipo</label><input name="foto1" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['logotipo'] : '' ; ?>" type="file"  onchange="readURL(this);"/><img id='preview1' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['logotipo'] : '' ; ?>" class='preview_foto'/>
 				<div class="clear"></div>
 			</li>
 
