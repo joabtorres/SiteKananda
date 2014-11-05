@@ -1,5 +1,4 @@
 <?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/header.php" ?>
-<link rel="stylesheet" href="/css/imovel-detalhado.css">
 
 <!--SLIDE IMOVEL SELECIONADO-->
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -14,6 +13,7 @@
     <script type="text/javascript" src="js/jssor.slider.min.js"></script>
     <script src="js/jssor-effect.js"></script>
 <!---->
+<link rel="stylesheet" href="/css/imovel-detalhado.css">
 <div class="row" id="imovel-detalhes">
 	<div class="col-xs-12" >
 			<!--FILTRO-->
@@ -22,7 +22,7 @@
 			<div class="row" id="fotos-detalhes">
 				<!--DESCRIÇÃO DO IMOVEL-->
 				<div class="col-xs-12" id="descricao-principal">
-					<h2>Referencia: xxx</h2>
+					<h2>Referência: xxx</h2>
 				</div>
 
 				<!--SLIDE IMOVEL SELECIONADO-->
@@ -82,7 +82,7 @@
 						  <div class="tab-pane fade in active" id="cEspecificacao">
 						  	<ul>
 						  		<li>
-						  			<p class="text-left">Referencia: <span>xxxxxx</span></p>
+						  			<p class="text-left">Referência: <span>xxxxxx</span></p>
 						  		</li>
 						  		<li>
 						  			<p class="text-left">Bairro: <span>xxxxxxxxx</span></p>
@@ -127,13 +127,13 @@
 				        </div>
 				        <!-- Slides Container -->
 				        <div u="slides" class="slide-container">
-				            <div><img u="image" src="img/ancient-lady/005.jpg" /></div>
-				            <div><img u="image" src="img/ancient-lady/006.jpg" /></div>
-				            <div><img u="image" src="img/ancient-lady/011.jpg" /></div>
-				            <div><img u="image" src="img/ancient-lady/013.jpg" /></div>
-				            <div><img u="image" src="img/ancient-lady/014.jpg" /></div>
-				            <div><img u="image" src="img/ancient-lady/019.jpg" /></div>
-				            <div><img u="image" src="img/ancient-lady/020.jpg" /></div>
+				            <div><a href=""><img u="image" src="img/ancient-lady/005.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="img/ancient-lady/006.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="img/ancient-lady/011.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="img/ancient-lady/013.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="img/ancient-lady/014.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="img/ancient-lady/019.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="img/ancient-lady/020.jpg" /></a></div>
 				        </div>
 				        <!-- bullet navigator container -->
 				        <div u="navigator" class="jssorb03" id="navigator-slide" style="position: absolute; bottom: 4px; right: 6px;">

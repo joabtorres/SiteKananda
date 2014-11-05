@@ -5,21 +5,20 @@
             <ul>
               <li><h3>IMÓVEIS</h3></li>
               <li><a href="/paginas/imovel/areas-portuarias.php">Áreas Portuarías</a></li>
-            <li>Casas</li>
-              <li><a href="/paginas/imovel/casa/aluguel.php">Aluguel</a></li>
-              <li><a href="/paginas/imovel/casa/venda.php">Venda</a></li>
+            <li><a href="/paginas/imovel/casa/aluguel.php">Casas para Aluguar</a></li>
+            <li><a href="/paginas/imovel/casa/venda.php">Casas a Venda</a></li>
             <li><a href="/paginas/imovel/loteamentos.php">Loteamentos</a></li>
             <li><a href="/paginas/imovel/terrenos-urbanos.php">Terrenos Urbanos</a></li>
             <li><a href="/paginas/imovel/terrenos-rurais.php">Terrenos Rurais</a></li>
             </ul>
             <ul>
             <li><h3>SERVIÇOS</h3></li>
-            <li><a href="">Conheça nossos serviços</a></li>
+            <li><a href="/paginas/servicos.php">Conheça nossos serviços</a></li>
           </ul>
         </div>
         <div class="col-xs-4">
-          <p class="text-center" style="margin-top:10px;"><img src="/img/plug-facebook.jpg" ></p>
-          
+          <p class="text-center logos-socias"><a href="#" target="_blank"><img src="/img/facebook-icon.png" alt=""></a>  <a href="#"target="_blank"><img src="/img/youtube-icon.png" alt=""></a></p>
+          <p class="text-center" ><img src="/img/plug-facebook.jpg" ></p>
         </div>
         <div class="col-xs-4">
           <h3>CONTATOS</h3>
@@ -58,7 +57,7 @@
     <div class="col-md-12">
       <a href="http://www.endogenese.com.br/" target="_blank"><img src="/img/endogenese.png" alt="Empresa Desenvolvedora Endogense Soluções" id="logo-endogenese"></a>
       <p class="text-center">© 2004-2014 - kananda.imb.br | Todos os direitos reservados <br>
-É proibida a reprodução total ou parcial de qualquer conteúdo deste site.
+                  É proibida a reprodução total ou parcial de qualquer conteúdo deste site.
          </p>
         <a href="http://www.endogenese.com.br/" target="_blank"><img src="/img/endogenese2.png" alt="Empresa Desenvolvedora Endogense Soluções" id="logo-endogenese-2"></a>
     </div>

@@ -23,9 +23,9 @@
 							      <input type="radio" name="tTerrenosRuarais" id="cTerrenosRuarais" value="aTerrenosRuarais" class="btn btn-primary"> Terrenos Ruarais
 							    </label>
 							    <label label="cLoteamento" class="btn btn-primary">
-							      <input type="radio" name="tAreaPortuaria" id="cAreaPortuaria" value="aAreaPortuaria"> Área Portuária
+							      <input type="radio" name="tAreaPortuaria" id="cAreaPortuaria" value="aAreaPortuaria"> Áreas Portuárias
 							    </label><label label="cLoteamento" class="btn btn-primary">
-							      <input type="radio" name="tLoteamento" id="cLoteamento" value="aLoteamento"> Loteamento
+							      <input type="radio" name="tLoteamento" id="cLoteamento" value="aLoteamento"> Loteamentos
 							    </label>
 							</div>
 						</div>

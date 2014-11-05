@@ -134,3 +134,11 @@ div#outros-imoveis .col-xs-12{
 	padding: 0px;
 	margin: 0px;
 }
+.slide-container a{
+	margin: 0;
+	padding: 0;
+}
+.slide-container div a img{
+	border-radius: 5px;
+	margin: 0;
+}
