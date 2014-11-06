@@ -1,16 +1,19 @@
 @font-face{
 	font-family: "travelcons";
-	src: url(/fontes/travelcons.ttf);
+	src: url(../fontes/travelcons.ttf);
 }
 @font-face{
 	font-family: "breeSerif-Regular";
-	src: url(/fontes/breeSerif-Regular.ttf);
+	src: url(../fontes/breeSerif-Regular.ttf);
 }
 body{
 	/*background: url(../img/fundo-kananda.jpg) no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;*/
-	background-image:linear-gradient(#EDF4FA, #D0EBF2)
+	background:linear-gradient(top, #F0F7FD, #CFEAF5);
+	background:-moz-linear-gradient(top, #F0F7FD, #CFEAF5);
+	background:-o-linear-gradient(top, #F0F7FD, #CFEAF5);
+	background:-webkit-linear-gradient(top, #F0F7FD, #CFEAF5);
 }
 body *{
 	font-family: "breeSerif-Regular",sans-serif;
@@ -168,6 +171,15 @@ height: 20px;
 width: 20%;
 }
 
+/******************************
+	MAPA HOME
+*******************************/
+iframe {
+width: 100%;
+height: auto;
+vertical-align: middle;
+margin-bottom: 6px;
+}
 
 /******************************
 	IMOVEIS
