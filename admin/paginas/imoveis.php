@@ -557,7 +557,7 @@ $mensagem_erro =  false;
 						$i=1;
 						$destaque = '';
 						foreach ($fotos as $key => $foto) {
-							if($i == 1)
+							if($i == count($fotos))
 								$destaque = 'foto_destaque';
 							else
 								$destaque = '';
