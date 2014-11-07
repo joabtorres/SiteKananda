@@ -1,26 +1,26 @@
-<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/header.php" ?>
-<link rel="stylesheet" href="/css/imovel-categoria.css">
-<link rel="stylesheet" href="/css/galeria.css">
+
+<link rel="stylesheet" href="<?= RAIZ ?>/css/imovel-categoria.css">
+<link rel="stylesheet" href="<?= RAIZ ?>/css/galeria.css">
 <!--FOTORAMA-->
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<link href="/paginas/galeria/css/fotorama.css" rel="stylesheet">
-<script src="/paginas/galeria/js/fotorama.js"></script>
+<link href="<?= RAIZ ?>/paginas/galeria/css/fotorama.css" rel="stylesheet">
+<script src="<?= RAIZ ?>/paginas/galeria/js/fotorama.js"></script>
 <!---->
 <di class="row" >
 	<!--FOTO selecionada-->
 
 	<div class="col-xs-12"class id="galeria-show">
 		<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="950" data-height="400" data-allowfullscreen="true">
-      <a href="/img/test1.jpg"><img src="/img/test1.jpg"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>  
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>  
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>
-      <a href="/img/residencia-a1.png"><img src="/img/residencia-a11.png"></a>  
+      <a href="<?= RAIZ ?>/img/test1.jpg"><img src="/img/test1.jpg"></a>
+      <a href="<?= RAIZ ?>/img/residencia-a1.png"><img src="<?= RAIZ ?>/img/residencia-a11.png"></a>  
+      <a href="<?= RAIZ ?>/img/residencia-a1.png"><img src="<?= RAIZ ?>/img/residencia-a11.png"></a>
+      <a href="<?= RAIZ ?>/img/residencia-a1.png"><img src="<?= RAIZ ?>/img/residencia-a11.png"></a>
+      <a href="<?= RAIZ ?>/img/residencia-a1.png"><img src="<?= RAIZ ?>/img/residencia-a11.png"></a>
+      <a href="<?= RAIZ ?>/img/residencia-a1.png"><img src="<?= RAIZ ?>/img/residencia-a11.png"></a>
+      <a href="<?= RAIZ ?>/img/residencia-a1.png"><img src="<?= RAIZ ?>/img/residencia-a11.png"></a>  
+      <a href="<?= RAIZ ?>/img/residencia-a1.png"><img src="<?= RAIZ ?>/img/residencia-a11.png"></a>
+      <a href="<?= RAIZ ?>/img/residencia-a1.png"><img src="<?= RAIZ ?>/img/residencia-a11.png"></a>
+      <a href="<?= RAIZ ?>/img/residencia-a1.png"><img src="<?= RAIZ ?>/img/residencia-a11.png"></a>  
 		</div>
 	</div>
 </di>
@@ -34,7 +34,7 @@
                 <div class="col-xs-4">
                   <a href="">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>/img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                             <p class="class-titulo">Lorem Ipsum</p>
                            <p class="class-data">14 de outubro de 2014</p>
@@ -45,7 +45,7 @@
                 <div class="col-xs-4">
                   <a href="">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>/img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                             <p class="class-titulo">Lorem Ipsum</p>
                            <p class="class-data">14 de outubro de 2014</p>
@@ -56,7 +56,7 @@
                 <div class="col-xs-4">
                   <a href="">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>/img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                             <p class="class-titulo">Lorem Ipsum</p>
                            <p class="class-data">14 de outubro de 2014</p>
@@ -70,7 +70,7 @@
                 <div class="col-xs-4">
                   <a href="">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>/img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                             <p class="class-titulo">Lorem Ipsum</p>
                            <p class="class-data">14 de outubro de 2014</p>
@@ -81,7 +81,7 @@
                 <div class="col-xs-4">
                   <a href="">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>/img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                             <p class="class-titulo">Lorem Ipsum</p>
                            <p class="class-data">14 de outubro de 2014</p>
@@ -92,7 +92,7 @@
                 <div class="col-xs-4">
                   <a href="">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" >
+                        <img src="<?= RAIZ ?>/img/venda-residencia.png" >
                         <div class="home-legenda-imovel">
                            <p class="class-titulo">Lorem Ipsum</p>
 							             <p class="class-data">14 de outubro de 2014</p>
@@ -118,4 +118,3 @@
 	            		</div>
 	            	</div>
       </div><!--FIM CATEGORIA DE IMOVEL-->
-<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/footer.php" ?>

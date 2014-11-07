@@ -1,5 +1,5 @@
-<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/header.php" ?>
-	<link rel="stylesheet" href="/css/mapa.css">
+
+	<link rel="stylesheet" href="<?= RAIZ ?>/css/mapa.css">
 	<!--CONTATO-->
 	<div class="row" id="mapa">
 		<div class="col-xs-12">
@@ -69,4 +69,3 @@
 			</div>
 		</div>
 	</div>
-<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/footer.php" ?>

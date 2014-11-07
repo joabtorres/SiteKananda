@@ -1,23 +1,21 @@
-<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/header.php" ?>
-
 <!--SLIDE IMOVEL SELECIONADO-->
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<link href="/paginas/imovel/imovel-especifico/css/fotorama.css" rel="stylesheet">
-<script src="/paginas/imovel/imovel-especifico/js/fotorama.js"></script>
+
+<link href="<?= RAIZ ?>paginas/imovel/css/fotorama.css" rel="stylesheet">
+<script src="<?= RAIZ ?>paginas/imovel/js/fotorama.js"></script>
 <!--SLIDE IMOVEL SELECIONADO-->
 
 <!--SLIDE SHOW OUTRO IMOVEIS-->
-	<link rel="stylesheet" href="css/jssor.css">
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/jssor.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
-    <script src="js/jssor-effect.js"></script>
+	<link rel="stylesheet" href="<?= RAIZ ?>paginas/imovel/css/jssor.css">
+    
+    <script type="text/javascript" src="<?= RAIZ ?>paginas/imovel/js/jssor.js"></script>
+    <script type="text/javascript" src="<?= RAIZ ?>paginas/imovel/js/jssor.slider.min.js"></script>
+    <script src="<?= RAIZ ?>paginas/imovel/js/jssor-effect.js"></script>
 <!---->
-<link rel="stylesheet" href="/css/imovel-detalhado.css">
+<link rel="stylesheet" href="<?= RAIZ ?>css/imovel-detalhado.css">
 <div class="row" id="imovel-detalhes">
 	<div class="col-xs-12" >
 			<!--FILTRO-->
-		<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/buscar.php" ?>
+		<?php require RAIZ."paginas/subpaginas/buscar.php" ?>
 			<!--FOTOS DETALHADAS-->
 			<div class="row" id="fotos-detalhes">
 				<!--DESCRIÇÃO DO IMOVEL-->
@@ -28,11 +26,11 @@
 				<!--SLIDE IMOVEL SELECIONADO-->
 				<div class="col-xs-8">
 					<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="600" data-height="400" data-max-width="100%">
-					  <a href="/img/residencia-a.png"><img src="/img/residencia-a.png"></a>
-					  <a href="/img/residencia-a.png"><img src="/img/residencia-a.png"></a>	
-					  <a href="/img/residencia-a.png"><img src="/img/residencia-a.png"></a>
-					  <a href="/img/residencia-a.png"><img src="/img/residencia-a.png"></a>
-					  <a href="/img/residencia-a.png"><img src="/img/residencia-a.png"></a>
+					  <a href="<?= RAIZ ?>img/residencia-a.png"><img src="<?= RAIZ ?>img/residencia-a.png"></a>
+					  <a href="<?= RAIZ ?>img/residencia-a.png"><img src="<?= RAIZ ?>img/residencia-a.png"></a>	
+					  <a href="<?= RAIZ ?>img/residencia-a.png"><img src="<?= RAIZ ?>img/residencia-a.png"></a>
+					  <a href="<?= RAIZ ?>img/residencia-a.png"><img src="<?= RAIZ ?>img/residencia-a.png"></a>
+					  <a href="<?= RAIZ ?>img/residencia-a.png"><img src="<?= RAIZ ?>img/residencia-a.png"></a>
 					</div>
 				</div>
 				<!--SLIDE IMOVEL SELECIONADO-->
@@ -127,13 +125,13 @@
 				        </div>
 				        <!-- Slides Container -->
 				        <div u="slides" class="slide-container">
-				            <div><a href=""><img u="image" src="img/ancient-lady/005.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="img/ancient-lady/006.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="img/ancient-lady/011.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="img/ancient-lady/013.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="img/ancient-lady/014.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="img/ancient-lady/019.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="img/ancient-lady/020.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/005.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/006.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/011.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/013.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/014.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/019.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/020.jpg" /></a></div>
 				        </div>
 				        <!-- bullet navigator container -->
 				        <div u="navigator" class="jssorb03" id="navigator-slide" style="position: absolute; bottom: 4px; right: 6px;">
@@ -152,5 +150,3 @@
 			</div>
 	</div><!--Fim do detalhes imoveis-->
 </div>
-
-<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/footer.php" ?>

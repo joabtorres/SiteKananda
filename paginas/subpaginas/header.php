@@ -30,22 +30,22 @@
         <li style="margin-left: 10px;"><a href="<?= RAIZ ?>">Home</a></li>
         <li><a>Imóvel</a>
           <ul class="nav nav-pills">
-            <li><a href="<?= RAIZ ?>paginas/imovel/areas-portuarias.php">Áreas Portuárias</a></li>
+            <li><a href="<?= RAIZ ?>areas-portuarias">Áreas Portuárias</a></li>
             <li class="submenu-2"><a>Casas</a>
             <ul class="nav nav-pills">
-              <li><a href="<?= RAIZ ?>paginas/imovel/casa/aluguel.php">Aluguel</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/casa/venda.php">A Venda</a></li>
+              <li><a href="<?= RAIZ ?>aluguel">Aluguel</a></li>
+              <li><a href="<?= RAIZ ?>venda">A Venda</a></li>
             </ul>
             </li>
-            <li><a href="<?= RAIZ ?>paginas/imovel/loteamentos.php">Loteamentos</a></li>
-            <li><a href="<?= RAIZ ?>paginas/imovel/terrenos-urbanos.php">Terrenos Urbanos</a></li>
-            <li><a href="<?= RAIZ ?>paginas/imovel/terrenos-rurais.php">Terrenos Rurais</a></li>
+            <li><a href="<?= RAIZ ?>loteamentos">Loteamentos</a></li>
+            <li><a href="<?= RAIZ ?>terrenos-urbanos">Terrenos Urbanos</a></li>
+            <li><a href="<?= RAIZ ?>terrenos-rurais">Terrenos Rurais</a></li>
           </ul>
         </li>
-        <li><a href="<?= RAIZ ?>paginas/servicos.php">Serviços</a></li>
-        <li><a href="<?= RAIZ ?>paginas/galeria/">Galeria</a></li>
-        <li><a href="<?= RAIZ ?>paginas/mapa.php">Mapa</a></li>
-        <li><a href="<?= RAIZ ?>paginas/sobre.php">Sobre</a></li>
+        <li><a href="<?= RAIZ ?>servicos">Serviços</a></li>
+        <li><a href="<?= RAIZ ?>galeria">Galeria</a></li>
+        <li><a href="<?= RAIZ ?>mapa">Mapa</a></li>
+        <li><a href="<?= RAIZ ?>sobre">Sobre</a></li>
       </ul>
     </div>
   </div>
