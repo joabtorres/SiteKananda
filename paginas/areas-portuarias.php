@@ -1,18 +1,17 @@
-<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/header.php" 
-?>
-<link rel="stylesheet" href="/css/imovel-categoria.css">
+
+<link rel="stylesheet" href="<?= RAIZ ?>css/imovel-categoria.css">
 
 <!--FILTRO-->
-    <?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/buscar.php" ?>
+    <?php require RAIZ."paginas/subpaginas/buscar.php" ?>
 <!--CATEGORIA DE IMOVEL-->
 
 	<div id="imovel-home">
           <h3 class="imovel-nome">Áreas Portuárias</h3>
             <div class="row">
                 <div class="col-xs-4">
-                  <a href="/paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                            <p><span class="icone-imovel">h</span> Quarto 2 <br>
                              <span class="icone-imovel">x</span> Garagem 1 <br>
@@ -22,9 +21,9 @@
                    </a>
                 </div>
                 <div class="col-xs-4">
-                  <a href="/paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                            <p><span class="icone-imovel">h</span> Quarto 2 <br>
                              <span class="icone-imovel">x</span> Garagem 1 <br>
@@ -34,48 +33,9 @@
                    </a>
                 </div>
                 <div class="col-xs-4">
-                  <a href="/paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
-                             <span class="icone-imovel">x</span> Garagem 1 <br>
-                             <span class="icone-imovel">V</span> Área 90 m2</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-4">
-                  <a href="/paginas/imovel/imovel-especifico/">
-                      <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
-                             <span class="icone-imovel">x</span> Garagem 1 <br>
-                             <span class="icone-imovel">V</span> Área 90 m2</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="/paginas/imovel/imovel-especifico/">
-                      <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
-                             <span class="icone-imovel">x</span> Garagem 1 <br>
-                             <span class="icone-imovel">V</span> Área 90 m2</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="/paginas/imovel/imovel-especifico/">
-                      <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                            <p><span class="icone-imovel">h</span> Quarto 2 <br>
                              <span class="icone-imovel">x</span> Garagem 1 <br>
@@ -88,9 +48,9 @@
 
             <div class="row">
                 <div class="col-xs-4">
-                  <a href="/paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                            <p><span class="icone-imovel">h</span> Quarto 2 <br>
                              <span class="icone-imovel">x</span> Garagem 1 <br>
@@ -100,9 +60,9 @@
                    </a>
                 </div>
                 <div class="col-xs-4">
-                  <a href="/paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                            <p><span class="icone-imovel">h</span> Quarto 2 <br>
                              <span class="icone-imovel">x</span> Garagem 1 <br>
@@ -112,9 +72,48 @@
                    </a>
                 </div>
                 <div class="col-xs-4">
-                  <a href="/paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
                       <div class="home-imovel">
-                        <img src="/img/venda-residencia.png" alt="...">
+                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
+                        <div class="home-legenda-imovel">
+                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
+                             <span class="icone-imovel">x</span> Garagem 1 <br>
+                             <span class="icone-imovel">V</span> Área 90 m2</p>
+                        </div>
+                      </div>
+                   </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-4">
+                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
+                      <div class="home-imovel">
+                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
+                        <div class="home-legenda-imovel">
+                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
+                             <span class="icone-imovel">x</span> Garagem 1 <br>
+                             <span class="icone-imovel">V</span> Área 90 m2</p>
+                        </div>
+                      </div>
+                   </a>
+                </div>
+                <div class="col-xs-4">
+                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
+                      <div class="home-imovel">
+                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
+                        <div class="home-legenda-imovel">
+                           <p><span class="icone-imovel">h</span> Quarto 2 <br>
+                             <span class="icone-imovel">x</span> Garagem 1 <br>
+                             <span class="icone-imovel">V</span> Área 90 m2</p>
+                        </div>
+                      </div>
+                   </a>
+                </div>
+                <div class="col-xs-4">
+                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
+                      <div class="home-imovel">
+                        <img src="<?= RAIZ ?>img/venda-residencia.png" alt="...">
                         <div class="home-legenda-imovel">
                            <p><span class="icone-imovel">h</span> Quarto 2 <br>
                              <span class="icone-imovel">x</span> Garagem 1 <br>
@@ -141,4 +140,3 @@
 	            		</div>
 	            	</div>
       </div><!--FIM CATEGORIA DE IMOVEL-->
-<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/footer.php" ?>

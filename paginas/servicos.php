@@ -1,10 +1,10 @@
-<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/header.php" ?>
-<link rel="stylesheet" href="/css/servico.css">
+
+<link rel="stylesheet" href="<?= RAIZ ?>/css/servico.css">
 <div class="row" id="interface-servico">
 	<div class="col-xs-12">
 
 		<!--FILTRO-->
-		<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/buscar.php" ?>
+		<?php require RAIZ."/paginas/subpaginas/buscar.php" ?>
 			<div class="row">
 				<div class="col-xs-12">
 					<h1 class="titulo-servico">SERVIÇOS</h1>
@@ -38,4 +38,3 @@
 			</div>
 	</div>
 </div>
-<?php require $_SERVER["DOCUMENT_ROOT"]."/paginas/subpaginas/footer.php" ?>
