@@ -4,6 +4,7 @@
 
   $pagina = Funcao::capturarUrlAmigavel();
   if((string)$pagina[0] !== ""){
+    
     if(file_exists("paginas/".$pagina[0].".php")){
       $inicio = false;
       $notfound = false;

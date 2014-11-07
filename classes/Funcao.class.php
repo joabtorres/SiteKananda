@@ -14,6 +14,7 @@
  * string gerarSenha();
  * gerarSelectOptions($table, $campo_option, $campo_value , $idselected) // gera um select  com opções do banco
  * gerarArraySelectOptions($array, $idselected) // gera um select a partir de um array
+ * gerarPaginacao($link_pagina, $qtd_paginas, $pagina_atual, $id, $class) // cria a estrutura de um sistema paginação
 */
 
 class Funcao{
@@ -212,6 +213,40 @@ class Funcao{
 		}
 		
 		return $return;
+	}
+
+
+	public static function gerarPaginacao($link_pagina, $qtd_paginas, $pagina_atual, $id = NULL, $class = NULL){
+
+		$paginacao = '';
+		if($qtd_paginas > 1 && $pagina_atual <= $qtd_paginas){
+
+			$paginacao = "<ul ".$id." ".$class.">";
+
+			$pagina_inicial = ($pagina_atual > 10 ) ? $pagina_atual - 9 : 1;
+
+			$paginacao .= "<li><a href='".$link_pagina.'/'.(($qtd_paginas>10 && $pagina_inicial>1) ? ($pagina_inicial-1): $pagina_inicial)."'>&laquo;</a></li>";
+
+			for ($i = $pagina_inicial; $i <= $qtd_paginas; $i++) { 
+				
+				if($i == $pagina_inicial+10)
+					break;
+
+				if($i == $pagina_atual)
+					$ativo = "class='active'";
+				else
+					$ativo = "";
+
+				$paginacao .= "<li ".$ativo."><a href='".$link_pagina."/".$i."'>".$i."</a></li>";
+			}
+
+			$paginacao .= "<li><a href='".$link_pagina.'/'.(($qtd_paginas>10) ? ($pagina_inicial+10): $qtd_paginas)."'>&raquo;</a></li>";
+
+			$paginacao .= "</ul>";
+
+		}
+
+		return $paginacao;
 	}
 }
 

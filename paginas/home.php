@@ -82,7 +82,7 @@
                   $foto = $foto_imovel->retornar();
               ?>
                 <div class="col-xs-4" >
-                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>">
                       <div class="home-imovel">
                         <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
                         <div class="home-legenda-imovel">
@@ -124,7 +124,7 @@
                   $foto = $foto_imovel->retornar();
               ?>
                 <div class="col-xs-4" >
-                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>">
                       <div class="home-imovel">
                         <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
                         <div class="home-legenda-imovel">
@@ -165,7 +165,7 @@
                   $foto = $foto_imovel->retornar();
               ?>
                 <div class="col-xs-4" >
-                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>">
                       <div class="home-imovel">
                         <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
                         <div class="home-legenda-imovel">
@@ -207,7 +207,7 @@
                   $foto = $foto_imovel->retornar();
               ?>
                 <div class="col-xs-4" >
-                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>">
                       <div class="home-imovel">
                         <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
                         <div class="home-legenda-imovel">
