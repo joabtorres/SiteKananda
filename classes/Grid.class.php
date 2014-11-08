@@ -107,7 +107,7 @@
 					endif;
 				endif;				
 
-				$paginacao .= ($this->paginaAtual > 10) ? '<span><a href="'.RAIZ.'admin/'.$pagina_admin[0].'/'.$sub_pag.'/'.($this->paginaAtual - 10).'" '.$onclick.'> << </a></spam>' : '';			
+				$paginacao .= ($this->paginaAtual > 10) ? '<span><a href="'.RAIZ.'admin/'.$pagina_admin[0].'/'.$sub_pag.'/'.($this->paginaAtual - 10).'" '.$onclick.'> &laquo; </a></spam>' : '';			
 
 				$j = 1;
 				for ($i = $pagina_inicial; $i <= $qtd_paginas; $i++) {
@@ -118,7 +118,7 @@
 					$link = ($onclick == '') ? RAIZ.'admin/'.$pagina_admin[0].'/'.$sub_pag.'/'.$i : '#';
 
 					if($j > 10 ):
-						$paginacao .= '<spam class="pagina_grid"><a href="'.RAIZ.'admin/'.$pagina_admin[0].'/'.$sub_pag.'/'.$i.'" '.$onclick.'> >> </a></spam>';
+						$paginacao .= '<spam class="pagina_grid"><a href="'.RAIZ.'admin/'.$pagina_admin[0].'/'.$sub_pag.'/'.$i.'" '.$onclick.'> &raquo; </a></spam>';
 						break;
 					endif;
 
@@ -163,11 +163,11 @@
 
 				if($this->paginaAtual > 1): // filtra os registros se houver paginação
 				
-					$tabela->addExtras(' LIMIT '.((($this->paginaAtual - 1) * $this->limite)).' , '.$this->limite );	
+					$tabela->addExtras(' ORDER BY id DESC LIMIT '.((($this->paginaAtual - 1) * $this->limite)).' , '.$this->limite );	
 
 				else:// caso não haja paginação usa o limite definido
 
-					$tabela->addExtras(' LIMIT '.$this->limite);
+					$tabela->addExtras(' ORDER BY id DESC LIMIT '.$this->limite);
 
 				endif;
 

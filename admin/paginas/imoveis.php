@@ -17,64 +17,75 @@ $mensagem_erro =  false;
 				if(isset($_POST['acao'])){
 					if($_POST['acao'] == "salvar"){
 
-						$tabela->setValor('referencia',$_POST['referencia']);
-						$tabela->setValor('tipo_imovel',$_POST['tipo_imovel']);
-						$tabela->setValor('finalidade',$_POST['finalidade']);
-						$tabela->setValor('quartos',$_POST['quartos']);
-						$tabela->setValor('garagem',$_POST['garagem']);
-						$tabela->setValor('area_edi',$_POST['area_edificada']);
-						$tabela->setValor('area_ter',$_POST['area_terreno']);
-						$tabela->setValor('perimetro_l',$_POST['largura']);
-						$tabela->setValor('perimetro_c',$_POST['comprimento']);
-						$tabela->setValor('latitude',$_POST['latitude']);
-						$tabela->setValor('longitude',$_POST['longitude']);
-						$tabela->setValor('suites',$_POST['suites']);
-						$tabela->setValor('banheiros',$_POST['banheiros']);
-						$tabela->setValor('categoria',$_POST['categoria']);
-						$tabela->setValor('logradouro',$_POST['logradouro']);
-						$tabela->setValor('num',$_POST['numero']);
-						$tabela->setValor('complemento',$_POST['complemento']);
-						$tabela->setValor('bairro',$_POST['bairro']);
-						$tabela->setValor('cidade',$_POST['cidade']);
-						$tabela->setValor('descricao',$_POST['descricao']);
-						$tabela->setValor('video',$_POST['video']);
-						
-						if($tabela->inserir() != false){
-							$diretorio = "img/imoveis/".$tabela->getId()."-".$_POST['referencia'];
-							mkdir('../'.$diretorio, 0644);
+						$tabela->addConsulta('referencia',$_POST['referencia']);
+						$tabela->selecionarTudo();
+
+						if($tabela->getLinhasAfetadas() == 0){
+
 							$tabela->limparDados();
-							$tabela->addConsulta('id',$tabela->getId());
-							$tabela->setValor('diretorio',$diretorio);
+							$tabela->setValor('referencia',$_POST['referencia']);
+							$tabela->setValor('tipo_imovel',$_POST['tipo_imovel']);
+							$tabela->setValor('finalidade',$_POST['finalidade']);
+							$tabela->setValor('quartos',$_POST['quartos']);
+							$tabela->setValor('garagem',$_POST['garagem']);
+							$tabela->setValor('area_edi',$_POST['area_edificada']);
+							$tabela->setValor('area_ter',$_POST['area_terreno']);
+							$tabela->setValor('perimetro_l',$_POST['largura']);
+							$tabela->setValor('perimetro_c',$_POST['comprimento']);
+							$tabela->setValor('latitude',$_POST['latitude']);
+							$tabela->setValor('longitude',$_POST['longitude']);
+							$tabela->setValor('suites',$_POST['suites']);
+							$tabela->setValor('banheiros',$_POST['banheiros']);
+							$tabela->setValor('categoria',$_POST['categoria']);
+							$tabela->setValor('logradouro',$_POST['logradouro']);
+							$tabela->setValor('num',$_POST['numero']);
+							$tabela->setValor('complemento',$_POST['complemento']);
+							$tabela->setValor('bairro',$_POST['bairro']);
+							$tabela->setValor('cidade',$_POST['cidade']);
+							$tabela->setValor('descricao',$_POST['descricao']);
+							$tabela->setValor('video',$_POST['video']);
+							
+							if($tabela->inserir() != false){
+								$diretorio = "img/imoveis/".$tabela->getId()."-".$_POST['referencia'];
+								mkdir('../'.$diretorio, 0644);
+								$tabela->limparDados();
+								$tabela->addConsulta('id',$tabela->getId());
+								$tabela->setValor('diretorio',$diretorio);
 
-							if($tabela->atualizar()){
+								if($tabela->atualizar()){
 
-								$upload = new Upload("../img/imoveis/".$tabela->getId()."-".$_POST['referencia']);
-								
-								for ($i=1; $i <= $_POST['qtd_fotos']; $i++) { 
+									$upload = new Upload("../img/imoveis/".$tabela->getId()."-".$_POST['referencia']);
 									
-									if(isset($_FILES['foto'.$i])){
+									for ($i=1; $i <= $_POST['qtd_fotos']; $i++) { 
 										
-										$upload->addFile($_FILES['foto'.$i],array("jpg","png","gif"),NULL,1);
-										$file = $upload->retornaFiles(true);
-										
+										if(isset($_FILES['foto'.$i])){
+											
+											$upload->addFile($_FILES['foto'.$i],array("jpg","png","gif"),NULL,1);
+											$file = $upload->retornaFiles(true);
+											
 
-										$tabela2->setValor('id_produto', $tabela->getId());
-										$tabela2->setValor('arquivo',substr($file[0],3));
-										
-										if($tabela2->inserir() != false){
-											cria_json();
-											$mensagem_sucesso = true;
-											$mensagem_erro = false;
-										}else{
-											$mensagem_sucesso = false;
-											$mensagem_erro = true;
+											$tabela2->setValor('id_produto', $tabela->getId());
+											$tabela2->setValor('arquivo',substr($file[0],3));
+											
+											if($tabela2->inserir() != false){
+												cria_json();
+												$mensagem_sucesso = true;
+												$mensagem_erro = false;
+											}else{
+												$mensagem_sucesso = false;
+												$mensagem_erro = true;
+											}
+
+											$tabela2->limparDados();
+
 										}
-
-										$tabela2->limparDados();
-
 									}
-								}
-							}	
+								}	
+							}
+
+						}else{
+							$mensagem_sucesso = false;
+							$mensagem_erro = true;
 						}
 					}
 
