@@ -368,10 +368,11 @@
 
 
 		public function limparDados(){
-			if(count($this->camposValores)):
+			if(count($this->camposValores) || count($this->camposConsulta) || $this->dataset!= NULL || $this->extrasSelect!= NULL):
 				$this->camposValores = array();
 				$this->camposConsulta = array();
 				$this->dataset = NULL;
+				$this->extrasSelect = NULL;
 			endif;
 		}// limparDados()
 
