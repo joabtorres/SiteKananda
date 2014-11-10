@@ -148,6 +148,12 @@ div#slideshow-home div.item div.carousel-caption{
 div#slideshow-home:hover div.item div.carousel-caption{
 	background: rgba(0,0,0,0.7);
 }
+.carousel-inner>.item{
+	height: 380px;
+}
+.carousel-inner>.item>img{
+	width: 100%;
+}
 div#slideshow-home div.item div.carousel-caption h3,p{
 	text-align: left;
 	padding: 5px 10px;
@@ -174,7 +180,7 @@ width: 20%;
 /******************************
 	MAPA HOME
 *******************************/
-iframe {
+iframe.mapa {
 width: 100%;
 height: auto;
 vertical-align: middle;
@@ -204,6 +210,10 @@ div#imovel-home .col-xs-4{
 	
 }
 div#imovel-home .col-xs-4 img{
+	width: auto;
+	height: 175px;
+	display: block;
+	margin: auto;
 	-moz-transition: transform 0.5s;
 	transition: transform 0.5s;
 	-webkit-transition: transform 0.5s;
