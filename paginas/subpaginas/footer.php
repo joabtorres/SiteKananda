@@ -68,5 +68,26 @@
   <script type="text/javascript" src="<?= RAIZ ?>js/holder.js"></script>
   <script type="text/javascript" src="<?= RAIZ ?>js/bootstrap.min.js"></script>
   <script type="text/javascript" src="<?= RAIZ ?>js/docs.min.js"></script>
+  <script src="<?= RAIZ ?>js/jquery_2.1.1.min.js"></script>
+  <script src="<?= RAIZ ?>js/infobox.js"></script>
+  <script src="<?= RAIZ ?>js/markerclusterer.js"></script>
+  <script src="<?= RAIZ ?>js/mapa.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+      
+      exibe_mapa = function (exibe){
+
+        if(exibe){
+          $('#cMapa').css('display', 'block');
+        }else{
+          $('#cMapa').css('display', 'none');
+        }
+
+      }
+
+    });
+
+  </script>
 </body>
 </html>

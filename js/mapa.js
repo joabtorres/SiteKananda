@@ -14,11 +14,13 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
+
     map = new google.maps.Map(document.getElementById("mapa"), options);
+
 }
 
 initialize();
-
+/*
 function abrirInfoBox(id, marker) {
 	if (typeof(idInfoBoxAberto) == 'number' && typeof(infoBox[idInfoBoxAberto]) == 'object') {
 		infoBox[idInfoBoxAberto].close();
@@ -103,4 +105,4 @@ function aplica_filtro(obj){
 
             }
 
-carregarPontos();
+carregarPontos();*/
