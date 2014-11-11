@@ -6,16 +6,16 @@
         <div class="col-xs-4">
             <ul>
               <li><h3>IMÓVEIS</h3></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/areas-portuarias.php">Áreas Portuarías</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/casa/aluguel.php">Casas para Aluguar</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/casa/venda.php">Casas a Venda</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/loteamentos.php">Loteamentos</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/terrenos-urbanos.php">Terrenos Urbanos</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/terrenos-rurais.php">Terrenos Rurais</a></li>
+              <li><a href="<?= RAIZ ?>areas-portuarias">Áreas Portuarías</a></li>
+              <li><a href="<?= RAIZ ?>aluguel">Casas para Aluguar</a></li>
+              <li><a href="<?= RAIZ ?>venda">Casas a Venda</a></li>
+              <li><a href="<?= RAIZ ?>loteamentos">Loteamentos</a></li>
+              <li><a href="<?= RAIZ ?>terrenos-urbanos">Terrenos Urbanos</a></li>
+              <li><a href="<?= RAIZ ?>terrenos-rurais">Terrenos Rurais</a></li>
             </ul>
             <ul>
             <li><h3>SERVIÇOS</h3></li>
-            <li><a href="<?= RAIZ ?>paginas/servicos.php">Conheça nossos serviços</a></li>
+            <li><a href="<?= RAIZ ?>servicos">Conheça nossos serviços</a></li>
           </ul>
         </div>
         <div class="col-xs-4">
