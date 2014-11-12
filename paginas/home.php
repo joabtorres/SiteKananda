@@ -32,7 +32,7 @@
     foreach ($slide_objeto->retornarDados() as $key => $value) {    
   ?>
       <div class="item <?= ($i==0)? 'active': ''?>">
-        <img src="<?= RAIZ.$value['slide'] ?>" alt="legenda">
+        <img src="<?= RAIZ.$value['slide'] ?>" alt="legenda" class="carousel-img">
         <div class="carousel-caption">
          <h3><?= $value['titulo']?></h3>
          <p><?= $value['descricao']?></p>
@@ -318,7 +318,7 @@
   <div class="row">
     <div class="col-md-12">
       
-        <iframe src="https://mapsengine.google.com/map/embed?mid=zs4x33MW_ykM.kAOGMPy5ErTM&z=16" ></iframe>
+        <iframe class="mapa" src="https://mapsengine.google.com/map/embed?mid=zs4x33MW_ykM.kAOGMPy5ErTM&z=16" ></iframe>
       
     </div>
   </div>
