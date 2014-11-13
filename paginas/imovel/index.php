@@ -119,11 +119,8 @@
 						  			<p class="text-left">Quantidade de suite(s): <span><?= $imovel['suites']?></span></p>
 						  		</li>
 						  		<li>
-<<<<<<< HEAD
 						  			<p class="text-left">Descrição: <span>xxxxxxxxxxxxx</span></p>
-=======
 						  			<p class="text-left">Quantidade de Garagem: <span><?= $imovel['garagem']?></span></p>
->>>>>>> 9c82b811d73c3a77c7be0296f4513e65f6fee0f4
 						  		</li>
 						  	</ul>
 						  </div>
@@ -159,7 +156,6 @@
 
 				        <!-- Slides Container -->
 				        <div u="slides" class="slide-container">
-<<<<<<< HEAD
 				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/005.jpg"/></a></div>
 				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/006.jpg" /></a></div>
 				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/011.jpg" /></a></div>
@@ -167,7 +163,6 @@
 				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/014.jpg" /></a></div>
 				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/019.jpg" /></a></div>
 				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/020.jpg" /></a></div>
-=======
 				        <?php
 
 				        	$similares = new Objeto('produto');
@@ -197,7 +192,6 @@
 				        <?php
 				    	}
 				        ?>
->>>>>>> 9c82b811d73c3a77c7be0296f4513e65f6fee0f4
 				        </div>
 				        <!-- bullet navigator container -->
 				        <div u="navigator" class="jssorb03" id="navigator-slide" style="position: absolute; bottom: 4px; right: 6px;">
