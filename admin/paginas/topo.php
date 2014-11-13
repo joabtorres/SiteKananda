@@ -17,7 +17,7 @@
         <div id="topo">
             <!-- Logotipo -->
         
-            	<img src="<?= RAIZ ?>admin/imagens/logo.png"  width='10%' alt="<?php //Funcao::tituloSite(); ?>" />
+            	<img src="<?= RAIZ ?>admin/imagens/logo.png" alt="<?php //Funcao::tituloSite(); ?>" />
         
         	<!-- Fim;Logotipo -->
         </div>

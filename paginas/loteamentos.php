@@ -84,7 +84,7 @@
                 <div class="row">
                   <div class="col-xs-12">
 
-                      <?php echo Funcao::gerarPaginacao(RAIZ.'areas-portuarias/page', $qtd_paginas, $pagina_atual, 'id="imovel-paginacao"', 'class="pagination"' ) ?>
+                      <?php echo Funcao::gerarPaginacao(RAIZ.'loteamentos/page', $qtd_paginas, $pagina_atual, 'id="imovel-paginacao"', 'class="pagination"' ) ?>
 
                   </div>
                 </div>

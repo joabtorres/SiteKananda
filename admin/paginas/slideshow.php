@@ -162,7 +162,7 @@ $mensagem_erro =  false;
 
 							<input type='hidden' name="id_foto<?= $i ?>" value="<?=$foto['id'] ?>"/>
 
-							<label>Foto</label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src="<?= RAIZ.$foto['slide'] ?>" class='preview_foto'/>
+							<label>Foto: </label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src="<?= RAIZ.$foto['slide'] ?>" class='preview_foto'/>
 
 							<input type='text' name="titulo<?= $i ?>" value="<?=$foto['titulo'] ?>"/>
 
