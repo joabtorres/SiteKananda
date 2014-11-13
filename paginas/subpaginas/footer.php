@@ -6,16 +6,16 @@
         <div class="col-xs-4">
             <ul>
               <li><h3>IMÓVEIS</h3></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/areas-portuarias.php">Áreas Portuarías</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/casa/aluguel.php">Casas para Aluguar</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/casa/venda.php">Casas a Venda</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/loteamentos.php">Loteamentos</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/terrenos-urbanos.php">Terrenos Urbanos</a></li>
-              <li><a href="<?= RAIZ ?>paginas/imovel/terrenos-rurais.php">Terrenos Rurais</a></li>
+              <li><a href="<?= RAIZ ?>areas-portuarias">Áreas Portuarías</a></li>
+              <li><a href="<?= RAIZ ?>aluguel">Casas para Aluguar</a></li>
+              <li><a href="<?= RAIZ ?>venda">Casas a Venda</a></li>
+              <li><a href="<?= RAIZ ?>loteamentos">Loteamentos</a></li>
+              <li><a href="<?= RAIZ ?>terrenos-urbanos">Terrenos Urbanos</a></li>
+              <li><a href="<?= RAIZ ?>terrenos-rurais">Terrenos Rurais</a></li>
             </ul>
             <ul>
             <li><h3>SERVIÇOS</h3></li>
-            <li><a href="<?= RAIZ ?>paginas/servicos.php">Conheça nossos serviços</a></li>
+            <li><a href="<?= RAIZ ?>servicos">Conheça nossos serviços</a></li>
           </ul>
         </div>
         <div class="col-xs-4">
@@ -68,5 +68,26 @@
   <script type="text/javascript" src="<?= RAIZ ?>js/holder.js"></script>
   <script type="text/javascript" src="<?= RAIZ ?>js/bootstrap.min.js"></script>
   <script type="text/javascript" src="<?= RAIZ ?>js/docs.min.js"></script>
+  <script src="<?= RAIZ ?>js/jquery_2.1.1.min.js"></script>
+  <script src="<?= RAIZ ?>js/infobox.js"></script>
+  <script src="<?= RAIZ ?>js/markerclusterer.js"></script>
+  <script src="<?= RAIZ ?>js/mapa.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+      
+      exibe_mapa = function (exibe){
+
+        if(exibe){
+          $('#cMapa').css('display', 'block');
+        }else{
+          $('#cMapa').css('display', 'none');
+        }
+
+      }
+
+    });
+
+  </script>
 </body>
 </html>

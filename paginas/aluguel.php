@@ -13,6 +13,7 @@
             $foto_imovel = new Objeto('foto_produto');
             $imovel->addConsulta('tipo_imovel', 'casa para alugar');
 
+            // define quantos registros vão ser exibidos
             if(isset($pagina[2]) && is_numeric($pagina[2]) && $pagina[2] > 1)
               $imovel->addExtras(' ORDER BY id DESC LIMIT '.(($pagina[2] - 1 ) * 9).' , '.(((($pagina[2] - 1 ) * 9)) + 8) ); 
             else
@@ -84,7 +85,7 @@
                 <div class="row">
                   <div class="col-xs-12">
 
-                      <?php echo Funcao::gerarPaginacao(RAIZ.'areas-portuarias/page', $qtd_paginas, $pagina_atual, 'id="imovel-paginacao"', 'class="pagination"' ) ?>
+                      <?php echo Funcao::gerarPaginacao(RAIZ.'aluguel/page', $qtd_paginas, $pagina_atual, 'id="imovel-paginacao"', 'class="pagination"' ) ?>
 
                   </div>
                 </div>
