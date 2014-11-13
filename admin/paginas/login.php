@@ -12,14 +12,14 @@
 			$msg= "Preencha todos dos campos!";
 		}else{
 			if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-				echo $msg = "informe um email válido!";
+				echo $msg = "informe um e-mail válido!";
 			}else{
 				$login = Validacao::login('administrador',$email, $senha);
 
 				if($login){
 					header("location: ".RAIZ.'admin/');
 				}else
-					$msg = "Email ou senha incorreta!";
+					$msg = "E-mail ou senha incorreta!";
 			}
 		}
 	}
@@ -41,7 +41,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body class="body-login">
 
 	<div id='login' class='bradius'>
 
@@ -51,8 +51,8 @@
 
 		<div id='form_login'>
 			<form action='#' method='POST'>
-				<label for='email'>E-mail:</label><input id='email' class='campo_txt bradius' type='text' name='email' value=''/>
-				<label for='senha'>Senha:</label><input id='senha' class='campo_txt bradius' type='password' name='senha' value=''/>
+				<label for='email'>E-mail: </label><input id='email' class='campo_txt bradius' type='text' name='email' value=''/>
+				<label for='senha'>Senha: </label><input id='senha' class='campo_txt bradius' type='password' name='senha' value=''/>
 				<input type='submit' id='btn_login' class='bradius' value='Entrar'>
 			</form>
 		</div><!-- .acomodar -->

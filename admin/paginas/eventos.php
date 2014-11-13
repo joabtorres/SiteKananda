@@ -77,16 +77,16 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Titulo</label><input obg="Titulo do Evento" name="titulo" type="text" />
+				<label>Titulo: </label><input obg="Titulo do Evento" name="titulo" type="text" />
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Descrição do Evento</label><input obg="Descrição do Evento" name="descricao_evento" type="text" />
+				<label>Descrição do Evento: </label><input obg="Descrição do Evento" name="descricao_evento" type="text" />
 				<div class="clear"></div>
 			</li>
 			<li>
 				<fieldset>
-					<legend>Fotos</legend>
+					<legend>Fotos: </legend>
 					<input type="hidden" name="qtd_fotos" value="1" id="qtd_fotos"/>
 					<a href='#' onclick='add_foto();'>Adicionar Foto</a>
 					
@@ -94,9 +94,9 @@ $mensagem_erro =  false;
 
 						<div class='foto' id='foto1'>
 
-							<label>Foto</label><input obg="foto1" name="foto1" type="file" onchange="readURL(this);" /><img id='preview1' src='#' class='preview_foto'/>
+							<label>Foto: </label><input obg="foto1" name="foto1" type="file" onchange="readURL(this);" /><img id='preview1' src='#' class='preview_foto'/>
 
-							<label>Descrição da Foto</label><textarea obg="Descrição da Foto 1" name="descricao_foto1" cols='20' rows='2'></textarea><a href='#' onclick="remover_foto(this);">Remover</a>
+							<label>Descrição da Foto:</label><textarea obg="Descrição da Foto 1" name="descricao_foto1" cols='20' rows='2'></textarea><a href='#' onclick="remover_foto(this);">Remover</a>
 
 						</div>
 					</div>
@@ -274,16 +274,16 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Titulo</label><input obg="Titulo do Evento" name="titulo" type="text" value="<?= $evento['titulo_evento']?>"/>
+				<label>Titulo: </label><input obg="Titulo do Evento" name="titulo" type="text" value="<?= $evento['titulo_evento']?>"/>
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Descrição do Evento</label><input obg="Descrição do Evento" name="descricao_evento" type="text" value="<?= $evento['descricao_evento']?>"/>
+				<label>Descrição do Evento: </label><input obg="Descrição do Evento" name="descricao_evento" type="text" value="<?= $evento['descricao_evento']?>"/>
 				<div class="clear"></div>
 			</li>
 			<li>
 				<fieldset>
-					<legend>Fotos</legend>
+					<legend>Fotos: </legend>
 					<input type="hidden" name="qtd_fotos" value="<?= $tabela2->getLinhasAfetadas()?>" id="qtd_fotos"/>
 					<a href='#' onclick='add_foto();'>Adicionar Foto</a>
 					
@@ -297,9 +297,9 @@ $mensagem_erro =  false;
 
 							<input type='hidden' name="id_foto<?= $i ?>" value="<?=$foto['id'] ?>"/>
 
-							<label>Foto</label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src="<?= RAIZ.$foto['arquivo'] ?>" class='preview_foto'/>
+							<label>Foto: </label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src="<?= RAIZ.$foto['arquivo'] ?>" class='preview_foto'/>
 
-							<label>Descrição da Foto</label><textarea obg="Descrição da Foto <?=$i ?>" name="descricao_foto<?=$i ?>" cols='20' rows='2'><?= $foto['descricao_foto'] ?></textarea><a href='#' onclick="remover_foto(this);">Remover</a>
+							<label>Descrição da Foto: </label><textarea obg="Descrição da Foto <?=$i ?>" name="descricao_foto<?=$i ?>" cols='20' rows='2'><?= $foto['descricao_foto'] ?></textarea><a href='#' onclick="remover_foto(this);">Remover</a>
 
 						</div>
 
