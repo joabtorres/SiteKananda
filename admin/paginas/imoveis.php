@@ -264,6 +264,9 @@ $mensagem_erro =  false;
 				if(isset($_POST['acao'])){
 					if($_POST['acao'] == "salvar"){
 
+						$latitude = ($_POST['latitude']=='') ? '-' : $_POST['latitude'];
+						$longitude = ($_POST['longitude']=='') ? '-' : $_POST['longitude'];
+
 						$tabela->setValor('referencia',$_POST['referencia']);
 						$tabela->setValor('tipo_imovel',$_POST['tipo_imovel']);
 						$tabela->setValor('finalidade',$_POST['finalidade']);
@@ -273,8 +276,8 @@ $mensagem_erro =  false;
 						$tabela->setValor('area_ter',$_POST['area_terreno']);
 						$tabela->setValor('perimetro_l',$_POST['largura']);
 						$tabela->setValor('perimetro_c',$_POST['comprimento']);
-						$tabela->setValor('latitude',$_POST['latitude']);
-						$tabela->setValor('longitude',$_POST['longitude']);
+						$tabela->setValor('latitude',$latitude);
+						$tabela->setValor('longitude',$longitude);
 						$tabela->setValor('suites',$_POST['suites']);
 						$tabela->setValor('banheiros',$_POST['banheiros']);
 						$tabela->setValor('categoria',$_POST['categoria']);
@@ -721,19 +724,23 @@ $mensagem_erro =  false;
 		$tabela = new Objeto('produto');
 		$tabela2 = new Objeto('foto_produto');	
 		$pontos = array();
+		$tabela->addExtras('WHERE `longitude` IS NOT NULL AND `latitude` IS NOT NULL AND `longitude`!="-" AND `latitude`!="-" ');
 		$tabela->selecionarTudo();
+
 		$i = 0;
 
 		foreach ($tabela->retornarDados() as $key => $value) {
 			$pontos[$i]['id'] = $value['id'];
 			$pontos[$i]['latitude'] = $value['latitude'];
 			$pontos[$i]['longitude'] = $value['longitude'];
-			$pontos[$i]['categoria'] = $value['categoria'];
+			$pontos[$i]['tipo_imovel'] = $value['tipo_imovel'];
+			$pontos[$i]['bairro'] = $value['bairro'];
+			$pontos[$i]['link'] = RAIZ.'imovel/'.$value['id'];
 
 			$descricao0 = str_split($value['descricao']);
 			$descricao1 = '';
 			for ($j=0; $j < count($descricao0); $j++) { 
-				if($j==81){
+				if($j==114){
 					$descricao1 .= '...';
 					break;
 				}

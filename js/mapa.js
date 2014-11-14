@@ -3,7 +3,8 @@ var idInfoBoxAberto;
 var infoBox = [];
 var markers = [];
 var marcadores = [];
-var visibles = ['aluguel','venda'];
+var visibles = [];
+var visibles_bairros = [];
 
 function initialize() {	
 	var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
@@ -14,13 +15,11 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-
     map = new google.maps.Map(document.getElementById("mapa"), options);
-
 }
 
 initialize();
-/*
+
 function abrirInfoBox(id, marker) {
 	if (typeof(idInfoBoxAberto) == 'number' && typeof(infoBox[idInfoBoxAberto]) == 'object') {
 		infoBox[idInfoBoxAberto].close();
@@ -38,22 +37,30 @@ function carregarPontos() {
 		
 		$.each(pontos, function(index, ponto) {
 			var ico;
-			if(ponto.categoria=='CASA TERREA')
-				ico = 'imagens/casa1.png'
-			if(ponto.categoria=='APARTAMENTO')
-				ico = 'imagens/marcador5.png'
+
+			if(ponto.tipo_imovel=='CASA A VENDA')
+				ico = 'img/casa_venda.png'
+			else if(ponto.tipo_imovel=='CASA PARA ALUGAR')
+				ico = 'img/casa_aluguel.png'
+			else if(ponto.tipo_imovel=='TERRENO URBANO')
+				ico = 'img/marcador5.png'
+			else if(ponto.tipo_imovel=='TERRENO RURAL')
+				ico = 'img/marcador5.png'
+			else if(ponto.tipo_imovel=='AREAS PORTUARIA')
+				ico = 'img/marcador5.png'
 			else
-				ico = 'imagens/marcador2.png'
+				ico = 'img/marcador5.png'
 
 			var marcador = new google.maps.Marker({
 				position: new google.maps.LatLng(ponto.latitude, ponto.longitude),
-				title: "Meu ponto personalizado! :-D",
+				title: "KANANDA IMOBILIÁRIA - IMÓVEL",
 				icon: ico,
-				categoria: ponto.categoria
+				tipo_imovel: ponto.tipo_imovel,
+				bairro: ponto.bairro
 			});
 			marcadores.push(marcador);
 			var myOptions = {
-				content: "<img src='"+ponto.foto+"' class='foto_mapa'/><p>" + ponto.descricao + "<a href='#' class='link_mapa'> Veja</a></p>",
+				content: "<img src='"+ponto.foto+"' class='foto_mapa'/><p>" + ponto.descricao + "<a href='"+ponto.link+"' class='link_mapa'> Veja</a></p>",
 				pixelOffset: new google.maps.Size(-150, 0)
         	};
 
@@ -81,28 +88,56 @@ function carregarPontos() {
 function ocultar_marcadores(){
 
    for (var i = 0, length = marcadores.length; i < length; i++){
-      	marcadores[i].setVisible(visibles.indexOf(marcadores[i].categoria) !== -1);
+      	marcadores[i].setVisible(visibles.indexOf(marcadores[i].tipo_imovel) !== -1);
+   }
+}
+
+function ocultar_bairros(){
+
+   for (var i = 0, length = marcadores.length; i < length; i++){
+      	marcadores[i].setVisible(visibles_bairros.indexOf(marcadores[i].bairro) !== -1);
    }
 }
 
 function aplica_filtro(obj){
 
-              var $this = $(obj),
-              valor = $this.attr('id');
-              
-               if ($this.val() == 'false'){
-                  // adiciona o objeto a lista de exibição
-                  visibles.push(valor);
-                  $this.val('true');
-               }
-               else {
-                  // remove o objeto da lista de exibição
-                  visibles.splice(visibles.indexOf(valor), 1);
-                  $this.val('false');
-               }
+  	var $this = $(obj),
+  	valor = $this.attr('id');
+  	
+	switch(valor) {
+	    case 'venda':
+	        visibles = ['CASA A VENDA'];
+	        break;
+	    case 'aluguel':
+	        visibles = ['CASA PARA ALUGAR'];
+	        break;
+	    case 'terrenos_rurais':
+	        visibles = ['TERRENO RURAL'];
+	        break;
+	    case 'terrenos_urbanos':
+	        visibles = ['TERRENO URBANO'];
+	        break;
+	    case 'areas_portuarias':
+	        visibles = ['AREAS PORTUARIA'];
+	        break;
+	    default:
+	        visibles = ['LOTEAMENTO'];
+	} 
 
-               ocultar_marcadores();
+   ocultar_marcadores();
 
-            }
+}
 
-carregarPontos();*/
+function aplica_filtro_bairro(obj){
+
+  	var $this = $(obj),
+  	valor =  $this.find(":selected").val();;
+  		
+	visibles_bairros = [valor];	
+
+   	ocultar_bairros();
+
+}
+
+
+carregarPontos();
