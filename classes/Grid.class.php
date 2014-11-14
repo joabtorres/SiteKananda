@@ -189,7 +189,7 @@
 
 					$grid .= "<input type='text' name='pesquisa' value='".((isset($this->itemConsulta['texto_selected']))? $this->itemConsulta['texto_selected'] : '' )."'/>";
 					$grid .= "<input type='hidden' name='pagina_pesquisa' id='pagina_pesquisa' value='1'/>";
-					$grid .= "<input type='submit' value='Pesquisar'/>";
+					$grid .= "<input  class='btn btn-danger' type='submit' value='Pesquisar'/>";
 					$grid .= "</div>";
 				endif;
 				

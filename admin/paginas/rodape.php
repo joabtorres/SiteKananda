@@ -151,12 +151,14 @@
 				      titulo  = document.createElement('input');
 				      titulo.setAttribute('type', 'text');
 				      titulo.setAttribute('name', 'foto'+i);
+				      titulo.setAttribute('class', 'slide-title');
 				      textarea = document.createElement('textarea');
 				      textarea.setAttribute('name','descricao'+i);
-				      textarea.setAttribute('cols','20');
-				      textarea.setAttribute('rows','2');
+				      textarea.setAttribute('class','descrissao-slide');
 				      a = document.createElement('a');
 				      a.setAttribute('href','#');
+				      a.setAttribute('class','btn-danger novo-slide');
+				      a.setAttribute('id','slide-remover');
 				      a.setAttribute('onclick','remover_foto(this);');
 				      a.appendChild(document.createTextNode('Remover'));
 				      div.appendChild(label);

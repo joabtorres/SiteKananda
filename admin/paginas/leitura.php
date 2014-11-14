@@ -14,7 +14,6 @@
 
 
         <!-- Leitura -->
-
         <div id="leitura">
 
 			<?php
@@ -44,5 +43,4 @@
 			?>
 
         </div>
-
         <!-- Fim; Leitura -->

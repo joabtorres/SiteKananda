@@ -87,25 +87,26 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Nome da Empresa: </label><input obg="Nome" name="nome" type="text" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['nome'] : '' ; ?>" />
+				<label>Nome da Empresa: </label><br><input obg="Nome" name="nome" type="text" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['nome'] : '' ; ?>" />
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>E-mail: </label><input class="email" obg="E-mail" name="email" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['email'] : '' ; ?>" type="text" />
+				<label>E-mail: </label><br><input class="email" obg="E-mail" name="email" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['email'] : '' ; ?>" type="text" />
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Titulo do Site: </label><input  obg="Titudo do Site" name="titulo_site" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['titulo_site'] : '' ; ?>" type="text" />
+				<label>Titulo do Site: </label><br><input  obg="Titudo do Site" name="titulo_site" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['titulo_site'] : '' ; ?>" type="text" />
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Logotipo: </label><input name="foto1" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['logotipo'] : '' ; ?>" type="file"  onchange="readURL(this);"/><img id='preview1' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['logotipo'] : '' ; ?>" class='preview_foto'/>
+				<label>Logotipo: </label><br>
+				<input name="foto1" class="seleciona-foto" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['logotipo'] : '' ; ?>" type="file"  onchange="readURL(this);"/>
+				<img id='preview1' class='preview_foto' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['logotipo'] : '' ; ?>" />
 				<div class="clear"></div>
 			</li>
-
 			<li>
-				<input type="submit" class="btn" value="Salvar" />
-				<button class="btn" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input type="submit" class="btn btn-success" value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 			
 			
