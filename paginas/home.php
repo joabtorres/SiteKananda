@@ -97,7 +97,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>venda"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
       </div>
       <?php } ?>
@@ -139,7 +139,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>loteamentos"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
   </div>
   <?php } ?>
@@ -180,7 +180,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>aluguel"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
   </div>
 
@@ -222,7 +222,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>terrenos-urbanos"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
   </div>
 
@@ -265,7 +265,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>terrenos-rurais"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
   </div>
 
@@ -307,7 +307,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>areas-portuarias"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
   </div>
 
