@@ -102,8 +102,7 @@
 				      div.setAttribute('class', 'foto foto-xxx');
 				      div.setAttribute('id', 'foto'+i);
 				      label = document.createElement('label');			      
-				      label.appendChild(document.createTextNode('Foto'));
-				      br1 = document.createElement('br');
+				      label.appendChild(document.createTextNode('Foto: '));
 				      input = document.createElement('input');
 				      input.setAttribute('name','foto'+i);
 				      input.setAttribute('type','file');
@@ -112,24 +111,23 @@
 				      img.setAttribute('id','preview'+i);
 				      img.setAttribute('src','#');
 				      img.setAttribute('class','preview_foto');
-				      br2 = document.createElement('br');
+				      br1 = document.createElement('br');
 				      a = document.createElement('a');
 				      a.setAttribute('class','btn-danger novo-slide');
 				      a.setAttribute('href','#');
 				      a.setAttribute('onclick','remover_foto(this);');
 				      a.appendChild(document.createTextNode('Remover'));
 				      div.appendChild(label);
-				      div.appendChild(br1);
 				      div.appendChild(input);
 				      div.appendChild(img);
-				      div.appendChild(br2);
+				      div.appendChild(br1);
 				      div.appendChild(a);
 				      conteiner.insertBefore(div, conteiner.firstChild);
 
 					}else{
 
 						fotos = document.getElementById("fotos");
-			      		fotos.innerHTML=fotos.innerHTML+"<div class='foto foto_destaque foto-xxx' id='foto"+i+"'><label>Foto</label><br><input name='foto"+i+"' type='file' onchange='readURL(this);' /><img id='preview"+i+"' scr='#' class='preview_foto'/><br><a class='btn-danger novo-slide' href='#' onclick='remover_foto(this);''>Remover</a></div>";
+			      		fotos.innerHTML=fotos.innerHTML+"<div class='foto foto_destaque foto-xxx' id='foto"+i+"'><label>Foto</label><input name='foto"+i+"' type='file' onchange='readURL(this);' /><img id='preview"+i+"' scr='#' class='preview_foto'/><br><a class='btn-danger novo-slide' href='#' onclick='remover_foto(this);''>Remover</a></div>";
 					}
 
 			      	qtd_fotos = document.getElementById("qtd_fotos");
@@ -150,7 +148,7 @@
 				      div.setAttribute('class', 'foto');
 				      div.setAttribute('id', 'foto'+i);
 				      label = document.createElement('label');			      
-				      label.appendChild(document.createTextNode('Foto: '));
+				      label.appendChild(document.createTextNode('Foto'));
 				      input = document.createElement('input');
 				      input.setAttribute('name','foto'+i);
 				      input.setAttribute('type','file');
@@ -183,7 +181,7 @@
 					}else{
 
 						fotos = document.getElementById("fotos");
-			      		fotos.innerHTML=fotos.innerHTML+"<div class='foto foto_destaque' id='foto"+i+"'><label>Foto: </label><input name='foto"+i+"' type='file' onchange='readURL(this);' /><img id='preview"+i+"' scr='#' class='preview_foto'/><input class='slide-title' type='text' name='titulo<?= $i ?>' value='<?=$foto['titulo'] ?>'/><textarea name='descricao<?= $i ?>' class='descrissao-slide'><?= $foto['descricao'] ?></textarea><a href='#' id='slide-remover' class='btn-danger novo-slide' onclick='remover_foto(this);'>Remover</a>";
+			      		fotos.innerHTML=fotos.innerHTML+"<div class='foto foto_destaque' id='foto"+i+"'><label>Foto</label><input name='foto"+i+"' type='file' onchange='readURL(this);' /><img id='preview"+i+"' scr='#' class='preview_foto'/><a href='#' onclick='remover_foto(this);''>Remover</a></div>";
 					}
 
 			      	qtd_fotos = document.getElementById("qtd_fotos");

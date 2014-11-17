@@ -233,7 +233,9 @@ $mensagem_erro =  false;
 					<div id='fotos'>
 						<div class='foto foto-xxx' id='foto1'>
 
-							<label>Foto: </label><br><input obg="foto1" name="foto1" type="file" onchange="readURL(this);" /><img id='preview1' src='#' class='preview_foto'/><br>
+							<label>Foto: </label>
+							<input obg="foto1" name="foto1" type="file" onchange="readURL(this);" />
+							<img id='preview1' src='#' class='preview_foto'/><br>
 
 							<a class="btn-danger novo-slide" href='#' onclick="remover_foto(this);">Remover</a>
 
@@ -581,7 +583,7 @@ $mensagem_erro =  false;
 
 						<input type='hidden' name="id_foto<?= $i ?>" value="<?=$foto['id'] ?>"/>
 
-						<label>Foto: </label><br><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src='<?= RAIZ.$foto['arquivo'] ?>' class='preview_foto'/><br>
+						<label>Foto: </label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src='<?= RAIZ.$foto['arquivo'] ?>' class='preview_foto'/><br>
 
 						<a class="btn-danger novo-slide" href='#' onclick="remover_foto(this);">Remover</a>
 
