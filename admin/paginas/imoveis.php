@@ -216,7 +216,7 @@ $mensagem_erro =  false;
 					<label>Longitude: </label><br><input name="longitude" type='text'>
 					<div class="clear"></div>
 
-					<div id="mapa" style="height: 500px; width: 700px;border: solid 1px">
+					<div id="mapa" class="mapa-imoveis">
 						<!-- Maps API Javascript -->
 				        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
         			</div>
@@ -228,7 +228,7 @@ $mensagem_erro =  false;
 				<fieldset>
 					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="1" id="qtd_fotos"/>
-					<a a class='novo-slide' href='#' onclick='add_slide();'>Adicionar Foto</a>
+					<a class='novo-slide' href='#' onclick='add_slide();'>Adicionar Foto</a>
 					
 					<div id='fotos'>
 						<div class='foto foto-xxx' id='foto1'>
@@ -552,7 +552,7 @@ $mensagem_erro =  false;
 					<label>Longitude: </label><br><input name="longitude" id='longitude' type='text' value="<?= $imovel['longitude']?>" onchange="addMarker();">
 					<div class="clear"></div>
 
-					<div id="mapa" style="height: 500px; min-width: 700px;border: solid 1px;">
+					<div id="mapa" class="mapa-imoveis">
 						<!-- Maps API Javascript -->
 				        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
         			</div>
