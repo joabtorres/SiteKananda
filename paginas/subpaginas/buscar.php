@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/templete.css">
+		<link rel="stylesheet" type="text/css" href="/css/home-index.css">
+<script src="/js/jquery-1.11.0.js"></script>
+
+<!--script que muda a visibilidade dos campos após escolha..-->
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#selecionaImovel").on('change',function(){
+  	
+    if ($("#selecionaImovel").val() == "loteamento" || $("#selecionaImovel").val() == "terrenosUrbanos" || $("#selecionaImovel").val() == "terrenosRurais"  ){
+    	$(".a").css("display", "none");
+    	$(".o").css("display", "block");
+    }
+    else{
+    	$(".a").css("display", "block");
+    	$(".o").css("display", "none");
+    }
+
+    
+  });
+});
+</script><!--fim do script -->
+</head>
+<body>
 		<div class="row" id="filtro-detalhe">
 				<div class="col-xs-12" style="padding-top: 8px;">			
 				<form action="" role="form" class="form">
@@ -15,7 +43,11 @@
 		                  <option value="terrenosRurais">Terrenos Rurais</option>
 		                  </select>
 					    </div>
-					    <div class="form-group col-xs-4">
+					  <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
+					    	<label for="area">Área </label>
+                 		 	<input type="text" class="form-control" id="area" name="tOutros">
+					  </div>
+					    <div class="form-group col-xs-4 a"> <!-- INCLUIR A CLASSE "a", que força o tipo block-->
 					    <label for="selecionaQntQuarto">Quarto: </label>
 					      <select name="select" id="selecionaQntQuarto" class="form-control">
 		                    <option value="qntQuarto-1">1</option>
@@ -25,7 +57,11 @@
 		                    <option value="qntQuarto-5">5</option>
 		                  </select>
 					  </div>
-					  <div class="form-group col-xs-4">
+					  <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
+					    	<label for="comprimento">Comprimento </label> 
+                 		 	<input type="text" class="form-control" id="comprimento" name="tOutros">
+					  </div>
+					  <div class="form-group col-xs-4 a"> <!-- INCLUIR A CLASSE "a", que força o tipo block-->
 					    <label for="selecionaQntSuites">Suite: </label>
 					    <select name="select" id="selecionaQntSuites" class="form-control">
 					            <option value="qntSuite-1">1</option>
@@ -35,7 +71,11 @@
 					            <option value="qntSuite-5">5</option>
 					    </select>
 					  </div>
-					  <div class="form-group col-xs-4">
+					  <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
+					    	<label for="largura">Largura </label>
+                 		 	<input type="text" class="form-control" id="largura" name="tOutros">
+					  </div>
+					  <div class="form-group col-xs-4 a"> <!-- INCLUIR A CLASSE "a", que força o tipo block-->
 					    <label for="selecionaqntGaragem">Garagem: </label>
 					    <select name="select" id="selecionaqntGaragem" class="form-control">
 		                    <option value="qntGaragem-1">1</option>
@@ -80,9 +120,12 @@
                  		 	<input type="text" class="form-control" id="cOutros" name="tOutros">
 					  </div>
 					<div class="form-group col-xs-1">
-						<button type="submit" name="tBuscar" id="cBuscar" class="btn btn-info">Buscar</button>
+						<button type="button" name="tBuscar" id="cBuscar" class="btn btn-info">Buscar</button>
 					</div>
 				</form>
 
 				</div>
 			</div><!--FILTRO-->
+
+			</body>
+			</html>
