@@ -107,102 +107,102 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Referência: </label><input obg="Referência" name="referencia" type="text" />
+				<label>Referência: </label><br><input obg="Referência" name="referencia" type="text" />
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Tipo do Imóvel: </label><select obg="Tipo do Imóvel" name="tipo_imovel"><?= Funcao::gerarArraySelectOptions(array('CASA A VENDA', 'CASA PARA ALUGAR', 'TERRENO URBANO','TERRENO RURAL','AREAS PORTUARIA','LOTEAMENTO'))?></select>
+				<label>Tipo do Imóvel: </label><br><select obg="Tipo do Imóvel" name="tipo_imovel"><?= Funcao::gerarArraySelectOptions(array('CASA A VENDA', 'CASA PARA ALUGAR', 'TERRENO URBANO','TERRENO RURAL','AREAS PORTUARIA','LOTEAMENTO'))?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Categoria: </label><select obg="Categoria do Imóvel" name="categoria"><?= Funcao::gerarArraySelectOptions(array('CASA TERREA', 'SOBRADO','APARTAMENTO','TERRENO'))?></select>
+				<label>Categoria: </label><br><select obg="Categoria do Imóvel" name="categoria"><?= Funcao::gerarArraySelectOptions(array('CASA TERREA', 'SOBRADO','APARTAMENTO','TERRENO'))?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Finalidade: </label><select obg="Finalidade" name="finalidade"><?= Funcao::gerarArraySelectOptions(array('VENDA', 'ALUGUEL' ))?></select>
+				<label>Finalidade: </label><br><select obg="Finalidade" name="finalidade"><?= Funcao::gerarArraySelectOptions(array('VENDA', 'ALUGUEL' ))?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Quartos: </label><input obg="Quantidade de Quatos" name="quartos" type='text'>
+				<label>Quartos: </label><br><input obg="Quantidade de Quatos" name="quartos" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Banheiros: </label><input obg="Quantidade de Banheiros" name="banheiros" type='text'>
+				<label>Banheiros: </label><br><input obg="Quantidade de Banheiros" name="banheiros" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Suítes: </label><input obg="Quantidade de Suítes" name="suites" type='text'>
+				<label>Suítes: </label><br><input obg="Quantidade de Suítes" name="suites" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Vagas na Garagem: </label><input obg="Vagas na Garagem" name="garagem" type='text'>
+				<label>Vagas na Garagem: </label><br><input obg="Vagas na Garagem" name="garagem" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Logradouro: </label><input name="logradouro" type='text'>
+				<label>Logradouro: </label><br><input name="logradouro" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Número: </label><input obg="Número do Imóvel" name="numero" type='text'>
+				<label>Número: </label><br><input obg="Número do Imóvel" name="numero" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Complemento: </label><input name="complemento" type='text'>
+				<label>Complemento: </label><br><input name="complemento" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Bairro: </label><select obg="Bairro" name="bairro"><?= Funcao::gerarArraySelectOptions(array('BELA VISTA', 'BOA ESPERANÇA','BOM JARDIM', 'BOM REMÉDIO', 'CENTRO', 'FLORESTA', 'JARDIM AEROPORTO', 'JARDIM AMÉRICA', 'JARDIM DAS ARARAS', 'JARDIM TAPAJÓS', 'LIBERDADE', 'MARIA MADALENA', 'NOVA ITAITUBA', 'NOVO PARAÍSO', 'PERPÉTUO SOCORRO', 'PIRACANÃ', 'RESIDENCIAL VALE DO PIRACANÃ', 'RESIDENCIAL VIVA ITAITUBA' , 'RESIDENCIAL WIRLAND FREIRE', 'SANTO ANTÔNIO', 'SÃO FRANCISCO', 'SÃO JOSÉ', 'VALE DO TAPAJÓS', 'VALMIRLÂNDIA', 'VITÓRIA-RÉGIA'))?></select>
+				<label>Bairro: </label><br><select obg="Bairro" name="bairro"><?= Funcao::gerarArraySelectOptions(array('BELA VISTA', 'BOA ESPERANÇA','BOM JARDIM', 'BOM REMÉDIO', 'CENTRO', 'FLORESTA', 'JARDIM AEROPORTO', 'JARDIM AMÉRICA', 'JARDIM DAS ARARAS', 'JARDIM TAPAJÓS', 'LIBERDADE', 'MARIA MADALENA', 'NOVA ITAITUBA', 'NOVO PARAÍSO', 'PERPÉTUO SOCORRO', 'PIRACANÃ', 'RESIDENCIAL VALE DO PIRACANÃ', 'RESIDENCIAL VIVA ITAITUBA' , 'RESIDENCIAL WIRLAND FREIRE', 'SANTO ANTÔNIO', 'SÃO FRANCISCO', 'SÃO JOSÉ', 'VALE DO TAPAJÓS', 'VALMIRLÂNDIA', 'VITÓRIA-RÉGIA'))?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Cidade: </label><select obg="Cidade" name="cidade"><?= Funcao::gerarArraySelectOptions(array('ITAITUBA' ))?></select>
+				<label>Cidade: </label><br><select obg="Cidade" name="cidade"><?= Funcao::gerarArraySelectOptions(array('ITAITUBA' ))?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>UF: </label><select obg="Estado" name="uf"><?= Funcao::gerarArraySelectOptions(array('PA' ))?></select>
+				<label>UF: </label><br><select obg="Estado" name="uf"><?= Funcao::gerarArraySelectOptions(array('PA' ))?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Área Edificada: </label><input obg="Área edificada" class='area' name="area_edificada" type='text'>
+				<label>Área Edificada: </label><br><input obg="Área edificada" class='area' name="area_edificada" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Área do Terreno: </label><input obg="Área do Terreno" class='area' name="area_terreno" type='text'>
+				<label>Área do Terreno: </label><br><input obg="Área do Terreno" class='area' name="area_terreno" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Largura: </label><input obg="Largura" name="largura" class='metros_medida' type='text'>
+				<label>Largura: </label><br><input obg="Largura" name="largura" class='metros_medida' type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Comprimento: </label><input obg="Comprimento" class='metros_medida' name="comprimento" type='text'>
+				<label>Comprimento: </label><br><input obg="Comprimento" class='metros_medida' name="comprimento" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Video: </label><input name="video" type='text'>
+				<label>Video: </label><br><input name="video" type='text'>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Descrição: </label><textarea obg="Descrição do imóvel" name="descricao"></textarea>
+				<label>Descrição: </label><br><textarea class="descrissao-slide" obg="Descrição do imóvel" name="descricao"></textarea>
 				<div class="clear"></div>
 			</li>
 
@@ -210,10 +210,10 @@ $mensagem_erro =  false;
 				<fieldset>
 					<legend>Mapa</legend>
 
-					<label>Latitude: </label><input name="latitude" type='text'>
+					<label>Latitude: </label><br><input name="latitude" type='text'>
 					<div class="clear"></div>
 			
-					<label>Longitude: </label><input name="longitude" type='text'>
+					<label>Longitude: </label><br><input name="longitude" type='text'>
 					<div class="clear"></div>
 
 					<div id="mapa" style="height: 500px; width: 700px;border: solid 1px">
@@ -228,14 +228,14 @@ $mensagem_erro =  false;
 				<fieldset>
 					<legend>Fotos</legend>
 					<input type="hidden" name="qtd_fotos" value="1" id="qtd_fotos"/>
-					<a href='#' onclick='add_slide();'>Adicionar Foto</a>
+					<a a class='novo-slide' href='#' onclick='add_slide();'>Adicionar Foto</a>
 					
 					<div id='fotos'>
-						<div class='foto' id='foto1'>
+						<div class='foto foto-xxx' id='foto1'>
 
-							<label>Foto: </label><input obg="foto1" name="foto1" type="file" onchange="readURL(this);" /><img id='preview1' src='#' class='preview_foto'/>
+							<label>Foto: </label><br><input obg="foto1" name="foto1" type="file" onchange="readURL(this);" /><img id='preview1' src='#' class='preview_foto'/><br>
 
-							<a href='#' onclick="remover_foto(this);">Remover</a>
+							<a class="btn-danger novo-slide" href='#' onclick="remover_foto(this);">Remover</a>
 
 						</div>
 					</div>
@@ -244,8 +244,8 @@ $mensagem_erro =  false;
 			</li>
 
 			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input class="btn btn-success" type="submit" value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 
 		</ul>
@@ -443,102 +443,102 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Referência: </label><input obg="Referência" name="referencia" type="text" value="<?= $imovel['referencia']?>"/>
+				<label>Referência: </label><br><input obg="Referência" name="referencia" type="text" value="<?= $imovel['referencia']?>"/>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Tipo do Imóvel: </label><select obg="Tipo do Imóvel" name="tipo_imovel"><?= Funcao::gerarArraySelectOptions(array('CASA A VENDA', 'CASA PARA ALUGAR', 'TERRENO URBANO','TERRENO RURAL','AREAS PORTUARIA','LOTEAMENTO'), $imovel['tipo_imovel'])?></select>
+				<label>Tipo do Imóvel: </label><br><select obg="Tipo do Imóvel" name="tipo_imovel"><?= Funcao::gerarArraySelectOptions(array('CASA A VENDA', 'CASA PARA ALUGAR', 'TERRENO URBANO','TERRENO RURAL','AREAS PORTUARIA','LOTEAMENTO'), $imovel['tipo_imovel'])?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Categoria: </label><select obg="Categoria do Imóvel" name="categoria"><?= Funcao::gerarArraySelectOptions(array('CASA TERREA', 'SOBRADO','APARTAMENTO','TERRENO'), $imovel['categoria'])?></select>
+				<label>Categoria: </label><br><select obg="Categoria do Imóvel" name="categoria"><?= Funcao::gerarArraySelectOptions(array('CASA TERREA', 'SOBRADO','APARTAMENTO','TERRENO'), $imovel['categoria'])?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Finalidade: </label><select obg="Finalidade" name="finalidade"><?= Funcao::gerarArraySelectOptions(array('VENDA', 'ALUGUEL'), $imovel['finalidade'])?></select>
+				<label>Finalidade: </label><br><select obg="Finalidade" name="finalidade"><?= Funcao::gerarArraySelectOptions(array('VENDA', 'ALUGUEL'), $imovel['finalidade'])?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Quartos: </label><input obg="Quantidade de Quatos" name="quartos" type='text' value="<?= $imovel['quartos']?>">
+				<label>Quartos: </label><br><input obg="Quantidade de Quatos" name="quartos" type='text' value="<?= $imovel['quartos']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Banheiros: </label><input obg="Quantidade de Banheiros" name="banheiros" type='text' value="<?= $imovel['banheiros']?>">
+				<label>Banheiros: </label><br><input obg="Quantidade de Banheiros" name="banheiros" type='text' value="<?= $imovel['banheiros']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Suítes: </label><input obg="Quantidade de Suítes" name="suites" type='text' value="<?= $imovel['suites']?>">
+				<label>Suítes: </label><br><input obg="Quantidade de Suítes" name="suites" type='text' value="<?= $imovel['suites']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Vagas na Garagem: </label><input obg="Vagas na Garagem" name="garagem" type='text' value="<?= $imovel['garagem']?>">
+				<label>Vagas na Garagem: </label><br><input obg="Vagas na Garagem" name="garagem" type='text' value="<?= $imovel['garagem']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Logradouro: </label><input name="logradouro" type='text' value="<?= $imovel['logradouro']?>">
+				<label>Logradouro: </label><br><input name="logradouro" type='text' value="<?= $imovel['logradouro']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Número: </label><input obg="Número do Imóvel" name="numero" type='text' value="<?= $imovel['num']?>">
+				<label>Número: </label><br><input obg="Número do Imóvel" name="numero" type='text' value="<?= $imovel['num']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Complemento: </label><input name="complemento" type='text' value="<?= $imovel['complemento']?>">
+				<label>Complemento: </label><br><input name="complemento" type='text' value="<?= $imovel['complemento']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Bairro: </label><select obg="Bairro" name="bairro"><?= Funcao::gerarArraySelectOptions(array('BELA VISTA', 'BOA ESPERANÇA','BOM JARDIM', 'BOM REMÉDIO', 'CENTRO', 'FLORESTA', 'JARDIM AEROPORTO', 'JARDIM AMÉRICA', 'JARDIM DAS ARARAS', 'JARDIM TAPAJÓS', 'LIBERDADE', 'MARIA MADALENA', 'NOVA ITAITUBA', 'NOVO PARAÍSO', 'PERPÉTUO SOCORRO', 'PIRACANÃ', 'RESIDENCIAL VALE DO PIRACANÃ', 'RESIDENCIAL VIVA ITAITUBA' , 'RESIDENCIAL WIRLAND FREIRE', 'SANTO ANTÔNIO', 'SÃO FRANCISCO', 'SÃO JOSÉ', 'VALE DO TAPAJÓS', 'VALMIRLÂNDIA', 'VITÓRIA-RÉGIA' ), $imovel['bairro'])?></select>
+				<label>Bairro: </label><br><select obg="Bairro" name="bairro"><?= Funcao::gerarArraySelectOptions(array('BELA VISTA', 'BOA ESPERANÇA','BOM JARDIM', 'BOM REMÉDIO', 'CENTRO', 'FLORESTA', 'JARDIM AEROPORTO', 'JARDIM AMÉRICA', 'JARDIM DAS ARARAS', 'JARDIM TAPAJÓS', 'LIBERDADE', 'MARIA MADALENA', 'NOVA ITAITUBA', 'NOVO PARAÍSO', 'PERPÉTUO SOCORRO', 'PIRACANÃ', 'RESIDENCIAL VALE DO PIRACANÃ', 'RESIDENCIAL VIVA ITAITUBA' , 'RESIDENCIAL WIRLAND FREIRE', 'SANTO ANTÔNIO', 'SÃO FRANCISCO', 'SÃO JOSÉ', 'VALE DO TAPAJÓS', 'VALMIRLÂNDIA', 'VITÓRIA-RÉGIA' ), $imovel['bairro'])?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Cidade: </label><select obg="Cidade" name="cidade"><?= Funcao::gerarArraySelectOptions(array('ITAITUBA' ), $imovel['cidade'])?></select>
+				<label>Cidade: </label><br><select obg="Cidade" name="cidade"><?= Funcao::gerarArraySelectOptions(array('ITAITUBA' ), $imovel['cidade'])?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>UF: </label><select obg="Estado" name="uf"><?= Funcao::gerarArraySelectOptions(array('PA' ), $imovel['uf'])?></select>
+				<label>UF: </label><br><select obg="Estado" name="uf"><?= Funcao::gerarArraySelectOptions(array('PA' ), $imovel['uf'])?></select>
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Área Edificada: </label><input obg="Área edificada" class='area' name="area_edificada" type='text' value="<?= $imovel['area_edi']?>">
+				<label>Área Edificada: </label><br><input obg="Área edificada" class='area' name="area_edificada" type='text' value="<?= $imovel['area_edi']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Área do Terreno: </label><input obg="Área do Terreno" class='area' name="area_terreno" type='text' value="<?= $imovel['area_ter']?>">
+				<label>Área do Terreno: </label><br><input obg="Área do Terreno" class='area' name="area_terreno" type='text' value="<?= $imovel['area_ter']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Largura: </label><input obg="Largura" name="largura" class='metros_medida' type='text' value="<?= $imovel['perimetro_l']?>">
+				<label>Largura: </label><br><input obg="Largura" name="largura" class='metros_medida' type='text' value="<?= $imovel['perimetro_l']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Comprimento: </label><input obg="Comprimento" name="comprimento" class='metros_medida' type='text' value="<?= $imovel['perimetro_c']?>">
+				<label>Comprimento: </label><br><input obg="Comprimento" name="comprimento" class='metros_medida' type='text' value="<?= $imovel['perimetro_c']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Video: </label><input name="video" type='text' value="<?= $imovel['video']?>">
+				<label>Video: </label><br><input name="video" type='text' value="<?= $imovel['video']?>">
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<label>Descrição: </label><textarea obg="Descrição do imóvel" name="descricao"><?= $imovel['descricao']?></textarea>
+				<label>Descrição: </label><br><textarea class="descrissao-slide" obg="Descrição do imóvel" name="descricao"><?= $imovel['descricao']?></textarea>
 				<div class="clear"></div>
 			</li>
 
@@ -546,10 +546,10 @@ $mensagem_erro =  false;
 				<fieldset>
 					<legend>Mapa</legend>
 
-					<label>Latitude: </label><input name="latitude" id='latitude' type='text' value="<?= $imovel['latitude']?>" onchange="addMarker();">
+					<label>Latitude: </label><br><input name="latitude" id='latitude' type='text' value="<?= $imovel['latitude']?>" onchange="addMarker();">
 					<div class="clear"></div>
 			
-					<label>Longitude: </label><input name="longitude" id='longitude' type='text' value="<?= $imovel['longitude']?>" onchange="addMarker();">
+					<label>Longitude: </label><br><input name="longitude" id='longitude' type='text' value="<?= $imovel['longitude']?>" onchange="addMarker();">
 					<div class="clear"></div>
 
 					<div id="mapa" style="height: 500px; width: 700px;border: solid 1px">
@@ -564,7 +564,7 @@ $mensagem_erro =  false;
 				<fieldset>
 					<legend>Fotos</legend>
 					<input type="hidden" name="qtd_fotos" value="<?= $tabela2->getLinhasAfetadas()?>" id="qtd_fotos"/>
-					<a href='#' onclick='add_slide();'>Adicionar Foto</a>
+					<a class='novo-slide' href='#' onclick='add_slide();'>Adicionar Foto</a>
 					
 					<div id='fotos'>
 					<?php
@@ -577,13 +577,13 @@ $mensagem_erro =  false;
 								$destaque = '';
 					?>
 
-					<div class='foto <?= $destaque ?>' id="foto<?=$i ?>">
+					<div class='foto <?= $destaque ?> foto-xxx' id="foto<?=$i ?>">
 
 						<input type='hidden' name="id_foto<?= $i ?>" value="<?=$foto['id'] ?>"/>
 
-						<label>Foto: </label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src='<?= RAIZ.$foto['arquivo'] ?>' class='preview_foto'/>
+						<label>Foto: </label><br><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src='<?= RAIZ.$foto['arquivo'] ?>' class='preview_foto'/><br>
 
-						<a href='#' onclick="remover_foto(this);">Remover</a>
+						<a class="btn-danger novo-slide" href='#' onclick="remover_foto(this);">Remover</a>
 
 					</div>
 
@@ -597,8 +597,8 @@ $mensagem_erro =  false;
 			</li>
 
 			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input class="btn btn-success" type="submit" value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 
 		</ul>

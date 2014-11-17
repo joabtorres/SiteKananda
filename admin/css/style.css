@@ -263,6 +263,10 @@ div.mensagem_sucesso{
 	padding: 2px 5px;
 	margin: 10px;
 	height: 30px;
+}#pesquisa_grid input,select{
+	padding: 2px 5px;
+	margin: 10px;
+	height: 30px;
 }
 
 input.btn:hover, button.btn:hover, #grid a.novo_registro_grid:hover{
@@ -323,8 +327,8 @@ color: white;
 }
 
 form#novo-administrador ul li, form#alterar-administrador ul li{
-padding: 5px;
 padding-left: 10px;
+padding-top: 5px;
 }
 form#novo-administrador ul li input,form#alterar-administrador ul li input{
 	font-size: 12pt;
@@ -352,13 +356,17 @@ div.foto{
 	border-radius: 10px;
 	margin: 10px;
 }
-form#alterar-administrador input.slide-title{
+div.foto-xxx{
+	height: 160px;
+	padding: 10px;
+}
+form#alterar-administrador input.slide-title,form#novo-administrador input.slide-title{
 	width: 450px;
 	margin: 5px;
 	margin-top: 7px;
 	display: block;
 }
-form#alterar-administrador textarea.descrissao-slide{
+form#alterar-administrador textarea.descrissao-slide, form#novo-administrador textarea.descrissao-slide{
 	margin: 5px;
 	display: block;
 min-height: 150px; min-width: 450px; max-height: 150px; max-width: 450px;
@@ -379,7 +387,7 @@ a#slide-remover{
 	border: dashed 1px #000;
 	float:left;
 }
-form#alterar-administrador input[type="file"]{
+form#alterar-administrador input[type="file"], form#novo-administrador input[type="file"]{
 	border-color: rgba(0,0,0,0);
 	width: auto;
 }
