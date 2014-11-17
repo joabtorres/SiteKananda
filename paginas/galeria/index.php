@@ -68,7 +68,10 @@
 
               $i = 1;
               foreach ($evento_obj->retornarDados() as $key => $value) {
-                  
+                
+                if($i > 6)
+                  break;
+
                 if((($i - 1) % 3 == 0) || $i == 1)
                   echo "<div class='row'>";
 
@@ -80,7 +83,7 @@
               
           ?>
               <div class="col-xs-4">
-                  <a href="">
+                  <a href="<?= RAIZ ?>galeria/<?= $value['id']?>">
                       <div class="home-imovel">
                         <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
                         <div class="home-legenda-imovel">
@@ -103,93 +106,30 @@
               echo "Não há eventos disponíveis.";
             }
 
+          $evento_obj->limparDados(); 
+          $evento_obj->selecionarTudo();
+
+          if($evento_obj->getLinhasAfetadas()>6){
+
+            $qtd_paginas = ceil($evento_obj->getLinhasAfetadas() / 6);
+              
+            if(isset($pagina[2]) && is_numeric($pagina[2]))
+              $pagina_atual = $pagina[2];
+            else
+              $pagina_atual = 1;
+
+
           ?>
-
-            <!-- <div class="row">
-                <div class="col-xs-4">
-                  <a href="">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ ?>/img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                            <p class="class-titulo">Lorem Ipsum</p>
-                           <p class="class-data">14 de outubro de 2014</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ ?>/img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                            <p class="class-titulo">Lorem Ipsum</p>
-                           <p class="class-data">14 de outubro de 2014</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ ?>/img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                            <p class="class-titulo">Lorem Ipsum</p>
-                           <p class="class-data">14 de outubro de 2014</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-4">
-                  <a href="">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ ?>/img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                            <p class="class-titulo">Lorem Ipsum</p>
-                           <p class="class-data">14 de outubro de 2014</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ ?>/img/venda-residencia.png" alt="...">
-                        <div class="home-legenda-imovel">
-                            <p class="class-titulo">Lorem Ipsum</p>
-                           <p class="class-data">14 de outubro de 2014</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-                <div class="col-xs-4">
-                  <a href="">
-                      <div class="home-imovel">
-                        <img src="<?= RAIZ ?>/img/venda-residencia.png" >
-                        <div class="home-legenda-imovel">
-                           <p class="class-titulo">Lorem Ipsum</p>
-							             <p class="class-data">14 de outubro de 2014</p>
-                        </div>
-                      </div>
-                   </a>
-                </div>
-            </div>
- -->
             
 				<!--PAGINAÇÃO-->
 	            	<div class="row">
 	            		<div class="col-xs-12">
-	            			<ul class="pagination" id="imovel-paginacao">
-							  <li><a href="#">&laquo;</a></li>
-							  <li class="active"><a href="#">1</a></li>
-							  <li><a href="#">2</a></li>
-							  <li><a href="#">3</a></li>
-							  <li><a href="#">4</a></li>
-							  <li><a href="#">5</a></li>
-							  <li><a href="#">&raquo;</a></li>
-							</ul>
-	            		</div>
+
+                    <?php echo Funcao::gerarPaginacao(RAIZ.'galeria/page', $qtd_paginas, $pagina_atual, 'id="imovel-paginacao"', 'class="pagination"' ) ?>
+
 	            	</div>
+	            </div>
+        <?php
+        }
+        ?>
       </div><!--FIM CATEGORIA DE IMOVEL-->

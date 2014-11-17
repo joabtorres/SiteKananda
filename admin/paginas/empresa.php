@@ -104,7 +104,7 @@ $mensagem_erro =  false;
 				<img id='preview1' class='preview_foto' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['logotipo'] : '' ; ?>" />
 				<div class="clear"></div>
 			</li>
-			<li>
+			<li style="display: block; margin-top: 90px;">
 				<input type="submit" class="btn btn-success" value="Salvar" />
 				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>

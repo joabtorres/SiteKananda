@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="<?= RAIZ ?>css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="<?= RAIZ ?>css/bootstrap/bootstrap-theme.min.css">
   <link rel="stylesheet" href="<?= RAIZ ?>css/templete.css">
+  <link rel="stylesheet" href="<?= RAIZ ?>css/mapa-google.css">
   <script type="text/javascript" src="<?= RAIZ ?>js/jquery-1.11.0.js"></script>
 </head>
 <body>

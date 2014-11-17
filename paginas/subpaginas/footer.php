@@ -24,25 +24,25 @@
         </div>
         <div class="col-xs-4">
           <h3>CONTATOS</h3>
-          <form action="" class="form form-horizontal">
+          <form onsubmit='return valida_form();' action="<?= RAIZ ?>contato" class="form form-horizontal" method="post"  id="contato-form" autocomplete="off" enctype="multipart/form-data">
             <div class="form-group">
               <div class="col-xs-12">
-                <input type="text" class="form-control" id="cNome" name="tNome" placeholder="Nome Completo">
+                <input type="text" obg="Nome" class="form-control" id="cNome" name="tNome" placeholder="Nome Completo">
               </div>
             </div>
             <div class="form-group">
                 <div class="col-xs-12">
-                  <input type="tel" class="form-control" id="cTelefone" name="tTelefone" placeholder="Telefone">
+                  <input type="tel" obg="Telefone" class="form-control" id="cTelefone" name="tTelefone" placeholder="Telefone">
                 </div>
               </div>
             <div class="form-group">
               <div class="col-xs-12">
-                 <input type="tel" class="form-control" id="cEmail" name="tEmail" placeholder="E-mail">
+                 <input type="tel" obg="Email" class="form-control" id="cEmail" name="tEmail" placeholder="E-mail">
               </div>
              </div>
             <div class="form-group">
                 <div class="col-xs-12">
-                  <textarea class="form-control" id="cMensagem" name="tMensagem" rows="3" placeholder="Mensagem" style="margin: 0px; max-height: 80px; max-width: 285px;"></textarea>
+                  <textarea obg="Mensagem" class="form-control" id="cMensagem" name="tMensagem" rows="3" placeholder="Mensagem" style="margin: 0px; max-height: 80px; max-width: 285px;"></textarea>
                 </div>
               </div>
               <div class="form-group">
@@ -82,6 +82,41 @@
           $('#cMapa').css('display', 'block');
         }else{
           $('#cMapa').css('display', 'none');
+        }
+
+      }
+
+      $('label.active').on('click',function(e){
+                alert('sd');
+         var $this = $(this),
+             valor = $this.val();
+        
+         if ($this.is(':checked')){
+            visibles.push(valor);
+         }
+         else {
+            visibles.splice(visibles.indexOf(valor), 1);
+         }
+
+         ocultar_marcadores();
+      });
+
+      valida_form = function(){
+
+        if($('#cNome').val()==''){
+          alert('Preencha o Nome!');
+          return false;
+        }else if($('#cTelefone').val()==''){
+          alert('Preencha o Telefone!');
+          return false;
+        }else if($('#cEmail').val()==''){
+          alert('Preencha o E-mail!');
+          return false;
+        }else if($('#cMensagem').val()==''){
+          alert('Preencha a Mensagem!');
+          return false;
+        }else{
+          return true;
         }
 
       }

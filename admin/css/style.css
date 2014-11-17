@@ -165,7 +165,6 @@ padding: 0;
 padding-left: 10px;
 }
 .subtitulo {
-	margin-top: 4px;
 	height: 20px;
 	padding: 6px;
 	color: white;
@@ -259,10 +258,23 @@ div.mensagem_sucesso{
 /******************************************************************
 				MENU ADMINISTRATIVO
 *******************************************************************/
-#pesquisa_grid input,select{
-	padding: 2px 5px;
+#pesquisa_grid input[type="text"]{
+	font-size: 11pt;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.4);
+	width: 300px;
+	padding: 5px 5px;
 	margin: 10px;
-	height: 30px;
+}
+#pesquisa_grid select{
+	font-size: 11pt;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.4);
+	padding: 0px 5px;
+	margin: 10px;
+}
+select option{
+padding: 4px;
 }
 
 input.btn:hover, button.btn:hover, #grid a.novo_registro_grid:hover{
@@ -323,18 +335,24 @@ color: white;
 }
 
 form#novo-administrador ul li, form#alterar-administrador ul li{
-padding: 5px;
 padding-left: 10px;
+padding-top: 5px;
 }
 form#novo-administrador ul li input,form#alterar-administrador ul li input{
-	font-size: 12pt;
+	font-size: 11pt;
 	border-radius: 5px;
 	border: 1px solid rgba(0,0,0,0.4);
 	width: 300px;
 	padding: 5px;
 	margin-top: 5px;
 }
-
+form#novo-administrador ul li select, form#alterar-administrador ul li select{
+	font-size: 11pt;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.4);
+	width: 300px;
+	margin-top: 5px;
+}
 form#novo-administrador ul li input.btn, form#alterar-administrador ul li input.btn{
 	float: none;
 	height: auto;
@@ -352,16 +370,22 @@ div.foto{
 	border-radius: 10px;
 	margin: 10px;
 }
-form#alterar-administrador input.slide-title{
+div.foto-xxx{
+	height: 160px;
+	padding: 10px;
+}
+form#alterar-administrador input.slide-title,form#novo-administrador input.slide-title{
 	width: 450px;
 	margin: 5px;
 	margin-top: 7px;
 	display: block;
 }
-form#alterar-administrador textarea.descrissao-slide{
+
+form#alterar-administrador textarea.descrissao-slide, form#novo-administrador textarea.descrissao-slide{
 	margin: 5px;
 	display: block;
-min-height: 150px; min-width: 450px; max-height: 150px; max-width: 450px;
+	min-height: 150px; min-width: 450px; max-height: 150px; max-width: 450px;
+	padding: 10px;
 }
 a#slide-remover{
 	display: block;
@@ -379,12 +403,29 @@ a#slide-remover{
 	border: dashed 1px #000;
 	float:left;
 }
-form#alterar-administrador input[type="file"]{
+form#alterar-administrador input[type="file"], form#novo-administrador input[type="file"]{
 	border-color: rgba(0,0,0,0);
 	width: auto;
 }
+form#alterar-administrador input[type="text"]:focus, form#novo-administrador input[type="text"]:focus, form#alterar-administrador input[type="email"]:focus, form#novo-administrador input[type="email"]:focus, form#alterar-administrador input[type="password"]:focus, form#novo-administrador input[type="password"]:focus, form#alterar-administrador textarea.descrissao-slide:focus, form#novo-administrador textarea.descrissao-slide:focus, #pesquisa_grid input[type="text"]:focus{
+	border:  thin solid  #678b97 ;
+	box-shadow: 0 0px  10px #678b97;
+	-webkit-box-shadow: 0 0px  10px #678b97;
+	-moz-box-shadow: 0 0px  10px #678b97;
+}
 form#novo-administrador ul,form#alterar-administrador ul{
 	padding-bottom: 100px;
+}
+
+form#novo-administrador ul li fieldset ,form#alterar-administrador ul li fieldset{
+	border-radius: 10px;
+	border: 2px groove #2998DB;
+	margin:20px;
+	padding: 5px 10px;
+	margin-left: 0;
+}form#novo-administrador ul li fieldset legend,form#alterar-administrador ul li fieldset legend{
+	padding:  0 10px;
+	font-size: 14pt;
 }
 form#novo-administrador ul li input.seleciona-foto, form#alterar-administrador ul li input.seleciona-foto{
 	border-color: rgba(0,0,0,0);
@@ -405,9 +446,9 @@ form#novo-administrador ul li input.seleciona-foto, form#alterar-administrador u
 
 .campo_txt:focus{
 	border:  thin solid  #678b97 ;
-	box-shadow: 0 2px  16px #678b97;
-	-webkit-box-shadow: 0 2px  10px #678b97;
-	-moz-box-shadow: 0 2px  10px #678b97;
+	box-shadow: 0 0px  10px #678b97;
+	-webkit-box-shadow: 0 0px  10px #678b97;
+	-moz-box-shadow: 0 0px  10px #678b97;
 }
 
 .fleft{

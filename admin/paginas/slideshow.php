@@ -165,7 +165,7 @@ $mensagem_erro =  false;
 							<input class="slide-title" type='text' name="titulo<?= $i ?>" value="<?=$foto['titulo'] ?>"/>
 							<br>
 							<textarea name="descricao<?= $i ?>" class="descrissao-slide"><?= $foto['descricao'] ?></textarea>
-							<a href='#' id="slide-remover"class="btn-danger novo-slide" onclick="remover_foto(this);">Remover</a>
+							<a href='#' id="slide-remover" class="btn-danger novo-slide" onclick="remover_foto(this);">Remover</a>
 
 						</div>
 
@@ -178,8 +178,8 @@ $mensagem_erro =  false;
 		
 
 			<li>
-				<input class="btn btn-success"type="submit" value="Salvar" />
-				<button class="btn btn-danger"onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input class="btn btn-success" type="submit" value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 			
 			
