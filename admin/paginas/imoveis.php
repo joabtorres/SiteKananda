@@ -208,7 +208,7 @@ $mensagem_erro =  false;
 
 			<li>
 				<fieldset>
-					<legend>Mapa</legend>
+					<legend>Mapa </legend>
 
 					<label>Latitude: </label><br><input name="latitude" type='text'>
 					<div class="clear"></div>
@@ -226,7 +226,7 @@ $mensagem_erro =  false;
 
 			<li>
 				<fieldset>
-					<legend>Fotos</legend>
+					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="1" id="qtd_fotos"/>
 					<a a class='novo-slide' href='#' onclick='add_slide();'>Adicionar Foto</a>
 					
@@ -544,7 +544,7 @@ $mensagem_erro =  false;
 
 			<li>
 				<fieldset>
-					<legend>Mapa</legend>
+					<legend>Mapa </legend>
 
 					<label>Latitude: </label><br><input name="latitude" id='latitude' type='text' value="<?= $imovel['latitude']?>" onchange="addMarker();">
 					<div class="clear"></div>
@@ -552,7 +552,7 @@ $mensagem_erro =  false;
 					<label>Longitude: </label><br><input name="longitude" id='longitude' type='text' value="<?= $imovel['longitude']?>" onchange="addMarker();">
 					<div class="clear"></div>
 
-					<div id="mapa" style="height: 500px; width: 700px;border: solid 1px">
+					<div id="mapa" style="height: 500px; min-width: 700px;border: solid 1px;">
 						<!-- Maps API Javascript -->
 				        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
         			</div>
@@ -562,7 +562,7 @@ $mensagem_erro =  false;
 
 			<li>
 				<fieldset>
-					<legend>Fotos</legend>
+					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="<?= $tabela2->getLinhasAfetadas()?>" id="qtd_fotos"/>
 					<a class='novo-slide' href='#' onclick='add_slide();'>Adicionar Foto</a>
 					

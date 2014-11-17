@@ -88,7 +88,7 @@ $mensagem_erro =  false;
 			</li>
 			<li>
 				<fieldset>
-					<legend>Fotos: </legend>
+					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="1" id="qtd_fotos"/>
 					<a class='novo-slide' href='#' onclick='add_foto();'>Adicionar Foto</a>
 					
@@ -289,7 +289,7 @@ $mensagem_erro =  false;
 			</li>
 			<li>
 				<fieldset>
-					<legend>Fotos: </legend>
+					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="<?= $tabela2->getLinhasAfetadas()?>" id="qtd_fotos"/>
 					<a class='novo-slide' href='#' onclick='add_foto();'>Adicionar Foto</a>
 					
