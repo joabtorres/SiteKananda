@@ -165,7 +165,7 @@ padding: 0;
 padding-left: 10px;
 }
 .subtitulo {
-	height: 20px;
+	height: 38px;
 	padding: 6px;
 	color: white;
 	background: rgb(81, 188, 213);
@@ -220,6 +220,7 @@ padding-left: 10px;
 	-moz-transition: transform 0.3s;
 	transition: transform 0.3s;
 	-webkit-transition: transform 0.3s;
+	font-size: 11pt;
 }
 #conteudo-geral #sidebar #menu-lateral li:hover {
 	background-color: #2382D3;
@@ -280,6 +281,9 @@ padding: 4px;
 input.btn:hover, button.btn:hover, #grid a.novo_registro_grid:hover{
 	background: #017cc2;
 }
+/************************************************
+			TABELAS
+************************************************/
 #grid table{
 	background: rgb(241, 254, 255);
 	margin: 10px;
@@ -333,7 +337,9 @@ color: white;
 	background-color: #D9534F;
 	border-color: #D43F3A;
 }
-
+/****************************************************************
+				FORMULARIOS
+**********************************************************/
 form#novo-administrador ul li, form#alterar-administrador ul li{
 padding-left: 10px;
 padding-top: 5px;
@@ -362,7 +368,7 @@ form#novo-administrador ul li input.btn, form#alterar-administrador ul li input.
 }
 
 /**************************************************************
-		SLIDE SHOW
+		SLIDE SHOW, IMOVEIS
 ****************************************************************/
 div.foto{
 	background: none repeat scroll 0% 0% rgba(23, 172, 204, 0.24);
@@ -373,6 +379,12 @@ div.foto{
 div.foto-xxx{
 	height: 160px;
 	padding: 10px;
+}
+/********************
+FOTO DESTAQUE
+*******************/
+div.foto_destaque{
+	background: rgba(41, 152, 219, 0.66);
 }
 form#alterar-administrador input.slide-title,form#novo-administrador input.slide-title{
 	width: 450px;
@@ -391,16 +403,25 @@ a#slide-remover{
 	display: block;
 	width: 100px;
 }
-
+/*********************************************
+				MAPA
+*********************************************/
+div.mapa-imoveis{
+	height: 400px; min-width: 700px;border: solid 1px; border-radius: 4px; margin: 10px;
+}
 /***********************************************************************
-
+			DIVERSOS
 ***********************************************************************/
+
 .preview_foto{
 	display: block;
 	margin: 10px 5px;
+	margin-right: 10px;
 	width:auto;
+	min-width:100px;
 	height:120px;
-	border: dashed 1px #000;
+	border: dashed 1px rgba(0,0,0,0.2);
+	border-radius: 5px;
 	float:left;
 }
 form#alterar-administrador input[type="file"], form#novo-administrador input[type="file"]{
@@ -458,6 +479,7 @@ form#novo-administrador ul li input.seleciona-foto, form#alterar-administrador u
 .fright{
 	float: right;
 }
+
 
 /*Múltiplos estilos*/
 .campo_txt, .campo_txt:focus, .btn_login, .btn_login:focus{

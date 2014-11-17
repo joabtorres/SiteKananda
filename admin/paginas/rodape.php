@@ -99,10 +99,10 @@
 
 				      conteiner = document.querySelector("#fotos");
 				      div = document.createElement('div');
-				      div.setAttribute('class', 'foto');
+				      div.setAttribute('class', 'foto foto-xxx');
 				      div.setAttribute('id', 'foto'+i);
 				      label = document.createElement('label');			      
-				      label.appendChild(document.createTextNode('Foto'));
+				      label.appendChild(document.createTextNode('Foto: '));
 				      input = document.createElement('input');
 				      input.setAttribute('name','foto'+i);
 				      input.setAttribute('type','file');
@@ -111,20 +111,23 @@
 				      img.setAttribute('id','preview'+i);
 				      img.setAttribute('src','#');
 				      img.setAttribute('class','preview_foto');
+				      br1 = document.createElement('br');
 				      a = document.createElement('a');
+				      a.setAttribute('class','btn-danger novo-slide');
 				      a.setAttribute('href','#');
 				      a.setAttribute('onclick','remover_foto(this);');
 				      a.appendChild(document.createTextNode('Remover'));
 				      div.appendChild(label);
 				      div.appendChild(input);
 				      div.appendChild(img);
+				      div.appendChild(br1);
 				      div.appendChild(a);
 				      conteiner.insertBefore(div, conteiner.firstChild);
 
 					}else{
 
 						fotos = document.getElementById("fotos");
-			      		fotos.innerHTML=fotos.innerHTML+"<div class='foto foto_destaque' id='foto"+i+"'><label>Foto</label><input name='foto"+i+"' type='file' onchange='readURL(this);' /><img id='preview"+i+"' scr='#' class='preview_foto'/><a href='#' onclick='remover_foto(this);''>Remover</a></div>";
+			      		fotos.innerHTML=fotos.innerHTML+"<div class='foto foto_destaque foto-xxx' id='foto"+i+"'><label>Foto</label><input name='foto"+i+"' type='file' onchange='readURL(this);' /><img id='preview"+i+"' scr='#' class='preview_foto'/><br><a class='btn-danger novo-slide' href='#' onclick='remover_foto(this);''>Remover</a></div>";
 					}
 
 			      	qtd_fotos = document.getElementById("qtd_fotos");
@@ -177,8 +180,43 @@
 
 					}else{
 
-						fotos = document.getElementById("fotos");
-			      		fotos.innerHTML=fotos.innerHTML+"<div class='foto foto_destaque' id='foto"+i+"'><label>Foto</label><input name='foto"+i+"' type='file' onchange='readURL(this);' /><img id='preview"+i+"' scr='#' class='preview_foto'/><a href='#' onclick='remover_foto(this);''>Remover</a></div>";
+						//fotos = document.getElementById("fotos");
+			      		//fotos.innerHTML=fotos.innerHTML+"<div class='foto foto_destaque' id='foto"+i+"'><label>Foto</label><input name='foto"+i+"' type='file' onchange='readURL(this);' /><img id='preview"+i+"' scr='#' class='preview_foto'/><a href='#' onclick='remover_foto(this);''>Remover</a></div>";
+
+			      	  conteiner = document.querySelector("#fotos");
+				      div = document.createElement('div');
+				      div.setAttribute('class', 'foto foto_destaque');
+				      div.setAttribute('id', 'foto'+i);
+				      label = document.createElement('label');			      
+				      label.appendChild(document.createTextNode('Foto'));
+				      input = document.createElement('input');
+				      input.setAttribute('name','foto'+i);
+				      input.setAttribute('type','file');
+				      input.setAttribute('onchange','readURL(this);');
+				      img = document.createElement('img');
+				      img.setAttribute('id','preview'+i);
+				      img.setAttribute('src','#');
+				      img.setAttribute('class','preview_foto');
+				      titulo  = document.createElement('input');
+				      titulo.setAttribute('type', 'text');
+				      titulo.setAttribute('name', 'foto'+i);
+				      titulo.setAttribute('class', 'slide-title');
+				      textarea = document.createElement('textarea');
+				      textarea.setAttribute('name','descricao'+i);
+				      textarea.setAttribute('class','descrissao-slide');
+				      a = document.createElement('a');
+				      a.setAttribute('href','#');
+				      a.setAttribute('class','btn-danger novo-slide');
+				      a.setAttribute('id','slide-remover');
+				      a.setAttribute('onclick','remover_foto(this);');
+				      a.appendChild(document.createTextNode('Remover'));
+				      div.appendChild(label);
+				      div.appendChild(input);
+				      div.appendChild(img);
+				      div.appendChild(titulo);
+				      div.appendChild(textarea);
+				      div.appendChild(a);
+				      conteiner.insertBefore(div, conteiner.firstChild);
 					}
 
 			      	qtd_fotos = document.getElementById("qtd_fotos");

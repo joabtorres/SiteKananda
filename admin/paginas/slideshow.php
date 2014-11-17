@@ -161,9 +161,9 @@ $mensagem_erro =  false;
 							<input class="foto-slide" type='hidden' name="id_foto<?= $i ?>" value="<?=$foto['id'] ?>"/>
 
 							<label>Foto: </label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src="<?= RAIZ.$foto['slide'] ?>" class='preview_foto'/>
-							<br>
+							
 							<input class="slide-title" type='text' name="titulo<?= $i ?>" value="<?=$foto['titulo'] ?>"/>
-							<br>
+							
 							<textarea name="descricao<?= $i ?>" class="descrissao-slide"><?= $foto['descricao'] ?></textarea>
 							<a href='#' id="slide-remover" class="btn-danger novo-slide" onclick="remover_foto(this);">Remover</a>
 

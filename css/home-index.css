@@ -26,3 +26,10 @@ div#filtro-detalhe{
 div#filtro-detalhe .col-xs-2{
 	width: 160px;
 }
+/*apenas para ocultar e exibir*/
+.a{
+	display: block;
+}
+.o{
+	display: none;
+}
