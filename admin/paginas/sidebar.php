@@ -31,6 +31,12 @@
                 </li>
                 </a>
 
+                <a href="<?= RAIZ ?>admin/contato">
+                <li class="item_menu">
+                    Contato
+                </li>
+                </a>
+
                 <a href="<?= RAIZ ?>admin/slideshow">
                 <li class="item_menu">
                     Slide Show
