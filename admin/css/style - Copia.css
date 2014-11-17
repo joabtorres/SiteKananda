@@ -9,12 +9,14 @@
 	list-style: none;
 	font-family: "Montserrat-Regular";
 }
+
+body{
+	position: relative;
+	font: 300 16px Oswald;
+}
 /*---------------------------------------------------------------------------
 			PAGINA DE LONGIN
 ---------------------------------------------------------------------------*/
-html, body{
-height: 100%;
-}
 body.body-login{
 	background:linear-gradient(top, #F0F7FD, #CFEAF5);
 	background:-moz-linear-gradient(top, #F0F7FD, #CFEAF5);
@@ -94,13 +96,17 @@ body.body-login{
 								Área administrativa
 ----------------------------------------------------------------------------*/
 
+html, body {
+	height: 100%;
+}
+
 #conteudo-geral {
 	height: 100%;
 	min-height:100%;
 	padding: 0 2px;
 	position: relative;
 	overflow: hidden;
-	min-width: 1000px;
+	min-width: 900px;
 	background: #EEE;
 }
 #conteudo-geral #topo {
@@ -134,42 +140,40 @@ body.body-login{
 	background: rgb(41, 152, 219);
 	width: 205px;
 	position: relative;
-	margin-right: 3px;
 	float: left;
-	top: 0px;
+	top: 2px;
 	padding: 4px;
 }
 
 #conteudo-geral #topo-leitura {
-	border-top: 1px solid #CCC;
-	border-left: 1px solid #CCC;
-	border-right: 1px solid #CCC;
-	height: 60px;
-	overflow-x: hidden;
-	overflow-y: hidden;
 	border: 1px solid #CCC;
 	background: rgb(41, 152, 219);
+	position: absolute;
+	margin: 0 220px;
+	top: 102px;
+	left: 0px;
+	width: 100%;
+	height: 23px;
+	padding: 4px;
 }
 
 .titulo {
-	padding: 5px;
 	padding-left: 10px;
-	padding-bottom: 0;
 	color: white;
 	font-family: "Montserrat-Regular";
 	font-size: 15pt;
 }
 
-#conteudo-geral #topo-sidebar .titulo{
-padding: 0;
-padding-left: 10px;
-}
 .subtitulo {
-	margin-top: 4px;
+	top: 35px;
+	position: absolute;
+	margin-left: -4px;
+	padding: 5px;
+	width: 100%;
 	height: 20px;
-	padding: 6px;
-	color: white;
+	font-family: "Montserrat-Regular";
 	background: rgb(81, 188, 213);
+	color: white;
 }
 
 .titulo, .subtitulo {
@@ -237,63 +241,33 @@ padding-left: 10px;
 				Container do site
 ******************************************************/
 #conteudo-geral #leitura {
-	margin-left: 218px;
-	margin-bottom: 200px;
-	background-color: white;
-	width: auto;
-	height: 90%;
-    overflow-y: auto;
-
-}
-div.mensagem_sucesso{
-	padding: 10px 5px;
-	color: rgba(8, 165, 21, 1);
-	font-size: 16pt;
-}
-#grid *{
-	font-size: 12pt;
-}
-#grid {
-	padding-bottom: 80px;
+	padding: 10px;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	margin: 0 0 0 205px;
+	overflow: auto;
+	background: #ccc;
 }
 /******************************************************************
 				MENU ADMINISTRATIVO
 *******************************************************************/
+#grid *{
+	font-size: 12pt;
+}
+#grid {
+	margin-bottom: 100px;
+}
 #pesquisa_grid input,select{
 	padding: 2px 5px;
 	margin: 10px;
 	height: 30px;
 }
-
-input.btn:hover, button.btn:hover, #grid a.novo_registro_grid:hover{
-	background: #017cc2;
-}
-#grid table{
-	background: rgb(241, 254, 255);
-	margin: 10px;
-	border: 1px solid #DDD;
-}
-#grid table tbody tr.cabecalho_grid th.coluna_grid, #grid table tbody tr.cabecalho_grid th, #grid table tbody tr.linha_grid td.coluna_grid, #grid table tbody tr.linha_grid td{
-	padding: 8px;
-	line-height: 1.42857;
-	vertical-align: top;
-	border-top: 1px solid #DDD;
-}
-#grid table tbody tr:nth-child(2n+1) {
-    background-color: #D9EDF7;
-}
-#grid table tbody tr.cabecalho_grid th.coluna_grid, #grid table tbody tr.cabecalho_grid th{
-background: rgb(81, 188, 213);
-color: white;
-}
-#grid table tbody tr.linha_grid td {
-	padding: 4px 8px;
-}
-
-#grid table tbody tr.linha_grid td a{
+#grid a.novo_registro_grid{
 	display: inline-block;
-	padding: 3px 10px;
+	padding: 2px 12px;
 	margin-bottom: 0;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.42857143;
 	text-align: center;
@@ -311,84 +285,41 @@ color: white;
 	border-radius: 4px;
 	text-decoration: none;
 	color: #fff;
-	background-color: #5CB85C;
-	border-color: #4CAE4C;
+	background-color: #428bca;
+	border-color: #357ebd;
 	font-size: 12pt;
 	font-family: "Montserrat-Regular",sans-serif;
-	margin: 0 6px;
+	margin: 10px;
 }
-#grid table tbody tr.linha_grid td a.delete{
-	background-color: #D9534F;
-	border-color: #D43F3A;
+#grid table{
+	margin: 10px;
+	border: 1px solid #DDD;
 }
-
-form#novo-administrador ul li, form#alterar-administrador ul li{
-padding: 5px;
-padding-left: 10px;
+#grid table tbody tr.cabecalho_grid th.coluna_grid{
+	padding: 8px;
+	line-height: 1.42857;
+	vertical-align: top;
+	border-top: 1px solid #DDD;
+}#grid table tbody tr.linha_grid td.coluna_grid{
+	line-height: 1.42857;
+	vertical-align: top;
+	border-top: 1px solid #DDD;
 }
-form#novo-administrador ul li input,form#alterar-administrador ul li input{
-	font-size: 12pt;
-	border-radius: 5px;
-	border: 1px solid rgba(0,0,0,0.4);
-	width: 300px;
-	padding: 5px;
-	margin-top: 5px;
+#grid table tbody tr.linha_grid td {
+	padding: 10px;
 }
-
-form#novo-administrador ul li input.btn, form#alterar-administrador ul li input.btn{
-	float: none;
-	height: auto;
-	width: auto;
-	padding: 3px 10px;
-	margin: auto;
+#grid table tbody tr:nth-child(2n+1) {
+    background-color: #D9EDF7;
 }
 
 /**************************************************************
-		SLIDE SHOW
+		
 ****************************************************************/
-div.foto{
-	background: none repeat scroll 0% 0% rgba(23, 172, 204, 0.24);
-	padding: 4px;
-	border-radius: 10px;
-	margin: 10px;
-}
-form#alterar-administrador input.slide-title{
-	width: 450px;
-	margin: 5px;
-	margin-top: 7px;
-	display: block;
-}
-form#alterar-administrador textarea.descrissao-slide{
-	margin: 5px;
-	display: block;
-min-height: 150px; min-width: 450px; max-height: 150px; max-width: 450px;
-}
-a#slide-remover{
-	display: block;
-	width: 100px;
-}
-
-/***********************************************************************
-
-***********************************************************************/
 .preview_foto{
-	display: block;
-	margin: 10px 5px;
-	width:auto;
-	height:120px;
+	width:70px;
+	height:70px;
 	border: dashed 1px #000;
 	float:left;
-}
-form#alterar-administrador input[type="file"]{
-	border-color: rgba(0,0,0,0);
-	width: auto;
-}
-form#novo-administrador ul,form#alterar-administrador ul{
-	padding-bottom: 100px;
-}
-form#novo-administrador ul li input.seleciona-foto, form#alterar-administrador ul li input.seleciona-foto{
-	border-color: rgba(0,0,0,0);
-	width: auto;
 }
 /*Classes de herança*/
 .bradius{
@@ -423,42 +354,4 @@ form#novo-administrador ul li input.seleciona-foto, form#alterar-administrador u
 	transition: all 0.5s linear;
 	-webkit-transition: all 0.5s linear;
 	-moz-transition: all 0.5s linear;
-}
-input.btn, button.btn, #grid a.novo_registro_grid, a.novo-slide{
-	display: inline-block;
-	padding: 3px 10px;
-	margin-bottom: 0;
-	font-weight: 400;
-	line-height: 1.42857143;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	background-image: none;
-	border: 1px solid transparent;
-	border-radius: 4px;
-	text-decoration: none;
-	color: #fff;
-	background-color: rgba(42, 140, 212, 1);
-	border-color: #357ebd;
-	font-size: 12pt;
-	font-family: "Montserrat-Regular",sans-serif;
-	margin: 5px 10px;
-}
-input.btn-success{
-	background-color: #5CB85C;
-}input.btn-success:hover{
-	background-color: rgba(77, 173, 77, 1);
-}
-button.btn-danger, a.btn-danger{
-	background-color: rgba(197, 67, 63, 1);
-	border-color: rgba(0,0,0,0.4);
-}button.btn-danger:hover, a.btn-danger:hover{
-	background-color: #D9534F;
 }

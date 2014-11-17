@@ -56,25 +56,25 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Nome</label><input obg="Nome" name="nome" type="text" />
+				<label>Nome: </label><br><input obg="Nome" name="nome" type="text" />
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>E-mail</label><input class="email" obg="E-mail" name="email" type="text" />
+				<label>E-mail: </label><br><input class="email" obg="E-mail" name="email" type="text" />
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Senha</label><input class="senha" obg="Senha" name="senha" type="password" />
+				<label>Senha: </label><br><input class="senha" obg="Senha" name="senha" type="password" />
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Confirmar senha</label><input class="senha" obg="Confirmar senha" name="c-senha" type="password" />
+				<label>Confirmar senha: </label><br><input class="senha" obg="Confirmar senha" name="c-senha" type="password" />
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input type="submit" class="btn btn-success"  value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 
 		</ul>
@@ -123,25 +123,25 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label >Nome</label><input obg="Nome" name="nome" type="text" value="<?= $administrador['nome'] ?>" />
+				<label >Nome: </label><br><input obg="Nome" name="nome" type="text" value="<?= $administrador['nome'] ?>" />
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>E-mail</label><input class="email" obg="E-mail" name="email" value="<?= $administrador['email'] ?>" type="text" />
+				<label>E-mail: </label><br><input class="email" obg="E-mail" name="email" value="<?= $administrador['email'] ?>" type="text" />
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Senha</label><input class="senha" obg="Senha" name="senha" type="password" />
+				<label>Senha: </label><br><input class="senha" obg="Senha" name="senha" type="password" />
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Confirmar senha</label><input class="senha" obg="Confirmação de Senha" name="c-senha" type="password" />
+				<label>Confirmar senha: </label><br><input class="senha" obg="Confirmação de Senha" name="c-senha" type="password" />
 				<div class="clear"></div>
 			</li>
 
 			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input type="submit" class="btn btn-success"  value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 			
 			

@@ -119,6 +119,7 @@
 						  			<p class="text-left">Quantidade de suite(s): <span><?= $imovel['suites']?></span></p>
 						  		</li>
 						  		<li>
+						  			<p class="text-left">Descrição: <span>xxxxxxxxxxxxx</span></p>
 						  			<p class="text-left">Quantidade de Garagem: <span><?= $imovel['garagem']?></span></p>
 						  		</li>
 						  	</ul>
@@ -155,6 +156,13 @@
 
 				        <!-- Slides Container -->
 				        <div u="slides" class="slide-container">
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/005.jpg"/></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/006.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/011.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/013.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/014.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/019.jpg" /></a></div>
+				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/020.jpg" /></a></div>
 				        <?php
 
 				        	$similares = new Objeto('produto');

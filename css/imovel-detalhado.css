@@ -40,11 +40,14 @@ background: #092d7f;
 div#descricao-do-imovel .nav-tabs li{
 margin: auto 0.5%;
 }
+div#descricao-do-imovel .nav-tabs li{
+	margin: auto 0.5%;
+}
 div#descricao-do-imovel .nav-tabs li a{
-color: white;
-font-size: 14pt;
-font-weight: 650;
-padding: 5px 90px;
+	color: white;
+	font-size: 14pt;
+	font-weight: 650;
+	padding: 5px 90px;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 color: white;
@@ -132,13 +135,16 @@ margin: 0px;
 #slider1_container{
 width: 875px!important;
 }
+#slider1_container{
+	width: 875px!important;
+}
 .slide-container a{
 margin: 0;
 padding: 0;
 }
 .slide-container div a img{
-border-radius: 5px;
-margin: 0;
-width: auto;
-height: 170px;
+	border-radius: 5px;
+	margin: 0;
+	width: auto;
+	height: 170px;
 }

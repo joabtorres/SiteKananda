@@ -63,19 +63,19 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Slide1</label><input name="slide1" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['slide1'] : '' ; ?>" type="file" onchange="readURL(this);"/><img id='preview1' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['slide1'] : '' ; ?>" class='preview_foto'/>
+				<label>Slide 1: </label><input name="slide1" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['slide1'] : '' ; ?>" type="file" onchange="readURL(this);"/><img id='preview1' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['slide1'] : '' ; ?>" class='preview_foto'/>
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Slide2</label><input value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['slide2'] : '' ; ?>" type="file" onchange="readURL(this);"/><img id='preview2' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['slide2'] : '' ; ?>" class='preview_foto'/>
+				<label>Slide 2: </label><input value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['slide2'] : '' ; ?>" type="file" onchange="readURL(this);"/><img id='preview2' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['slide2'] : '' ; ?>" class='preview_foto'/>
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Slide3</label><input value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['slide3'] : '' ; ?>" type="file"  onchange="readURL(this);"/><img id='preview3' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['slide3'] : '' ; ?>" class='preview_foto'/>
+				<label>Slide 3: </label><input value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['slide3'] : '' ; ?>" type="file"  onchange="readURL(this);"/><img id='preview3' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['slide3'] : '' ; ?>" class='preview_foto'/>
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Slide4</label><input value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['slide4'] : '' ; ?>" type="file"  onchange="readURL(this);"/><img id='preview4' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['slide4'] : '' ; ?>" class='preview_foto'/>
+				<label>Slide 4: </label><input value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['slide4'] : '' ; ?>" type="file"  onchange="readURL(this);"/><img id='preview4' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['slide4'] : '' ; ?>" class='preview_foto'/>
 				<div class="clear"></div>
 			</li>
 
