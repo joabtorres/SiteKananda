@@ -8,21 +8,34 @@
 
 <!--script que muda a visibilidade dos campos após escolha..-->
 <script type="text/javascript">
-$(document).ready(function(){
-  $("#selecionaImovel").on('change',function(){
-  	
-    if ($("#selecionaImovel").val() == "loteamento" || $("#selecionaImovel").val() == "terrenosUrbanos" || $("#selecionaImovel").val() == "terrenosRurais"  ){
-    	$(".a").css("display", "none");
-    	$(".o").css("display", "block");
-    }
-    else{
-    	$(".a").css("display", "block");
-    	$(".o").css("display", "none");
-    }
+	$(document).ready(function(){
+		$("#selecionaImovel").on("change", function(){
+			if ($("#selecionaImovel").val() == "areas-portuarias" || $("#selecionaImovel").val() == "loteamento" || $("#selecionaImovel").val() == "terrenosUrbanos" || $("#selecionaImovel").val() == "terrenosRurais"  ){
+		    	$(".a").css("display", "none");
+		    	$(".o").css("display", "block");
+		    }
+		    else{
+		    	$(".a").css("display", "block");
+		    	$(".o").css("display", "none");
+		    }
+		});
+		$("#cReferencia").on("change", function(){
+			if ($("#cReferencia").val() != "" ){
+				$("#filtro-detalhe select").attr("disabled", "disabled");
+				$("#filtro-detalhe input:not(#cReferencia)").attr("disabled", "disabled");
 
-    
-  });
-});
+			}
+			else{
+				$("#filtro-detalhe select").removeAttr("disabled");
+				$("#filtro-detalhe input").removeAttr("disabled");
+			}
+
+		});
+
+		
+	});
+
+
 </script><!--fim do script -->
 </head>
 <body>
@@ -33,28 +46,27 @@ $(document).ready(function(){
 					  <div class="form-group col-xs-4">
 					      <label for="selecionaImovel">Imóvel: </label>
 					      <select name="select" id="selecionaImovel" class="form-control">
-		                    <option value="areas-portuarias">Áreas Portuárias</option>
-		                    <optgroup label="Casas">
-		                    <option value="casaAluguel">Casas para Aluguar</option>
-		                    <option value="casaVenda">Casas a Venda</option>
-		                  </optgroup>
-		                  <option value="loteamento">Loteamentos</option>
-		                  <option value="terrenosUrbanos">Terrenos Urbanos</option>
-		                  <option value="terrenosRurais">Terrenos Rurais</option>
+			                  <option value="casaAluguel">Casas para Aluguar</option>
+			                  <option value="casaVenda">Casas a Venda</option>
+			            	  <option value="areas-portuarias">Áreas Portuárias</option>
+			                  <option value="loteamento">Loteamentos</option>
+			                  <option value="terrenosUrbanos">Terrenos Urbanos</option>
+			                  <option value="terrenosRurais">Terrenos Rurais</option>
 		                  </select>
 					    </div>
-					  <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
+					   <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
 					    	<label for="area">Área </label>
                  		 	<input type="text" class="form-control" id="area" name="tOutros">
 					  </div>
 					    <div class="form-group col-xs-4 a"> <!-- INCLUIR A CLASSE "a", que força o tipo block-->
 					    <label for="selecionaQntQuarto">Quarto: </label>
 					      <select name="select" id="selecionaQntQuarto" class="form-control">
-		                    <option value="qntQuarto-1">1</option>
-		                    <option value="qntQuarto-2">2</option>
-		                    <option value="qntQuarto-3">3</option>
-		                    <option value="qntQuarto-4">4</option>
-		                    <option value="qntQuarto-5">5</option>
+		                    <option value="1">1</option>
+		                    <option value="2">2</option>
+		                    <option value="3">3</option>
+		                    <option value="4">4</option>
+		                    <option value="5">5</option>
+		                    <option value="mais de 5">mais de 5</option>
 		                  </select>
 					  </div>
 					  <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
@@ -69,6 +81,7 @@ $(document).ready(function(){
 					            <option value="qntSuite-3">3</option>
 					            <option value="qntSuite-4">4</option>
 					            <option value="qntSuite-5">5</option>
+					            <option value="mais de 5">mais de 5</option>
 					    </select>
 					  </div>
 					  <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
@@ -83,6 +96,7 @@ $(document).ready(function(){
 		                    <option value="qntGaragem-3">3</option>
 		                    <option value="qntGaragem-4">4</option>
 		                    <option value="qntGaragem-5">5</option>
+		                    <option value="mais de 5">mais de 5</option>
 		                </select>
 					  </div>
 					  <div class="form-group col-xs-4">
@@ -116,11 +130,11 @@ $(document).ready(function(){
 		                </select>
 					  </div>
 					  <div class="form-group col-xs-2">
-					    	<label for="cOutros">Referência: </label>
-                 		 	<input type="text" class="form-control" id="cOutros" name="tOutros">
+					    	<label for="cReferencia">Referência: </label>
+                 		 	<input type="text" class="form-control" id="cReferencia" name="tOutros">
 					  </div>
 					<div class="form-group col-xs-1">
-						<button type="button" name="tBuscar" id="cBuscar" class="btn btn-info">Buscar</button>
+						<button type="submit" name="tBuscar" id="cBuscar" class="btn btn-info">Buscar</button>
 					</div>
 				</form>
 

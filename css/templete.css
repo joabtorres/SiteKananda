@@ -316,7 +316,7 @@ float: right;
 margin-right: -15px;
 }
 .logos-socias{
-margin: 10px auto 0px auto;
+margin: 10px auto -10px; auto;
 }
 .logos-socias img{
 display: inline-block;
@@ -336,4 +336,11 @@ transform: scale(1.1);
 ****************************************/
 .pagination{
 margin: 5px;
+}
+
+.a{
+	display: block;
+}
+.o{
+	display: none;
 }

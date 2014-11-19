@@ -239,11 +239,13 @@ padding-left: 10px;
 #conteudo-geral #leitura {
 	margin-left: 218px;
 	margin-bottom: 200px;
-	background-color: white;
 	width: auto;
 	height: 90%;
     overflow-y: auto;
-
+    background:linear-gradient(top, #F0F7FD, #CFEAF5);
+	background:-moz-linear-gradient(top, #F0F7FD, #CFEAF5);
+	background:-o-linear-gradient(top, #F0F7FD, #CFEAF5);
+	background:-webkit-linear-gradient(top, #F0F7FD, #CFEAF5);
 }
 div.mensagem_sucesso{
 	padding: 10px 5px;
@@ -273,6 +275,7 @@ div.mensagem_sucesso{
 	border: 1px solid rgba(0,0,0,0.4);
 	padding: 0px 5px;
 	margin: 10px;
+	height: 30px;
 }
 select option{
 padding: 4px;
