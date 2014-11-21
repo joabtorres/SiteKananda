@@ -358,6 +358,7 @@ form#novo-administrador ul li input,form#alterar-administrador ul li input{
 form#novo-administrador ul li select, form#alterar-administrador ul li select{
 	font-size: 11pt;
 	border-radius: 5px;
+	height: 30px;
 	border: 1px solid rgba(0,0,0,0.4);
 	width: 300px;
 	margin-top: 5px;
@@ -410,7 +411,7 @@ a#slide-remover{
 				MAPA
 *********************************************/
 div.mapa-imoveis{
-	height: 400px; min-width: 700px;border: solid 1px; border-radius: 4px; margin: 10px;
+	height:250px; min-width: 700px; width: 100%; border: solid 1px; border-radius: 4px; margin: 10px;
 }
 /***********************************************************************
 			DIVERSOS
@@ -440,7 +441,9 @@ form#alterar-administrador input[type="text"]:focus, form#novo-administrador inp
 form#novo-administrador ul,form#alterar-administrador ul{
 	padding-bottom: 100px;
 }
-
+form#novo-administrador ul li > h2,form#alterar-administrador ul li > h2{
+margin: 10px;
+}
 form#novo-administrador ul li fieldset ,form#alterar-administrador ul li fieldset{
 	border-radius: 10px;
 	border: 2px groove #2998DB;
@@ -527,4 +530,78 @@ button.btn-danger, a.btn-danger{
 	border-color: rgba(0,0,0,0.4);
 }button.btn-danger:hover, a.btn-danger:hover{
 	background-color: #D9534F;
+}
+.container-grids{
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: auto;
+	min-width: 660px;
+	background: none repeat scroll 0% 0% rgba(23, 172, 204, 0.24);
+	padding:  0 2px;
+	margin-right: 50px; 
+	border: solid 1px #999;
+}
+.container-grids > div{
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border: solid 1px #999;
+	margin: 4px 0;
+}
+.container-grids > div > div{
+	display: inline-block;
+	padding: 10px 5px;
+	border-left: solid 1px #999;
+}
+.container-grids > div .container-row-espc{
+	border-left: none;
+}
+form#novo-administrador ul li > .container-grids> div > .container-row > input, form#alterar-administrador ul li > .container-grids> div > .container-row > input, form#novo-administrador ul li > .container-grids> div > .container-row > select, form#alterar-administrador ul li > .container-grids> div > .container-row > select,form#novo-administrador ul li > .container-grids> div > .container-row > textarea.descrissao-slide, form#alterar-administrador ul li > .container-grids> div > .container-row > textarea.descrissao-slide{
+	width: 95%;
+	min-width: 150px;
+	max-width: 95%;
+	margin-top: 5px;
+}
+.container-1, .container-2 , .container-3, .container-4{
+	width: auto;
+}
+.container-1 > .container-row{
+	width: 95%;
+	padding-left: 1%;
+}
+.container-2 > .container-row{
+	width: 45%;
+	padding-left: 1%;
+}
+.container-2> .grid-referencia{
+	width: 19%;
+	padding-left: 1%;
+}
+.container-2 > .input-ref{
+	width: 75%;
+	padding-left: 1%;
+}
+
+.grid-referencia{
+	width: 20%;
+}
+
+.container-3 .container-row{
+	width: 30%;
+	padding-left: 1%;
+}
+.container-4 .container-row{
+	width: 21.5%;
+	padding-left: 1%;
+}
+form#novo-administrador ul li > .container-grids>.container-4 > .container-row > input, form#alterar-administrador ul li > .container-grids>.container-4 > .container-row > input, form#novo-administrador ul li > .container-grids>.container-4 > .container-row > select, form#alterar-administrador ul li > .container-grids>.container-4 > .container-row > select{
+	width: 95%;
+	min-width: 150px;
+	margin-top: 5px;
+}
+@media screen and (min-width: 1200px){
+	.container-grids>.container-4 > .container-row{
+		margin-left: .8%; 	
+	}
 }
