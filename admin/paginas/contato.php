@@ -136,11 +136,11 @@ $mensagem_erro =  false;
 
 	function gerarGrid($tabela_local){
 
-		if($mensagem_erro){ 
-			echo "<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>";
-		}elseif ($mensagem_sucesso) {
-			echo "<li><div class='mensagem_sucesso'>Operação realizada com sucesso!</div></li>";
-		}
+		// if($mensagem_erro){ 
+		// 	echo "<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>";
+		// }elseif ($mensagem_sucesso) {
+		// 	echo "<li><div class='mensagem_sucesso'>Operação realizada com sucesso!</div></li>";
+		// }
 
 		$grid = new Grid($tabela_local);
 		$grid->addColuna('Cod', 'id');

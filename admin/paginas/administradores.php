@@ -56,7 +56,7 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Nome: </label><br><input obg="Nome" name="nome" type="text" />
+				<label>Nome: </label><br><input obg="Nome" name="nome" type="text" title="Insira o nome completo" />
 				<div class="clear"></div>
 			</li>
 			<li>
@@ -226,11 +226,11 @@ $mensagem_erro =  false;
 
 	function gerarGrid($tabela_local){
 
-		if($mensagem_erro){ 
-			echo "<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>";
-		}elseif ($mensagem_sucesso) {
-			echo "<li><div class='mensagem_sucesso'>Operação realizada com sucesso!</div></li>";
-		}
+		// if($mensagem_erro){ 
+		// 	echo "<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>";
+		// }elseif ($mensagem_sucesso) {
+		// 	echo "<li><div class='mensagem_sucesso'>Operação realizada com sucesso!</div></li>";
+		// }
 		
 		$grid = new Grid($tabela_local);
 		$grid->addColuna('Cod', 'id');

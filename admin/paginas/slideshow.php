@@ -148,6 +148,8 @@ $mensagem_erro =  false;
 
 
 			<li>
+				<fieldset>
+					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="<?= $tabela->getLinhasAfetadas()?>" id="qtd_fotos"/>
 					<a href='#' onclick='add_slideshow();' class='novo-slide'>Adicionar Slide</a>
 					<div id='fotos'>
@@ -174,6 +176,7 @@ $mensagem_erro =  false;
 					}
 					?>
 					</div>
+				</fieldset>
 			</li>
 		
 
