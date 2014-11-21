@@ -36,7 +36,7 @@
       <div class="logo-imagem">
         <img src="<?= RAIZ.$config['logotipo'] ?>" alt="">
       </div>
-      <img src="<?= RAIZ ?>img/header.png">
+      <img src="<?= RAIZ ?>img/header.png" style="display: block;margin-left: -5px;">
       <ul class="nav nav-pills" id="menu-head">
         <li style="margin-left: 10px;"><a href="<?= RAIZ ?>">Home</a></li>
         <li><a>Imóvel</a>
