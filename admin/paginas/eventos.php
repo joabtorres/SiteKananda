@@ -377,11 +377,11 @@ $mensagem_erro =  false;
 				
 				if($pagina_admin[1] == 'error'):
 					echo "<div class='mensagem_erro'>Ocorreu um erro!</div>";
-					goto lista;
+					gerarGrid($tabela_local);
 
 				elseif ($pagina_admin[1] == 'sucess'):
 					echo "<div class='mensagem_sucesso'>Operação realizada com sucesso!</div>";
-					goto lista;
+					gerarGrid($tabela_local);
 
 				elseif ($pagina_admin[1] == 'search'):
 
@@ -399,7 +399,7 @@ $mensagem_erro =  false;
 
 					else:
 
-						goto lista;
+						gerarGrid($tabela_local);
 
 					endif;
 
@@ -410,7 +410,12 @@ $mensagem_erro =  false;
 
 	else:
 
-		lista:
+		gerarGrid($tabela_local);
+
+
+	endif;//Fim; Verifica se existe uma ação
+
+	function gerarGrid($tabela_local){
 
 		$grid = new Grid($tabela_local);
 		$grid->addColuna('Cod', 'id');
@@ -419,7 +424,5 @@ $mensagem_erro =  false;
 		$grid->addColuna('Data do Cadastro', 'data_cadastro');
 		$grid->addItemPesquisa('Titulo', 'titulo_evento');
 		$grid->gerarGrid();
-	
-
-	endif;//Fim; Verifica se existe uma ação
+	}
 ?>
