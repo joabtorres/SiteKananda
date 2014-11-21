@@ -56,7 +56,7 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Nome: </label><br><input obg="Nome" name="nome" type="text" />
+				<label>Nome: </label><br><input obg="Nome" name="nome" type="text" title="Insira o nome completo" />
 				<div class="clear"></div>
 			</li>
 			<li>
