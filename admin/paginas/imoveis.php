@@ -477,123 +477,155 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Referência: </label><br><input obg="Referência" name="referencia" type="text" value="<?= $imovel['referencia']?>"/>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Tipo do Imóvel: </label><br><select obg="Tipo do Imóvel" name="tipo_imovel"><?= Funcao::gerarArraySelectOptions(array('CASA A VENDA', 'CASA PARA ALUGAR', 'TERRENO URBANO','TERRENO RURAL','AREAS PORTUARIA','LOTEAMENTO'), $imovel['tipo_imovel'])?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Categoria: </label><br><select obg="Categoria do Imóvel" name="categoria"><?= Funcao::gerarArraySelectOptions(array('CASA TERREA', 'SOBRADO','APARTAMENTO','TERRENO'), $imovel['categoria'])?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Finalidade: </label><br><select obg="Finalidade" name="finalidade"><?= Funcao::gerarArraySelectOptions(array('VENDA', 'ALUGUEL'), $imovel['finalidade'])?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Quartos: </label><br><input obg="Quantidade de Quatos" name="quartos" type='text' value="<?= $imovel['quartos']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Banheiros: </label><br><input obg="Quantidade de Banheiros" name="banheiros" type='text' value="<?= $imovel['banheiros']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Suítes: </label><br><input obg="Quantidade de Suítes" name="suites" type='text' value="<?= $imovel['suites']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Vagas na Garagem: </label><br><input obg="Vagas na Garagem" name="garagem" type='text' value="<?= $imovel['garagem']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Logradouro: </label><br><input name="logradouro" type='text' value="<?= $imovel['logradouro']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Número: </label><br><input obg="Número do Imóvel" name="numero" type='text' value="<?= $imovel['num']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Complemento: </label><br><input name="complemento" type='text' value="<?= $imovel['complemento']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Bairro: </label><br><select obg="Bairro" name="bairro"><?= Funcao::gerarArraySelectOptions(array('BELA VISTA', 'BOA ESPERANÇA','BOM JARDIM', 'BOM REMÉDIO', 'CENTRO', 'FLORESTA', 'JARDIM AEROPORTO', 'JARDIM AMÉRICA', 'JARDIM DAS ARARAS', 'JARDIM TAPAJÓS', 'LIBERDADE', 'MARIA MADALENA', 'NOVA ITAITUBA', 'NOVO PARAÍSO', 'PERPÉTUO SOCORRO', 'PIRACANÃ', 'RESIDENCIAL VALE DO PIRACANÃ', 'RESIDENCIAL VIVA ITAITUBA' , 'RESIDENCIAL WIRLAND FREIRE', 'SANTO ANTÔNIO', 'SÃO FRANCISCO', 'SÃO JOSÉ', 'VALE DO TAPAJÓS', 'VALMIRLÂNDIA', 'VITÓRIA-RÉGIA' ), $imovel['bairro'])?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Cidade: </label><br><select obg="Cidade" name="cidade"><?= Funcao::gerarArraySelectOptions(array('ITAITUBA' ), $imovel['cidade'])?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>UF: </label><br><select obg="Estado" name="uf"><?= Funcao::gerarArraySelectOptions(array('PA' ), $imovel['uf'])?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Área Edificada: </label><br><input obg="Área edificada" class='area' name="area_edificada" type='text' value="<?= $imovel['area_edi']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Área do Terreno: </label><br><input obg="Área do Terreno" class='area' name="area_terreno" type='text' value="<?= $imovel['area_ter']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Largura: </label><br><input obg="Largura" name="largura" class='metros_medida' type='text' value="<?= $imovel['perimetro_l']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Comprimento: </label><br><input obg="Comprimento" name="comprimento" class='metros_medida' type='text' value="<?= $imovel['perimetro_c']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Video: </label><br><input name="video" type='text' value="<?= $imovel['video']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Descrição: </label><br><textarea class="descrissao-slide" obg="Descrição do imóvel" name="descricao"><?= $imovel['descricao']?></textarea>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<fieldset>
-					<legend>Mapa </legend>
-
-					<label>Latitude: </label><br><input name="latitude" id='latitude' type='text' value="<?= $imovel['latitude']?>" onchange="addMarker();">
-					<div class="clear"></div>
+				<h2>DADOS GERAIS</h2>
+			<div class="container-grids">
+				<div class="container-2">
+					<div class="grid-referencia container-row-espc"><label>Referência: </label></div>
+					<div class="container-row input-ref" ><input obg="Referência" name="referencia" type="text" value="<?= $imovel['referencia']?>"/>
+</div>
+				</div>
+				<!-- divisao -->
+				<div class="container-3">
+					<div class="container-row container-row-espc">
+						<label>Tipo do Imóvel: </label><br>
+						<select obg="Tipo do Imóvel" name="tipo_imovel"><?= Funcao::gerarArraySelectOptions(array('CASA A VENDA', 'CASA PARA ALUGAR', 'TERRENO URBANO','TERRENO RURAL','AREAS PORTUARIA','LOTEAMENTO'), $imovel['tipo_imovel'])?></select>
+					</div>
+					<div class="container-row">
+						<label>Finalidade: </label><br>
+						<select obg="Finalidade" name="finalidade"><?= Funcao::gerarArraySelectOptions(array('VENDA', 'ALUGUEL'), $imovel['finalidade'])?></select>
+					</div>
+					<div class="container-row">
+						<label>Categoria: </label><br>
+						<select obg="Categoria do Imóvel" name="categoria"><?= Funcao::gerarArraySelectOptions(array('CASA TERREA', 'SOBRADO','APARTAMENTO','TERRENO'), $imovel['categoria'])?></select>
+					</div>
+				</div>
+				<!-- DIVISAO -->
+				<div class="container-4">
+					<div class="container-row container-row-espc">
+						<label>Quartos: </label><br>
+						<input obg="Quantidade de Quatos" name="quartos" type='text' value="<?= $imovel['quartos']?>">
+					</div>
+					<div class="container-row">
+						<label>Banheiros: </label><br>
+						<input obg="Quantidade de Banheiros" name="banheiros" type='text' value="<?= $imovel['banheiros']?>">				
+					</div>
+					<div class="container-row">
+						<label>Suítes: </label><br>
+						<input obg="Quantidade de Suítes" name="suites" type='text' value="<?= $imovel['suites']?>">
+					</div>
+					<div class="container-row">
+						<label>Garagem: </label><br>
+						<input obg="Vagas na Garagem" name="garagem" type='text' value="<?= $imovel['garagem']?>">
+					</div>
+				</div>
+			</div>
 			
-					<label>Longitude: </label><br><input name="longitude" id='longitude' type='text' value="<?= $imovel['longitude']?>" onchange="addMarker();">
-					<div class="clear"></div>
+			<li>
+				<h2>DIMENSÕES E POSIÇÃO</h2>	
+				<div class="container-grids">
+					
+				<div class="container-4">
+					<div class="container-row container-row-espc">
+						<label>Área Edificada: </label><br>
+						<input obg="Área edificada" class='area' name="area_edificada" type='text' value="<?= $imovel['area_edi']?>">
 
-					<div id="mapa" class="mapa-imoveis">
-						<!-- Maps API Javascript -->
-				        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
-        			</div>
-			
-				</fieldset>
+					</div>
+					<div class="container-row">
+						<label>Área do Terreno: </label><br>
+						<input obg="Área do Terreno" class='area' name="area_terreno" type='text' value="<?= $imovel['area_ter']?>">
+					</div>
+					<div class="container-row">
+						<label> Perímetro Largura: </label><br>
+					<input obg="Largura" name="largura" class='metros_medida' type='text' value="<?= $imovel['perimetro_l']?>">
+				
+					</div>
+					<div class="container-row">
+						<label>Perímetro Comprimento: </label><br>
+						<input obg="Comprimento" name="comprimento" class='metros_medida' type='text' value="<?= $imovel['perimetro_c']?>">
+					</div>
+				</div>
+				<!-- divisao -->
+				<div class="container-2">
+					<div class="container-row container-row-espc"> 
+						<label>Latitude: </label><br>
+						<input name="latitude" id='latitude' type='text' value="<?= $imovel['latitude']?>" onchange="addMarker();">
+					</div>
+					<div class="container-row">
+						<label>Longitude: </label><br>
+						<input name="longitude" id='longitude' type='text' value="<?= $imovel['longitude']?>" onchange="addMarker();">
+					</div>
+				</div>
+				<!-- divisao -->
+				<div class="container-1">
+					<div class="container-row container-row-espc"> 
+						<div id="mapa" class="mapa-imoveis">
+							<!-- Maps API Javascript -->
+					        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
+		    			</div>
+					</div>
+				</div>	
+				</div>
+
+			<li>
+				<h2>ENDEREÇO</h2>
+				<!-- divisao -->
+				<div class="container-grids">
+					<div class="container-2">
+						<div class=" container-row input-ref container-row-espc"> 
+							<label>Logradouro: </label><br>
+							<input name="logradouro" type='text' value="<?= $imovel['logradouro']?>">
+						</div>
+						<div class="container-row grid-referencia">
+							<label>Número: </label><br>
+							<input obg="Número do Imóvel" name="numero" type='text' value="<?= $imovel['num']?>">
+						</div>
+					
+					</div>
+					<!-- divisao -->
+					<div class="container-4">
+						<div class="container-row container-row-espc">
+							<label>Complemento: </label><br>
+							<input name="complemento" type='text' value="<?= $imovel['complemento']?>">
+						</div>
+						<div class="container-row">
+							<label>Bairro: </label><br>
+							<select obg="Bairro" name="bairro"><?= Funcao::gerarArraySelectOptions(array('BELA VISTA', 'BOA ESPERANÇA','BOM JARDIM', 'BOM REMÉDIO', 'CENTRO', 'FLORESTA', 'JARDIM AEROPORTO', 'JARDIM AMÉRICA', 'JARDIM DAS ARARAS', 'JARDIM TAPAJÓS', 'LIBERDADE', 'MARIA MADALENA', 'NOVA ITAITUBA', 'NOVO PARAÍSO', 'PERPÉTUO SOCORRO', 'PIRACANÃ', 'RESIDENCIAL VALE DO PIRACANÃ', 'RESIDENCIAL VIVA ITAITUBA' , 'RESIDENCIAL WIRLAND FREIRE', 'SANTO ANTÔNIO', 'SÃO FRANCISCO', 'SÃO JOSÉ', 'VALE DO TAPAJÓS', 'VALMIRLÂNDIA', 'VITÓRIA-RÉGIA' ), $imovel['bairro'])?></select>
+						</div>
+						<div class="container-row">
+							<label>Cidade: </label><br>
+							<select obg="Cidade" name="cidade"><?= Funcao::gerarArraySelectOptions(array('ITAITUBA' ), $imovel['cidade'])?></select>
+						</div>
+						<div class="container-row">
+							<label>UF: </label><br>
+							<select obg="Estado" name="uf"><?= Funcao::gerarArraySelectOptions(array('PA' ), $imovel['uf'])?></select>
+						</div>
+					</div>
+				</div>
 			</li>
 
+			<li>
+				<h2>VÍDEO DO IMOVEL</h2>
+				<div class="container-grids">
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Video: </label><br>
+						<input name="video" type='text' value="<?= $imovel['video']?>">
+					</div>
+				</div>
+				</div>
+			</li>
+
+			<li>
+				<h2>VÍDEO DO IMOVEL</h2>
+				<div class="container-grids">
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Descrição: </label><br>
+						<textarea class="descrissao-slide" obg="Descrição do imóvel" name="descricao"><?= $imovel['descricao']?></textarea>
+					</div>
+				</div>
+				</div>
+			</li>
 			<li>
 				<fieldset>
 					<legend>Fotos </legend>

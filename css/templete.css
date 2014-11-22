@@ -30,6 +30,13 @@ div#cabecalho{
 margin-top: 0px;
 margin-bottom: -45px;
 }
+span.e-mail-kananda{
+position: absolute;
+z-index: 20;
+left: 670px;
+top: 45px;
+font-size: 13pt;
+}
 div.logo-imagem{
 	position: absolute;
 	top: 1px;
