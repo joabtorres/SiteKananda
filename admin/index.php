@@ -9,7 +9,7 @@
 	}
 
 	require_once("../classes/Incluir.php");
-	
+			
 	if(Validacao::administrador()){
 
 		require("paginas/topo.php");

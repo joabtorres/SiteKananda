@@ -31,7 +31,16 @@ if(file_exists('../paginas/subpaginas/constantes.php'))
 				$admin->selecionarTudo();
 				
 				if($admin->getLinhasAfetadas() > 0){
-					return true;
+
+					//caso tenha se passado 20 minutos desde a última atividade
+					if((time() - $_SESSION[RAIZSIMPLES]["ULTIMA_ATIVIDADE"]) > 1200){
+						session_unset(); 
+						session_destroy(); 
+						return false;
+					}else{
+						$_SESSION[RAIZSIMPLES]["ULTIMA_ATIVIDADE"] = time();
+						return true;
+					}
 				}else{
 					
 					unset($_SESSION[RAIZSIMPLES]["ID"]);
@@ -66,6 +75,7 @@ if(file_exists('../paginas/subpaginas/constantes.php'))
 			 	$_SESSION[RAIZSIMPLES]["ID"] = $value['id'];
 			 	$_SESSION[RAIZSIMPLES]["EMAIL"] = $value['email'];
 			 	$_SESSION[RAIZSIMPLES]["SENHA"] = $value['senha'];
+			 	$_SESSION[RAIZSIMPLES]["ULTIMA_ATIVIDADE"] = time();//date("Y-m-d H:i:s");
 			 }
 
 			 if(isset($_SESSION[RAIZSIMPLES]["EMAIL"])){
