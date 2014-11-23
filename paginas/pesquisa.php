@@ -9,7 +9,7 @@
             
             <div class="form-group col-xs-4">
                 <label for="selecionaImovel">Imóvel: </label>
-                <select name="selecionaImovel" id="selecionaImovel" class="form-control selecionaFiltro">
+                <select name="selecionaImovel" id="selecionaImovel" class="form-control itemPesquisa">
 
                       <?= Funcao::gerarArraySelectOptions(array('CASA A VENDA' => 'Casas a Venda', 'CASA PARA ALUGAR' => 'Casas para Aluguar' ,'AREAS PORTUARIA' => 'Áreas Portuárias' ,'LOTEAMENTO' => 'Loteamentos' , 'TERRENO URBANO' => 'Terrenos Urbanos','TERRENO RURAL' => 'Terrenos Rurais'), (isset($_POST['selecionaImovel'])) ? $_POST['selecionaImovel'] : '')?>
                         
@@ -17,11 +17,11 @@
               </div>
              <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
                 <label for="area">Área </label>
-                      <input type="text" class="form-control" id="area" name="area" value="<?= (isset($_POST['area'])) ? $_POST['area'] : ''?>">
+                      <input type="text" class="form-control itemPesquisa" id="area" name="area" value="<?= (isset($_POST['area'])) ? $_POST['area'] : ''?>">
             </div>
               <div class="form-group col-xs-4 a"> <!-- INCLUIR A CLASSE "a", que força o tipo block-->
               <label for="selecionaQntQuarto">Quarto: </label>
-                <select name="selecionaQntQuarto" id="selecionaQntQuarto" class="form-control">
+                <select name="selecionaQntQuarto" id="selecionaQntQuarto" class="form-control itemPesquisa">
 
                       <?= Funcao::gerarArraySelectOptions(array('1', '2', '3', '4', '5', '+' => 'mais de 5'), (isset($_POST['selecionaQntQuarto'])) ? $_POST['selecionaQntQuarto'] : '')?>
                         
@@ -29,11 +29,11 @@
             </div>
             <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
                 <label for="comprimento">Comprimento </label> 
-                      <input type="text" class="form-control" id="comprimento" name="comprimento" value="<?= (isset($_POST['comprimento'])) ? $_POST['comprimento'] : ''?>">
+                      <input type="text" class="form-control itemPesquisa" id="comprimento" name="comprimento" value="<?= (isset($_POST['comprimento'])) ? $_POST['comprimento'] : ''?>">
             </div>
             <div class="form-group col-xs-4 a"> <!-- INCLUIR A CLASSE "a", que força o tipo block-->
               <label for="selecionaQntSuites">Suite: </label>
-              <select name="selecionaQntSuites" id="selecionaQntSuites" class="form-control">
+              <select name="selecionaQntSuites" id="selecionaQntSuites" class="form-control itemPesquisa">
                 
                 <?= Funcao::gerarArraySelectOptions(array('0', '1', '2', '3', '4', '5', '+' => 'mais de 5'), (isset($_POST['selecionaQntSuites'])) ? $_POST['selecionaQntSuites'] : '')?>
                   
@@ -41,11 +41,11 @@
             </div>
             <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
                 <label for="largura">Largura </label>
-                      <input type="text" class="form-control" id="largura" name="largura" value="<?= (isset($_POST['largura'])) ? $_POST['largura'] : ''?>">
+                      <input type="text" class="form-control itemPesquisa" id="largura" name="largura" value="<?= (isset($_POST['largura'])) ? $_POST['largura'] : ''?>">
             </div>
             <div class="form-group col-xs-4 a"> <!-- INCLUIR A CLASSE "a", que força o tipo block-->
               <label for="selecionaqntGaragem">Garagem: </label>
-              <select name="selecionaqntGaragem" id="selecionaqntGaragem" class="form-control">
+              <select name="selecionaqntGaragem" id="selecionaqntGaragem" class="form-control itemPesquisa">
               
                 <?= Funcao::gerarArraySelectOptions(array('0', '1', '2', '3', '4', '5', '+' => 'mais de 5'), (isset($_POST['selecionaqntGaragem'])) ? $_POST['selecionaqntGaragem'] : '1')?>
               
@@ -53,7 +53,7 @@
             </div>
             <div class="form-group col-xs-4">
               <label for="selecionaBairro">Bairro: </label>
-              <select name="selecionaBairro" id="selecionaBairro" class="form-control">
+              <select name="selecionaBairro" id="selecionaBairro" class="form-control itemPesquisa">
                 
                 <?= Funcao::gerarArraySelectOptions(array( 'qualquer' => 'Qualquer Bairro', 'BELA VISTA' => 'Bela Vista', 'BOA ESPERANÇA' => 'Boa Esperança','BOM JARDIM' => 'Bom Jardim', 'BOM REMÉDIO' => 'Bom Remédio', 'CENTRO' => 'Centro', 'FLORESTA' => 'Floresta', 'JARDIM AEROPORTO' => 'Jardim Aeroporto', 'JARDIM AMÉRICA' => 'Jardim América', 'JARDIM DAS ARARAS' => 'Jardim das Araras', 'JARDIM TAPAJÓS' => 'Jardim Tapajós', 'LIBERDADE' => 'Liberdade', 'MARIA MADALENA' => 'Maria Madalena', 'NOVA ITAITUBA' => 'Nova Itaituba', 'NOVO PARAÍSO' => 'Novo Paraíso', 'PERPÉTUO SOCORRO' => 'Perpétuo Socorro', 'PIRACANÃ' => 'Piracanã', 'RESIDENCIAL VALE DO PIRACANÃ' => 'Residencial Vale do Piracanã', 'RESIDENCIAL VIVA ITAITUBA' => 'Residencial Viva Itaituba' , 'RESIDENCIAL WIRLAND FREIRE' => 'Residencial Wirland Freire', 'SANTO ANTÔNIO' => 'Santo Antônio', 'SÃO FRANCISCO' => 'São Francisco', 'SÃO JOSÉ' => 'São José', 'VALE DO TAPAJÓS' => 'Vale do Tapajós', 'VALMIRLÂNDIA' => 'Valmirlândia', 'VITÓRIA-RÉGIA' => 'Vitória-Régia'), (isset($_POST['selecionaBairro'])) ? $_POST['selecionaBairro'] : '')?>
                           
@@ -61,7 +61,7 @@
             </div>
             <div class="form-group col-xs-2">
                 <label for="cReferencia">Referência: </label>
-                      <input type="text" class="form-control" id="cReferencia" name="cReferencia" value="<?= (isset($_POST['cReferencia'])) ? $_POST['cReferencia'] : ''?>">
+                      <input type="text" class="form-control itemPesquisa" id="cReferencia" name="cReferencia" value="<?= (isset($_POST['cReferencia'])) ? $_POST['cReferencia'] : ''?>">
             </div>
           <div class="form-group col-xs-1">
             <button type="submit" name="tBuscar" id="cBuscar" class="btn btn-info">Buscar</button>
