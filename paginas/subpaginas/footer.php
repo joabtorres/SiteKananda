@@ -19,6 +19,7 @@
           </ul>
         </div>
         <div class="col-xs-4">
+
           <div
   class="fb-like"
   data-send="true"
@@ -27,6 +28,10 @@
 </div>
           <!-- <p class="text-center logos-socias"><a href="https://www.facebook.com/kanandaimobiliaria" target="_blank"><img src="<?= RAIZ ?>img/facebook-icon.png" alt=""></a>  <a href="#"target="_blank"><img src="<?= RAIZ ?>img/youtube-icon.png" alt=""></a></p>
           <p class="text-center"><div class="fb-like-box" data-href="https://www.facebook.com/KanandaNegociosImobiliarios" data-width="280" data-height="230" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" style="background: white;"></div></p> -->
+
+          <p class="text-center logos-socias"><a href="https://www.facebook.com/kanandaimobiliaria" target="_blank"><img src="<?= RAIZ ?>img/facebook-icon.png" alt="Facebook da kananda imobiliaria"></a>  <a href="#"target="_blank"><img src="<?= RAIZ ?>img/youtube-icon.png" alt=""></a></p>
+          <p class="text-center"><div class="fb-like-box" data-href="https://www.facebook.com/KanandaNegociosImobiliarios" data-width="280" data-height="230" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" style="background: white;"></div></p>
+
         </div>
         <div class="col-xs-4">
           <h3>CONTATOS</h3>
@@ -143,13 +148,14 @@
     // função responsável por ocultar e revelar componentes do FILTRO de busca quando a REFERÊNCIA for modificada
     alterna_referencia_filtro = function (){
       if ($("#cReferencia").val() != "" ){
-        $("#filtro-detalhe select").attr("disabled", "disabled");
-        $("#filtro-detalhe input:not(#cReferencia)").attr("disabled", "disabled");
+        $("#filtro-detalhe select").attr("readonly", "readonly");
+        $('select option').attr('disabled',true);
+        $("#filtro-detalhe input:not(#cReferencia)").attr("readonly", "readonly");
 
-      }
-      else{
-        $("#filtro-detalhe select").removeAttr("disabled");
-        $("#filtro-detalhe input").removeAttr("disabled");
+      }else{
+        $('select option').attr('disabled',false);
+        $("#filtro-detalhe select").removeAttr("readonly");
+        $("#filtro-detalhe input").removeAttr("readonly");
       }
 
     }
@@ -160,9 +166,14 @@
     //script que muda a visibilidade dos campos após escolha dos campos no FILTRO..
     $("#cReferencia").on("change", alterna_referencia_filtro);
     $("#selecionaImovel").on("change", alterna_imoveis_filtro );
-    $("#filtro-detalhe").on("click", function(){
-      alert('x');
+     $(".itemPesquisa").on("click", function(){
+        if(($(this).attr("readonly")) == "readonly"){
+          $("#cReferencia").val('');
+          alterna_referencia_filtro();
+          console.log('readonly');
+        }
     });
+    
     
 
 

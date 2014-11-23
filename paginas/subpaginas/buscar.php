@@ -6,7 +6,7 @@
 					  
 					  <div class="form-group col-xs-4">
 					      <label for="selecionaImovel">Imóvel: </label>
-					      <select name="selecionaImovel" id="selecionaImovel" class="form-control">
+					      <select name="selecionaImovel" id="selecionaImovel" class="form-control itemPesquisa">
 					      	  <option value="CASA A VENDA">Casas a Venda</option>
 			                  <option value="CASA PARA ALUGAR">Casas para Aluguar</option>
 			            	  <option value="AREAS PORTUARIA">Áreas Portuárias</option>
@@ -17,11 +17,11 @@
 					    </div>
 					   <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
 					    	<label for="area">Área </label>
-                 		 	<input type="text" class="form-control" id="area" name="area">
+                 		 	<input type="text" class="form-control itemPesquisa" id="area" name="area">
 					  </div>
 					    <div class="form-group col-xs-4 a"> <!-- INCLUIR A CLASSE "a", que força o tipo block-->
 					    <label for="selecionaQntQuarto">Quarto: </label>
-					      <select name="selecionaQntQuarto" id="selecionaQntQuarto" class="form-control">
+					      <select name="selecionaQntQuarto" id="selecionaQntQuarto" class="itemPesquisa form-control">
 		                    <option value="1">1</option>
 		                    <option value="2">2</option>
 		                    <option value="3">3</option>
@@ -32,11 +32,11 @@
 					  </div>
 					  <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
 					    	<label for="comprimento">Comprimento </label> 
-                 		 	<input type="text" class="form-control" id="comprimento" name="comprimento">
+                 		 	<input type="text" class="form-control itemPesquisa" id="comprimento" name="comprimento">
 					  </div>
 					  <div class="form-group col-xs-4 a"> <!-- INCLUIR A CLASSE "a", que força o tipo block-->
 					    <label for="selecionaQntSuites">Suite: </label>
-					    <select name="selecionaQntSuites" id="selecionaQntSuites" class="form-control">
+					    <select name="selecionaQntSuites" id="selecionaQntSuites" class="itemPesquisa form-control">
 					    		<option value="0">0</option>
 					            <option value="1">1</option>
 					            <option value="2">2</option>
@@ -48,11 +48,11 @@
 					  </div>
 					  <div class="form-group col-xs-4 o"> <!-- INCLUIR O CAMPO QUE COMEÇA OCULTO, COM A CLASSE "o"-->
 					    	<label for="largura">Largura </label>
-                 		 	<input type="text" class="form-control" id="largura" name="largura">
+                 		 	<input type="text" class="form-control itemPesquisa" id="largura" name="largura">
 					  </div>
 					  <div class="form-group col-xs-4 a"> <!-- INCLUIR A CLASSE "a", que força o tipo block-->
 					    <label for="selecionaqntGaragem">Garagem: </label>
-					    <select name="selecionaqntGaragem" id="selecionaqntGaragem" class="form-control">
+					    <select name="selecionaqntGaragem" id="selecionaqntGaragem" class="itemPesquisa form-control">
 		                    <option value="0">0</option>
 		                    <option selected value="1">1</option>
 		                    <option value="2">2</option>
@@ -64,7 +64,7 @@
 					  </div>
 					  <div class="form-group col-xs-4">
 					    <label for="selecionaBairro">Bairro: </label>
-					    <select name="selecionaBairro" id="selecionaBairro" class="form-control">
+					    <select name="selecionaBairro" id="selecionaBairro" class="itemPesquisa form-control">
 		                    	<option value="qualquer" selected>Qualquer Bairro</option>
 		                    	<option value="BELA VISTA">Bela Vista</option>
 			                    <option value="BOA ESPERANÇA">Boa Esperança</option>
