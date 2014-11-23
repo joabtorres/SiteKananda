@@ -19,8 +19,14 @@
           </ul>
         </div>
         <div class="col-xs-4">
-          <p class="text-center logos-socias"><a href="https://www.facebook.com/kanandaimobiliaria" target="_blank"><img src="<?= RAIZ ?>img/facebook-icon.png" alt=""></a>  <a href="#"target="_blank"><img src="<?= RAIZ ?>img/youtube-icon.png" alt=""></a></p>
-          <p class="text-center"><div class="fb-like-box" data-href="https://www.facebook.com/KanandaNegociosImobiliarios" data-width="280" data-height="230" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" style="background: white;"></div></p>
+          <div
+  class="fb-like"
+  data-send="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+          <!-- <p class="text-center logos-socias"><a href="https://www.facebook.com/kanandaimobiliaria" target="_blank"><img src="<?= RAIZ ?>img/facebook-icon.png" alt=""></a>  <a href="#"target="_blank"><img src="<?= RAIZ ?>img/youtube-icon.png" alt=""></a></p>
+          <p class="text-center"><div class="fb-like-box" data-href="https://www.facebook.com/KanandaNegociosImobiliarios" data-width="280" data-height="230" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" style="background: white;"></div></p> -->
         </div>
         <div class="col-xs-4">
           <h3>CONTATOS</h3>
@@ -121,8 +127,60 @@
 
       }
 
+      // função responsável por ocultar e revelar componentes do FILTRO de busca
+      alterna_imoveis_filtro = function(){
+        if ($("#selecionaImovel").val() == "AREAS PORTUARIA" || $("#selecionaImovel").val() == "LOTEAMENTO" || $("#selecionaImovel").val() == "TERRENO URBANO" || $("#selecionaImovel").val() == "TERRENO RURAL"  ){
+            $(".a").css("display", "none");
+            $(".o").css("display", "block");
+        }
+        else{
+          $(".a").css("display", "block");
+          $(".o").css("display", "none");
+        }
+
+    }
+
+    // função responsável por ocultar e revelar componentes do FILTRO de busca quando a REFERÊNCIA for modificada
+    alterna_referencia_filtro = function (){
+      if ($("#cReferencia").val() != "" ){
+        $("#filtro-detalhe select").attr("disabled", "disabled");
+        $("#filtro-detalhe input:not(#cReferencia)").attr("disabled", "disabled");
+
+      }
+      else{
+        $("#filtro-detalhe select").removeAttr("disabled");
+        $("#filtro-detalhe input").removeAttr("disabled");
+      }
+
+    }
+
+    alterna_imoveis_filtro();
+    alterna_referencia_filtro();
+
+    //script que muda a visibilidade dos campos após escolha dos campos no FILTRO..
+    $("#cReferencia").on("change", alterna_referencia_filtro);
+    $("#selecionaImovel").on("change", alterna_imoveis_filtro );
+    $("#filtro-detalhe").on("click", function(){
+      alert('x');
+    });
+    
+
+
     });
 
+
+  </script>
+
+
+  
+  <!-- facebook -->
+  <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=679921648729271&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
   </script>
 </body>
 </html>
