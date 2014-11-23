@@ -88,6 +88,12 @@ $mensagem_erro =  false;
 				if(isset($_POST['acao'])){
 					if($_POST['acao'] == "salvar"){
 
+						if($_SESSION[RAIZSIMPLES]["ID"] != $pagina_admin[2]){
+ 							echo "<script>alert('Você não possui permissão para alterar a senha de outro usuário')</script>";
+ 							echo '<script>window.location="'.RAIZ.'admin/'.$pagina_admin[0].'"</script>';
+ 							exit();
+ 						}
+
 						$senha = md5(sha1($_POST['senha']));
 
 						$tabela->setValor('nome',$_POST['nome']);

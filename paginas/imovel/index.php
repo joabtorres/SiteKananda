@@ -156,13 +156,7 @@
 
 				        <!-- Slides Container -->
 				        <div u="slides" class="slide-container">
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/005.jpg"/></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/006.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/011.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/013.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/014.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/019.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/020.jpg" /></a></div>
+				            
 				        <?php
 
 				        	$similares = new Objeto('produto');
@@ -185,7 +179,7 @@
 	              				$foto_similar->addConsulta('id_produto', $value['id'] );
 	              				$foto_similar->selecionarTudo();
 	              				$foto = $foto_similar->retornar();              				
-
+	              				
 				        ?>
 				            <div><a href="<?= RAIZ ?>imovel/<?= $value['id']?>"><img u="image" src="<?= RAIZ.$foto['arquivo'] ?>" /></a></div>
 

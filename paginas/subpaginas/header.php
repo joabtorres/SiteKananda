@@ -36,7 +36,15 @@
       <div class="logo-imagem">
         <img src="<?= RAIZ.$config['logotipo'] ?>" alt="">
       </div>
-      <span class="e-mail-kananda">Kananda@hotmail.com</span>
+      <span class="e-mail-kananda">
+        <?php
+          $config = new Objeto('empresa');
+          $config->addExtras('LIMIT 1');
+          $config->selecionarTudo();
+          $config = $config->retornar();
+          echo $config['email'];
+        ?>
+      </span>
       <img src="<?= RAIZ ?>img/header.png" style="display: block;margin-left: -5px;">
       <ul class="nav nav-pills" id="menu-head">
         <li style="margin-left: 10px;"><a href="<?= RAIZ ?>">Home</a></li>

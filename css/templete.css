@@ -12,6 +12,7 @@ background:linear-gradient(top, #F0F7FD, #CFEAF5);
 background:-moz-linear-gradient(top, #F0F7FD, #CFEAF5);
 background:-o-linear-gradient(top, #F0F7FD, #CFEAF5);
 background:-webkit-linear-gradient(top, #F0F7FD, #CFEAF5);
+background-repeat: no-repeat;
 }
 body *{
 font-family: "breeSerif-Regular",sans-serif;
