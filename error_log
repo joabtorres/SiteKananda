@@ -1,0 +1,10 @@
+[21-Nov-2014 00:37:25] PHP Warning:  require(http://dev.endogenese.com.br/sitekananda/paginas/subpaginas/header.php) [<a href='function.require'>function.require</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/endog103/public_html/dev/kananda/index.php on line 24
+[21-Nov-2014 00:37:25] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'http://dev.endogenese.com.br/sitekananda/paginas/subpaginas/header.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/endog103/public_html/dev/kananda/index.php on line 24
+[21-Nov-2014 16:34:18] PHP Fatal error:  Class 'Config' not found in /home/endog103/public_html/dev/kananda/classes/Funcao.class.php on line 105
+[21-Nov-2014 17:04:14] PHP Fatal error:  Cannot redeclare class phpmailerException in /home/endog103/public_html/dev/kananda/classes/phpmailer/class.phpmailer.php on line 2825
+[21-Nov-2014 17:07:32] PHP Fatal error:  Cannot redeclare class phpmailerException in /home/endog103/public_html/dev/kananda/classes/phpmailer/class.phpmailer.php on line 2825
+[23-Nov-2014 18:34:53] PHP Warning:  Cannot modify header information - headers already sent by (output started at http://dev.endogenese.com.br/kananda/paginas/subpaginas/header.php:10) in /home/endog103/public_html/dev/kananda/paginas/imovel/index.php on line 218
+[23-Nov-2014 18:42:29] PHP Warning:  Cannot modify header information - headers already sent by (output started at http://dev.endogenese.com.br/kananda/paginas/subpaginas/header.php:10) in /home/endog103/public_html/dev/kananda/paginas/imovel/index.php on line 212
+[24-Nov-2014 19:56:43] PHP Warning:  Cannot modify header information - headers already sent by (output started at http://dev.endogenese.com.br/kananda/paginas/subpaginas/header.php:10) in /home/endog103/public_html/dev/kananda/paginas/imovel/index.php on line 212
+[24-Nov-2014 19:56:48] PHP Warning:  Cannot modify header information - headers already sent by (output started at http://dev.endogenese.com.br/kananda/paginas/subpaginas/header.php:10) in /home/endog103/public_html/dev/kananda/paginas/imovel/index.php on line 212

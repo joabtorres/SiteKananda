@@ -7,13 +7,13 @@
 
 		############## PROPRIEDADES ###############
 		protected $servidor		= "localhost";
-		protected $usuario		= "root";
-		//protected $usuario		= "endog103_dev";
+		//protected $usuario		= "root";
+		protected $usuario		= "endog103_dev";
 		protected $porta		= "3306";
-		//protected $senha		= "endogenese2014";
-		protected $senha		= "";
-		//protected $nomeBanco	= "endog103_kananda";
-		protected $nomeBanco	= "kananda";
+		protected $senha		= "endogenese2014";
+		//protected $senha		= "";
+		protected $nomeBanco	= "endog103_kananda";
+		//protected $nomeBanco	= "kananda";
 		protected $conexao 		= NULL;
 
 		################# MÉTODOS ###################

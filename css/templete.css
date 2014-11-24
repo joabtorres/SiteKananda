@@ -12,6 +12,7 @@ background:linear-gradient(top, #F0F7FD, #CFEAF5);
 background:-moz-linear-gradient(top, #F0F7FD, #CFEAF5);
 background:-o-linear-gradient(top, #F0F7FD, #CFEAF5);
 background:-webkit-linear-gradient(top, #F0F7FD, #CFEAF5);
+background-repeat: no-repeat;
 }
 body *{
 font-family: "breeSerif-Regular",sans-serif;
@@ -311,9 +312,8 @@ float: left;
 margin-left: -15px;
 }
 div#rodape-2 p{
-font-weight: 400;
 float: left;
-font-size: 10pt;
+font-size: 13pt;
 width: 840px;
 }
 img#logo-endogenese-2{
@@ -322,13 +322,12 @@ float: right;
 margin-right: -15px;
 }
 .logos-socias{
-	padding: 0;
-margin: 10px auto 0 auto;
+margin: 10px auto -10px; auto;
 }
 .logos-socias img{
 display: inline-block;
 margin-right: 10px;
-width: 35px;
+width: 45px;
 -moz-transition: transform 0.5s;
 transition: transform 0.5s;
 -webkit-transition: transform 0.5s;
@@ -337,11 +336,6 @@ transition: transform 0.5s;
 transform: scale(1.1);
 -webkit-transform: scale(1.1);
 -moz-transform: scale(1.1);
-}
-._rw{
-	width: 20px;
-	height: 20px;
-	border-radius
 }
 /*****************************************
 .pagination
