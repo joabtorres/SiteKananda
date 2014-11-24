@@ -54,37 +54,24 @@ $mensagem_erro =  false;
 					<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>
 				<?php }
 			?>
+
 			<li>
-				<h2>Novo Cadastramento</h2>	
-				<div class="container-grids grid-in-line" >
-				<!-- divisao -->
-				<div class="container-1">
-					<div class="container-row container-row-espc"> 
-						<label>Nome: </label><br>
-						<input obg="Nome" name="nome" type="text" title="Insira o nome completo" />
-					</div>
-				</div>
-				<div class="container-1">
-					<div class="container-row container-row-espc">
-						<label>E-mail: </label><br>
-						<input class="email" title="Insira um e-mail valido" obg="E-mail" name="email" type="text" />
-					</div>
-				</div>
-				<!-- divisão -->
-				<div class="container-1">
-					<div class="container-row container-row-espc"> 
-						<label>Senha: </label><br>
-						<input class="senha" obg="Senha" name="senha" type="password" />
-					</div>
-				</div>
-				<div class="container-1">
-					<div class="container-row container-row-espc">	
-						<label>Confirmar senha: </label><br><input class="senha" obg="Confirmar senha" name="c-senha" type="password" />
-								
-					</div>
-				</div>
-				</div>
-			</li>	
+				<label>Nome: </label><br><input obg="Nome" name="nome" type="text" title="Insira o nome completo" />
+				<div class="clear"></div>
+			</li>
+			<li>
+				<label>E-mail: </label><br><input class="email" obg="E-mail" name="email" type="text" />
+				<div class="clear"></div>
+			</li>
+			<li>
+				<label>Senha: </label><br><input class="senha" obg="Senha" name="senha" type="password" />
+				<div class="clear"></div>
+			</li>
+			<li>
+				<label>Confirmar senha: </label><br><input class="senha" obg="Confirmar senha" name="c-senha" type="password" />
+				<div class="clear"></div>
+			</li>
+
 			<li>
 				<input type="submit" class="btn btn-success"  value="Salvar" />
 				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
@@ -100,6 +87,12 @@ $mensagem_erro =  false;
 
 				if(isset($_POST['acao'])){
 					if($_POST['acao'] == "salvar"){
+
+						if($_SESSION[RAIZSIMPLES]["ID"] != $pagina_admin[2]){
+ 							echo "<script>alert('Você não possui permissão para alterar a senha de outro usuário')</script>";
+ 							echo '<script>window.location="'.RAIZ.'admin/'.$pagina_admin[0].'"</script>';
+ 							exit();
+ 						}
 
 						$senha = md5(sha1($_POST['senha']));
 
@@ -134,38 +127,24 @@ $mensagem_erro =  false;
 					<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>
 				<?php }
 			?>
+
 			<li>
-				<h2>Editar Cadastramento</h2>	
-				<div class="container-grids" style="width: 600px;">
-				<!-- divisao -->
-				<div class="container-1">
-					<div class="container-row container-row-espc">	
-						<label>Nome: </label><br>
-						<input obg="Nome" name="nome" type="text" value="<?= $administrador['nome'] ?>" />
-					</div>
-				</div>
-				<div class="container-1">
-					<div class="container-row container-row-espc">	
-						<label>E-mail: </label><br>
-						<input class="email" obg="E-mail" name="email" value="<?= $administrador['email'] ?>" type="text" />
-					</div>
-				</div>
-				<!-- divisão -->
-				<div class="container-1">
-					<div class="container-row container-row-espc">	
-						<label>Senha: </label><br>
-						<input class="senha" obg="Senha" name="senha" type="password" />
-					</div>
-				</div>
-				<div class="container-1">
-					<div class="container-row container-row-espc">	
-						<label>Confirmar senha: </label><br>
-						<input class="senha" obg="Confirmação de Senha" name="c-senha" type="password" />						
-					</div>
-				</div>
-				</div>
-			</li>	
-			
+				<label >Nome: </label><br><input obg="Nome" name="nome" type="text" value="<?= $administrador['nome'] ?>" />
+				<div class="clear"></div>
+			</li>
+			<li>
+				<label>E-mail: </label><br><input class="email" obg="E-mail" name="email" value="<?= $administrador['email'] ?>" type="text" />
+				<div class="clear"></div>
+			</li>
+			<li>
+				<label>Senha: </label><br><input class="senha" obg="Senha" name="senha" type="password" />
+				<div class="clear"></div>
+			</li>
+			<li>
+				<label>Confirmar senha: </label><br><input class="senha" obg="Confirmação de Senha" name="c-senha" type="password" />
+				<div class="clear"></div>
+			</li>
+
 			<li>
 				<input type="submit" class="btn btn-success"  value="Salvar" />
 				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
