@@ -148,6 +148,8 @@ $mensagem_erro =  false;
 
 
 			<li>
+				<h2>SlideShow da Pagina Inicial (Home)</h2>
+				<p class="obs">OBS: É recomendado que utilize uma imagem editada com sua largura de até 950 pixels e sua altura 380 pixels, caso contrario a imagem sera cortada pelo proprio slideshow.</p>
 				<fieldset>
 					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="<?= $tabela->getLinhasAfetadas()?>" id="qtd_fotos"/>

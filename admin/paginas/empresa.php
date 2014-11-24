@@ -85,26 +85,39 @@ $mensagem_erro =  false;
 					<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>
 				<?php }
 			?>
-
 			<li>
-				<label>Nome da Empresa: </label><br><input obg="Nome" name="nome" type="text" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['nome'] : '' ; ?>" />
-				<div class="clear"></div>
-			</li>
+				<h2>Empresa</h2>	
+				<div class="container-grids grid-in-line">
+				<!-- divisao -->
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Nome da Empresa: </label><br>
+						<input obg="Nome" name="nome" type="text" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['nome'] : '' ; ?>" />
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>E-mail: </label><br>
+						<input class="email" obg="E-mail" name="email" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['email'] : '' ; ?>" type="text" />
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Titulo do Site: </label><br>
+						<input  obg="Titudo do Site" name="titulo_site" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['titulo_site'] : '' ; ?>" type="text" />
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Logotipo: </label><br>
+						<input name="foto1" class="seleciona-foto" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['logotipo'] : '' ; ?>" type="file"  onchange="readURL(this);" />
+						<img id='preview1' class='preview_foto' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['logotipo'] : '' ; ?>" />
+					</div>
+				</div>
+				</div>
+			</li>	
+			
 			<li>
-				<label>E-mail: </label><br><input class="email" obg="E-mail" name="email" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['email'] : '' ; ?>" type="text" />
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Titulo do Site: </label><br><input  obg="Titudo do Site" name="titulo_site" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['titulo_site'] : '' ; ?>" type="text" />
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Logotipo: </label><br>
-				<input name="foto1" class="seleciona-foto" value="<?= ($tabela->getLinhasAfetadas()>0) ? $config['logotipo'] : '' ; ?>" type="file"  onchange="readURL(this);"/>
-				<img id='preview1' class='preview_foto' src="<?= ($tabela->getLinhasAfetadas()>0) ? RAIZ.$config['logotipo'] : '' ; ?>" />
-				<div class="clear"></div>
-			</li>
-			<li style="display: block; margin-top: 90px;">
 				<input type="submit" class="btn btn-success" value="Salvar" />
 				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>

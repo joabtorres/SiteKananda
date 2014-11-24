@@ -22,13 +22,13 @@
 </head>
 <body>
     <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
   <div class="container" id="interface">
   <div class="row">
@@ -36,15 +36,7 @@
       <div class="logo-imagem">
         <img src="<?= RAIZ.$config['logotipo'] ?>" alt="">
       </div>
-      <span class="e-mail-kananda">
-        <?php
-          $config = new Objeto('empresa');
-          $config->addExtras('LIMIT 1');
-          $config->selecionarTudo();
-          $config = $config->retornar();
-          echo $config['email'];
-        ?>
-      </span>
+      <span class="e-mail-kananda">Kananda@hotmail.com</span>
       <img src="<?= RAIZ ?>img/header.png" style="display: block;margin-left: -5px;">
       <ul class="nav nav-pills" id="menu-head">
         <li style="margin-left: 10px;"><a href="<?= RAIZ ?>">Home</a></li>
