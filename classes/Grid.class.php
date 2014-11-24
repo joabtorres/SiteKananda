@@ -14,6 +14,7 @@
 * void addItemPesquisa($coluna, $campoTabela) -- define os itens que poderão ser consultados na tabela
 * void addPaginaAtual(int $paginaAtual) -- define a página da tabela que será exibida
 * void paginacao(int $qtd_registros) -- cria a paginação da tabela
+* void addPermissoes(strin permissao) -- adiciona as ações na tabela. Valores aceitos: editar, excluir, inserir, ler. Caso nem uma permissão for informado são adotadas as permissões:editar, excluir e inserir
 * void gerarGrid() -- constói a tabela
 */
 
@@ -24,6 +25,7 @@
 		protected $itensPesquisa	= array();
 		protected $colunasGrid		= array();
 		protected $itemConsulta		= array();
+		protected $permissoes		= array();// permissões aceitas: editar, excluir, inserir, ler
 		protected $limite	 		= 30;
 		protected $paginaAtual		= 1;
 
@@ -34,6 +36,16 @@
 			$this->tabela = $tabela;
 
 		}// construct
+
+		public function addPermissoes($permissao = NULL){
+
+			if($permissao != NULL):
+
+				$this->permissoes[] = $permissao;
+
+			endif;
+			
+		}//addPermissoes
 
 
 		public function addConsulta($campo = NULL, $valor = NULL){
@@ -77,7 +89,8 @@
 
 		
 		public function addPaginaAtual($pagina){
-			if(is_numeric($paginaAtual))
+			
+			if(is_numeric($pagina))
 				$this->paginaAtual  = $pagina;
 
 		}
@@ -189,11 +202,16 @@
 
 					$grid .= "<input type='text' name='pesquisa' value='".((isset($this->itemConsulta['texto_selected']))? $this->itemConsulta['texto_selected'] : '' )."'/>";
 					$grid .= "<input type='hidden' name='pagina_pesquisa' id='pagina_pesquisa' value='1'/>";
-					$grid .= "<input type='submit' value='Pesquisar'/>";
+					$grid .= "<input  class='btn btn-danger' type='submit' value='Pesquisar'/>";
 					$grid .= "</div>";
 				endif;
 				
-				$grid .= "<a href='".RAIZ."admin/$pagina_admin[0]/novo' class='novo_registro_grid'>Inserir Novo</a>";
+				if(count($this->permissoes) > 0){
+					if(in_array('inserir', $this->permissoes))
+						$grid .= "<a href='".RAIZ."admin/$pagina_admin[0]/novo' class='novo_registro_grid'>Inserir Novo</a>";
+				}else{
+					$grid .= "<a href='".RAIZ."admin/$pagina_admin[0]/novo' class='novo_registro_grid'>Inserir Novo</a>";
+				}
 
 				################ CRIA A TABELA ##################				
 				$grid .= '<table><tr class="cabecalho_grid">';
@@ -219,7 +237,22 @@
 							$grid .= '<td class="coluna_grid">'.$value[$campo].'</td>';
 						}
 
-					$grid .= "<td><a href='".RAIZ."admin/".$pagina_admin[0]."/editar/".$value['id']."'>Editar</a>/<a href='".RAIZ."admin/".$pagina_admin[0]."/excluir/".$value['id']."' class='delete'>Excluir</a></td></tr>";
+					if(count($this->permissoes) == 0){
+						$grid .= "<td><a href='".RAIZ."admin/".$pagina_admin[0]."/editar/".$value['id']."'>Editar</a><a href='".RAIZ."admin/".$pagina_admin[0]."/excluir/".$value['id']."' class='delete'>Excluir</a></td></tr>";
+					}else{
+						$grid .= "<td>";
+						foreach ($this->permissoes as $key => $p) {
+							if(strtolower($p) == 'editar')
+								$grid .= "<a href='".RAIZ."admin/".$pagina_admin[0]."/editar/".$value['id']."'>Editar</a>";
+							elseif(strtolower($p) == 'excluir')
+								$grid .= "<a href='".RAIZ."admin/".$pagina_admin[0]."/excluir/".$value['id']."' class='delete'>Excluir</a>";
+							elseif(strtolower($p) == 'ler')
+								$grid .= "<a href='".RAIZ."admin/".$pagina_admin[0]."/ler/".$value['id']."' >Ler</a>";
+
+						}
+												
+						$grid .= "</td></tr>";
+					}
 				} 
 				$grid .= '</table>';
 				

@@ -54,27 +54,40 @@ $mensagem_erro =  false;
 					<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>
 				<?php }
 			?>
-
 			<li>
-				<label>Nome</label><input obg="Nome" name="nome" type="text" />
-				<div class="clear"></div>
-			</li>
+				<h2>Novo Cadastramento</h2>	
+				<div class="container-grids grid-in-line" >
+				<!-- divisao -->
+				<div class="container-1">
+					<div class="container-row container-row-espc"> 
+						<label>Nome: </label><br>
+						<input obg="Nome" name="nome" type="text" title="Insira o nome completo" />
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>E-mail: </label><br>
+						<input class="email" title="Insira um e-mail valido" obg="E-mail" name="email" type="text" />
+					</div>
+				</div>
+				<!-- divisão -->
+				<div class="container-1">
+					<div class="container-row container-row-espc"> 
+						<label>Senha: </label><br>
+						<input class="senha" obg="Senha" name="senha" type="password" />
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">	
+						<label>Confirmar senha: </label><br><input class="senha" obg="Confirmar senha" name="c-senha" type="password" />
+								
+					</div>
+				</div>
+				</div>
+			</li>	
 			<li>
-				<label>E-mail</label><input class="email" obg="E-mail" name="email" type="text" />
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Senha</label><input class="senha" obg="Senha" name="senha" type="password" />
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Confirmar senha</label><input class="senha" obg="Confirmar senha" name="c-senha" type="password" />
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input type="submit" class="btn btn-success"  value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 
 		</ul>
@@ -121,27 +134,41 @@ $mensagem_erro =  false;
 					<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>
 				<?php }
 			?>
-
 			<li>
-				<label >Nome</label><input obg="Nome" name="nome" type="text" value="<?= $administrador['nome'] ?>" />
-				<div class="clear"></div>
-			</li>
+				<h2>Editar Cadastramento</h2>	
+				<div class="container-grids" style="width: 600px;">
+				<!-- divisao -->
+				<div class="container-1">
+					<div class="container-row container-row-espc">	
+						<label>Nome: </label><br>
+						<input obg="Nome" name="nome" type="text" value="<?= $administrador['nome'] ?>" />
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">	
+						<label>E-mail: </label><br>
+						<input class="email" obg="E-mail" name="email" value="<?= $administrador['email'] ?>" type="text" />
+					</div>
+				</div>
+				<!-- divisão -->
+				<div class="container-1">
+					<div class="container-row container-row-espc">	
+						<label>Senha: </label><br>
+						<input class="senha" obg="Senha" name="senha" type="password" />
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">	
+						<label>Confirmar senha: </label><br>
+						<input class="senha" obg="Confirmação de Senha" name="c-senha" type="password" />						
+					</div>
+				</div>
+				</div>
+			</li>	
+			
 			<li>
-				<label>E-mail</label><input class="email" obg="E-mail" name="email" value="<?= $administrador['email'] ?>" type="text" />
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Senha</label><input class="senha" obg="Senha" name="senha" type="password" />
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Confirmar senha</label><input class="senha" obg="Confirmação de Senha" name="c-senha" type="password" />
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input type="submit" class="btn btn-success"  value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 			
 			
@@ -185,11 +212,11 @@ $mensagem_erro =  false;
 				
 				if($pagina_admin[1] == 'error'):
 					echo "<div class='mensagem_erro'>Ocorreu um erro!</div>";
-					goto lista;
+					gerarGrid($tabela_local);
 
 				elseif ($pagina_admin[1] == 'sucess'):
 					echo "<div class='mensagem_sucesso'>Operação realizada com sucesso!</div>";
-					goto lista;
+					gerarGrid($tabela_local);
 
 				elseif ($pagina_admin[1] == 'search'):
 
@@ -208,7 +235,7 @@ $mensagem_erro =  false;
 
 					else:
 
-						goto lista;
+						gerarGrid($tabela_local);
 
 					endif;
 
@@ -218,14 +245,20 @@ $mensagem_erro =  false;
 
 	else:
 
-		lista:
+		gerarGrid($tabela_local);
 
-		if($mensagem_erro){ 
-			echo "<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>";
-		}elseif ($mensagem_sucesso) {
-			echo "<li><div class='mensagem_sucesso'>Operação realizada com sucesso!</div></li>";
-		}
+		
 
+	endif;//Fim; Verifica se existe uma ação
+
+	function gerarGrid($tabela_local){
+
+		// if($mensagem_erro){ 
+		// 	echo "<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>";
+		// }elseif ($mensagem_sucesso) {
+		// 	echo "<li><div class='mensagem_sucesso'>Operação realizada com sucesso!</div></li>";
+		// }
+		
 		$grid = new Grid($tabela_local);
 		$grid->addColuna('Cod', 'id');
 		$grid->addColuna('Nome', 'nome');
@@ -234,6 +267,5 @@ $mensagem_erro =  false;
 		$grid->addItemPesquisa('Nome', 'nome');
 		$grid->addItemPesquisa('E-mail', 'email');
 		$grid->gerarGrid();
-
-	endif;//Fim; Verifica se existe uma ação
+	}
 ?>

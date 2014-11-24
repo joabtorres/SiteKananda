@@ -1,3 +1,17 @@
+<?php
+	
+	if(isset($pagina[1]) && is_numeric($pagina[1])){
+		$imovel = new Objeto('produto');
+	    $foto_imovel = new Objeto('foto_produto');
+	    $imovel->addConsulta('id', $pagina[1]);
+	    $imovel->selecionarTudo();
+	    $imovel = $imovel->retornar();
+
+	    
+
+?>
+
+
 <!--SLIDE IMOVEL SELECIONADO-->
 
 <link href="<?= RAIZ ?>paginas/imovel/css/fotorama.css" rel="stylesheet">
@@ -20,17 +34,27 @@
 			<div class="row" id="fotos-detalhes">
 				<!--DESCRIÇÃO DO IMOVEL-->
 				<div class="col-xs-12" id="descricao-principal">
-					<h2>Referência: xxx</h2>
+					<h2>Referência: <?= $imovel['referencia']?></h2>
 				</div>
 
 				<!--SLIDE IMOVEL SELECIONADO-->
 				<div class="col-xs-8">
 					<div class="fotorama" data-nav="thumbs" data-loop="true" data-width="600" data-height="400" data-max-width="100%">
-					  <a href="<?= RAIZ ?>img/residencia-a.png"><img src="<?= RAIZ ?>img/residencia-a.png"></a>
-					  <a href="<?= RAIZ ?>img/residencia-a.png"><img src="<?= RAIZ ?>img/residencia-a.png"></a>	
-					  <a href="<?= RAIZ ?>img/residencia-a.png"><img src="<?= RAIZ ?>img/residencia-a.png"></a>
-					  <a href="<?= RAIZ ?>img/residencia-a.png"><img src="<?= RAIZ ?>img/residencia-a.png"></a>
-					  <a href="<?= RAIZ ?>img/residencia-a.png"><img src="<?= RAIZ ?>img/residencia-a.png"></a>
+						<?php
+
+							$foto_imovel->limparDados();
+              				$foto_imovel->addConsulta('id_produto', $imovel['id'] );
+              				$foto_imovel->selecionarTudo();
+              				foreach ($foto_imovel->retornarDados() as $key => $value) {
+
+						?>
+
+					  	<a href="<?= RAIZ.$value['arquivo'] ?>"><img src="<?= RAIZ.$value['arquivo'] ?> ?>"></a>
+					  
+					  <?php
+					  	}
+					  ?>
+					  
 					</div>
 				</div>
 				<!--SLIDE IMOVEL SELECIONADO-->
@@ -71,44 +95,50 @@
 			<div class="row" id="descricao-do-imovel">
 				<div class="col-xs-12" >
 					<ul class="nav nav-tabs" role="tablist">
-						  <li class="active"><a href="#cEspecificacao" role="tab" data-toggle="tab">Especificação</a></li>
-						  <li><a href="#cMapa" role="tab" data-toggle="tab">Mapa</a></li>
-						  <li><a href="#cVideo" role="tab" data-toggle="tab">Vídeo</a></li>
+						  <li class="active"><a href="#cEspecificacao" onclick='exibe_mapa(false)' role="tab" data-toggle="tab">Especificação</a></li>
+						  <li><a href="#cMapa" role="tab" onclick='exibe_mapa(true	)' data-toggle="tab">Mapa</a></li>
+						  <li><a href="#cVideo" role="tab" onclick='exibe_mapa(false)' data-toggle="tab">Vídeo</a></li>
 					</ul>
 				<!-- Tab panes -->
 					<div class="tab-content" style="padding: 5px 10px;">
 						  <div class="tab-pane fade in active" id="cEspecificacao">
 						  	<ul>
 						  		<li>
-						  			<p class="text-left">Referência: <span>xxxxxx</span></p>
+						  			<p class="text-left">Descricao: <span><?= $imovel['descricao']?></span></p>
 						  		</li>
 						  		<li>
-						  			<p class="text-left">Bairro: <span>xxxxxxxxx</span></p>
+						  			<p class="text-left">Referência: <span><?= $imovel['referencia']?></span></p>
 						  		</li>
 						  		<li>
-						  			<p class="text-left">Quantidade de quarto(s): <span>xxxxxxxxx</span></p>
+						  			<p class="text-left">Bairro: <span><?= $imovel['bairro']?></span></p>
 						  		</li>
 						  		<li>
-						  			<p class="text-left">Quantidade de suite(s): <span>xxxxxxxxxxxx</span></p>
+						  			<p class="text-left">Quantidade de quarto(s): <span><?= $imovel['quartos']?></span></p>
 						  		</li>
 						  		<li>
-						  			<p class="text-left">Quantidade de Garagem: <span>xxxxxxxxxxxx</span></p>
+						  			<p class="text-left">Quantidade de suite(s): <span><?= $imovel['suites']?></span></p>
 						  		</li>
 						  		<li>
-						  			<p class="text-left">Outros: <span>xxxxxxxxxxxxx</span></p>
+						  			<p class="text-left">Descrição: <span>xxxxxxxxxxxxx</span></p>
+						  			<p class="text-left">Quantidade de Garagem: <span><?= $imovel['garagem']?></span></p>
 						  		</li>
 						  	</ul>
 						  </div>
-						  <div class="tab-pane fade" id="cMapa">
-						  	<iframe class="endo-mapa" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/ms?msa=0&amp;msid=203815559016864751127.0004ff7cd23a2fa0978ae&amp;hl=pt-BR&amp;ie=UTF8&amp;t=m&amp;z=17&amp;output=embed"></iframe>
+						  <div class="fade" id="cMapa" style="display:none">
+						  	<!-- <iframe class="endo-mapa" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/ms?msa=0&amp;msid=203815559016864751127.0004ff7cd23a2fa0978ae&amp;hl=pt-BR&amp;ie=UTF8&amp;t=m&amp;z=17&amp;output=embed"></iframe> -->
+							<div id="mapa" style="height: 300px; width: 100%;">
+					      		<!-- Maps API Javascript -->
+					        	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
+					      	</div>
+        						
 						  </div>
 						  <div class="tab-pane fade" id="cVideo">
-						  	<iframe width="100%" height="400" src="//www.youtube.com/embed/gCYcHz2k5x0" frameborder="0" allowfullscreen></iframe>	
+						  	<iframe width="100%" height="400" src="<?= $imovel['video']?>" frameborder="0" allowfullscreen></iframe>	
 						  </div>
 					</div>
 				</div>
 			</div>
-
+						
 			<!--OUTROS IMOVEIS-->
 			<div class="row" id="outros-imoveis">
 				<div class="col-xs-12">
@@ -123,15 +153,39 @@
 				            <div class="loading-2">
 				            </div>
 				        </div>
+
 				        <!-- Slides Container -->
 				        <div u="slides" class="slide-container">
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/005.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/006.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/011.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/013.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/014.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/019.jpg" /></a></div>
-				            <div><a href=""><img u="image" src="<?= RAIZ ?>paginas/imovel/img/ancient-lady/020.jpg" /></a></div>
+				            
+				        <?php
+
+				        	$similares = new Objeto('produto');
+				        	$similares->addConsulta('tipo_imovel',$imovel['tipo_imovel']);
+				        	$similares->addConsulta('cidade',$imovel['cidade']);
+
+				        	if($imovel['tipo_imovel'] == 'CASA A VENDA' || $imovel['tipo_imovel'] == 'CASA PARA ALUGAR'){
+				        		$similares->addExtras(' AND id!='.$imovel['id'].' ORDER BY quartos');
+				        	}else{
+				        		$similares->addExtras(' AND id!='.$imovel['id']);
+				        	}
+
+				        	$similares->selecionarTudo();
+
+				        	$foto_similar = new Objeto('foto_produto');
+
+				        	foreach ($similares->retornarDados() as $key => $value) {
+
+					        	$foto_similar->limparDados();
+	              				$foto_similar->addConsulta('id_produto', $value['id'] );
+	              				$foto_similar->selecionarTudo();
+	              				$foto = $foto_similar->retornar();              				
+	              				
+				        ?>
+				            <div><a href="<?= RAIZ ?>imovel/<?= $value['id']?>"><img u="image" src="<?= RAIZ.$foto['arquivo'] ?>" /></a></div>
+
+				        <?php
+				    	}
+				        ?>
 				        </div>
 				        <!-- bullet navigator container -->
 				        <div u="navigator" class="jssorb03" id="navigator-slide" style="position: absolute; bottom: 4px; right: 6px;">
@@ -150,3 +204,11 @@
 			</div>
 	</div><!--Fim do detalhes imoveis-->
 </div>
+
+<?php
+
+	}else{
+
+		header('location: '.RAIZ);
+	}
+?>

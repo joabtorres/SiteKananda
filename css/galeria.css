@@ -2,7 +2,7 @@ div#galeria-show{
 	margin: 0 5px;
 	margin-top: -10px;
 	padding: 2px;
-	background: #345195;
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.59);
 	border-radius: 10px;
 	width: 950px;
 }

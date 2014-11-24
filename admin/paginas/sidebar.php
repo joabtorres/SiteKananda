@@ -17,46 +17,51 @@
 
             <!-- Menu lateral -->
 
-            <ul id="menu-lateral">
+            <ul id="menu-lateral" class="">
 
-   
+                <a href="<?= RAIZ ?>admin/administradores">
                 <li class="item_menu">
-
-                	<a href="<?= RAIZ ?>admin/administradores">Administradores</a>
-
+                	Administradores
                 </li>
+                </a>
 
+                <a href="<?= RAIZ ?>admin/empresa">
                 <li class="item_menu">
-
-                    <a href="<?= RAIZ ?>admin/empresa">Empresa</a>
-
+                    Empresa
                 </li>
+                </a>
 
+                <a href="<?= RAIZ ?>admin/contato">
                 <li class="item_menu">
-
-                    <a href="<?= RAIZ ?>admin/slideshow">Slide Show</a>
-
+                    Contato
                 </li>
+                </a>
 
+                <a href="<?= RAIZ ?>admin/slideshow">
                 <li class="item_menu">
-
-                    <a href="<?= RAIZ ?>admin/eventos">Eventos</a>
-
+                    Slide Show
                 </li>
+                </a>
 
+                <a href="<?= RAIZ ?>admin/eventos">
                 <li class="item_menu">
-
-                    <a href="<?= RAIZ ?>admin/imoveis">Imóveis</a>
-
+                    Eventos
                 </li>
+                </a>
 
+                <a href="<?= RAIZ ?>admin/imoveis">
+                <li class="item_menu">
+                    Imóveis
+                </li>
+                </a>
 
+                <a href="<?= RAIZ ?>admin/logout">
                 <li>
 
-                	<a href="<?= RAIZ ?>admin/logout">Sair</a>
-
+                	Sair
+                    
                 </li>
-
+                </a>
             </ul>
 
             <!-- Fim; Menu lateral -->

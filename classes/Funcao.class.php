@@ -98,13 +98,16 @@ class Funcao{
 
 	public static function enviaEmail($destinatario = NULL, $assunto = NULL, $mensagem = NULL, $anexo = NULL){
 		
-		require("phpmailer/class.phpmailer.php");
+		require_once("phpmailer/class.phpmailer.php");
 		
 		if($destinatario !=null || $assunto != null || $mensagem !=null){
 
-			$email_contato = Config::emailContato();
-			$assunto = $assunto." - ".Config::tituloSite();
+			$config = new Objeto('empresa');
+  			$config->selecionarTudo();
+  			$config = $config->retornar();
 
+			$email_contato = $config['email'];
+			$assunto = $assunto." - ".$config['titulo_site'];
 
 			$email = new PHPMailer();
 			$email->From      = $email_contato;
@@ -113,6 +116,7 @@ class Funcao{
 			$email->Body      =  $mensagem;
 			$email->AddAddress( $destinatario);
 			$email->isHtml(true);
+			$email->SMTPDebug  = 2;
 
 			if(file_exists($anexo) and !empty($anexo)){
 				$email->AddAttachment($anexo);
@@ -120,14 +124,16 @@ class Funcao{
 
 			if($email->Send()){
 				$envio = true;
+				$email->ClearAddresses();  
 			}else{
-				echo $mail->ErrorInfo;
+				echo $email->ErrorInfo;
 				$envio = false;
 			}
 
 		}else{
 			$envio = false;
 		}
+
 		return $envio;
 	}
 

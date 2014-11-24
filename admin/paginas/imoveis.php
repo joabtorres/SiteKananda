@@ -12,8 +12,8 @@ $mensagem_erro =  false;
 			if($pagina_admin[1] == "novo"):
 
 				$tabela = new Objeto($tabela_local);
-				$tabela2 = new Objeto('foto_produto');
-				
+				$tabela2 = new Objeto('foto_produto')
+;				
 				if(isset($_POST['acao'])){
 					if($_POST['acao'] == "salvar"){
 
@@ -105,137 +105,171 @@ $mensagem_erro =  false;
 					<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>
 				<?php }
 			?>
-
 			<li>
-				<label>Referência</label><input obg="Referência" name="referencia" type="text" />
-				<div class="clear"></div>
+				<h2>DADOS GERAIS</h2>
+			<div class="container-grids">
+				<div class="container-2">
+					<div class="grid-referencia container-row-espc"><label>Referência: </label></div>
+					<div class="container-row input-ref" ><input obg="Referência" name="referencia" type="text" /></div>
+				</div>
+				<!-- divisao -->
+				<div class="container-3">
+					<div class="container-row container-row-espc">
+						<label>Tipo do Imóvel: </label><br>
+						<select obg="Tipo do Imóvel" name="tipo_imovel"><?= Funcao::gerarArraySelectOptions(array('CASA A VENDA', 'CASA PARA ALUGAR', 'TERRENO URBANO','TERRENO RURAL','AREAS PORTUARIA','LOTEAMENTO'))?></select>
+					</div>
+					<div class="container-row">
+						<label>Finalidade: </label><br>
+						<select obg="Finalidade" name="finalidade"><?= Funcao::gerarArraySelectOptions(array('VENDA', 'ALUGUEL' ))?></select>
+				
+					</div>
+					<div class="container-row">
+						<label>Categoria: </label><br>
+						<select obg="Categoria do Imóvel" name="categoria"><?= Funcao::gerarArraySelectOptions(array('CASA TERREA', 'SOBRADO','APARTAMENTO','TERRENO'))?></select>
+				
+					</div>
+				</div>
+				<!-- DIVISAO -->
+				<div class="container-4">
+					<div class="container-row container-row-espc">
+						<label>Quartos: </label><br>
+						<input obg="Quantidade de Quatos" name="quartos" type='text'>
+					</div>
+					<div class="container-row">
+						<label>Banheiros: </label><br>
+						<input obg="Quantidade de Banheiros" name="banheiros" type='text'>
+				
+					</div>
+					<div class="container-row">
+						<label>Suítes: </label><br>
+						<input obg="Quantidade de Suítes" name="suites" type='text'>
+					</div>
+					<div class="container-row">
+						<label>Garagem: </label><br>
+						<input obg="Vagas na Garagem" name="garagem" type='text'>
+					</div>
+				</div>
+				</div>
+			</li>
+			<li>
+			<h2>DIMENSÕES E POSIÇÃO</h2>	
+				<div class="container-grids">
+					
+				<div class="container-4">
+					<div class="container-row container-row-espc">
+						<label>Área Edificada: </label><br>
+					<input obg="Área edificada" class='area' name="area_edificada" type='text'>
+					</div>
+					<div class="container-row">
+						<label>Área do Terreno: </label><br>
+					<input obg="Área do Terreno" class='area' name="area_terreno" type='text'>
+					</div>
+					<div class="container-row">
+						<label> Perímetro Largura: </label><br>
+					<input obg="Largura" name="largura" class='metros_medida' type='text'>
+					</div>
+					<div class="container-row">
+						<label>Perímetro Comprimento: </label><br>
+						<input obg="Comprimento" class='metros_medida' name="comprimento" type='text'>
+					</div>
+				</div>
+				<!-- divisao -->
+				<div class="container-2">
+					<div class="container-row container-row-espc"> 
+						<label>Latitude: </label><br>
+						<input name="latitude" type='text'>
+					</div>
+					<div class="container-row">
+						<label>Longitude: </label><br>
+						<input name="longitude" type='text'>
+					</div>
+				</div>
+				<!-- divisao -->
+				<div class="container-1">
+					<div class="container-row container-row-espc"> 
+						<div id="mapa" class="mapa-imoveis">
+							<!-- Maps API Javascript -->
+					        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
+		    			</div>
+					</div>
+				</div>	
+				</div>
+			<li>
+			<li>
+				<h2>ENDEREÇO</h2>
+				<!-- divisao -->
+				<div class="container-grids">
+					<div class="container-2">
+						<div class=" container-row input-ref container-row-espc"> 
+							<label>Logradouro: </label><br>
+							<input name="logradouro" type='text'>
+
+						</div>
+						<div class="container-row grid-referencia">
+							<label>Número: </label><br>
+							<input obg="Número do Imóvel" name="numero" type='text'>
+						</div>
+					
+					</div>
+					<!-- divisao -->
+					<div class="container-4">
+						<div class="container-row container-row-espc">
+							<label>Complemento: </label><br>
+							<input name="complemento" type='text'>
+						</div>
+						<div class="container-row">
+							<label>Bairro: </label><br>
+							<select obg="Bairro" name="bairro"><?= Funcao::gerarArraySelectOptions(array('BELA VISTA', 'BOA ESPERANÇA','BOM JARDIM', 'BOM REMÉDIO', 'CENTRO', 'FLORESTA', 'JARDIM AEROPORTO', 'JARDIM AMÉRICA', 'JARDIM DAS ARARAS', 'JARDIM TAPAJÓS', 'LIBERDADE', 'MARIA MADALENA', 'NOVA ITAITUBA', 'NOVO PARAÍSO', 'PERPÉTUO SOCORRO', 'PIRACANÃ', 'RESIDENCIAL VALE DO PIRACANÃ', 'RESIDENCIAL VIVA ITAITUBA' , 'RESIDENCIAL WIRLAND FREIRE', 'SANTO ANTÔNIO', 'SÃO FRANCISCO', 'SÃO JOSÉ', 'VALE DO TAPAJÓS', 'VALMIRLÂNDIA', 'VITÓRIA-RÉGIA'))?></select>
+						</div>
+						<div class="container-row">
+							<label>Cidade: </label><br>
+							<select obg="Cidade" name="cidade"><?= Funcao::gerarArraySelectOptions(array('ITAITUBA' ))?></select>
+						</div>
+						<div class="container-row">
+							<label>UF: </label><br>
+							<select obg="Estado" name="uf"><?= Funcao::gerarArraySelectOptions(array('PA' ))?></select>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<h2>VÍDEO DO IMOVEL</h2>
+				<div class="container-grids">
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Video: </label><br>
+						<input name="video" type='text'>
+					</div>
+				</div>
+				</div>
 			</li>
 
 			<li>
-				<label>Tipo do Imóvel</label><select obg="Tipo do Imóvel" name="tipo_imovel"><?= Funcao::gerarArraySelectOptions(array('CASA A VENDA', 'CASA PARA ALUGAR', 'TERRENO URBANO','TERRENO RURAL','AREAS PORTUARIA','LOTEAMENTO'))?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Categoria</label><select obg="Categoria do Imóvel" name="categoria"><?= Funcao::gerarArraySelectOptions(array('CASA TERREA', 'SOBRADO','APARTAMENTO','TERRENO'))?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Finalidade</label><select obg="Finalidade" name="finalidade"><?= Funcao::gerarArraySelectOptions(array('VENDA', 'ALUGUEL' ))?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Quartos</label><input obg="Quantidade de Quatos" name="quartos" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Banheiros</label><input obg="Quantidade de Banheiros" name="banheiros" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Suítes</label><input obg="Quantidade de Suítes" name="suites" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Vagas na Garagem</label><input obg="Vagas na Garagem" name="garagem" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Logradouro</label><input name="logradouro" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Número</label><input obg="Número do Imóvel" name="numero" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Complemento</label><input name="complemento" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Bairro</label><select obg="Bairro" name="bairro"><?= Funcao::gerarArraySelectOptions(array('BELA VISTA', 'BOA ESPERANÇA','BOM JARDIM', 'BOM REMÉDIO', 'CENTRO', 'FLORESTA', 'JARDIM AEROPORTO', 'JARDIM AMÉRICA', 'JARDIM DAS ARARAS', 'JARDIM TAPAJÓS', 'LIBERDADE', 'MARIA MADALENA', 'NOVA ITAITUBA', 'NOVO PARAÍSO', 'PERPÉTUO SOCORRO', 'PIRACANÃ', 'RESIDENCIAL VALE DO PIRACANÃ', 'RESIDENCIAL VIVA ITAITUBA' , 'RESIDENCIAL WIRLAND FREIRE', 'SANTO ANTÔNIO', 'SÃO FRANCISCO', 'SÃO JOSÉ', 'VALE DO TAPAJÓS', 'VALMIRLÂNDIA', 'VITÓRIA-RÉGIA'))?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Cidade</label><select obg="Cidade" name="cidade"><?= Funcao::gerarArraySelectOptions(array('ITAITUBA' ))?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Uf</label><select obg="Estado" name="uf"><?= Funcao::gerarArraySelectOptions(array('PA' ))?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Área Edificada</label><input obg="Área edificada" class='area' name="area_edificada" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Área do Terreno</label><input obg="Área do Terreno" class='area' name="area_terreno" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Largura</label><input obg="Largura" name="largura" class='metros_medida' type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Comprimento</label><input obg="Comprimento" class='metros_medida' name="comprimento" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Video</label><input name="video" type='text'>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Descrição</label><textarea obg="Descrição do imóvel" name="descricao"></textarea>
-				<div class="clear"></div>
+				<h2>VÍDEO DO IMOVEL</h2>
+				<div class="container-grids">
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Descrição: </label><br>
+						<textarea class="descrissao-slide" obg="Descrição do imóvel" name="descricao"></textarea>
+					</div>
+				</div>
+				</div>
 			</li>
 
 			<li>
 				<fieldset>
-					<legend>Mapa</legend>
-
-					<label>Latitude</label><input name="latitude" type='text'>
-					<div class="clear"></div>
-			
-					<label>Longitude</label><input name="longitude" type='text'>
-					<div class="clear"></div>
-
-					<div id="mapa" style="height: 500px; width: 700px;border: solid 1px">
-						<!-- Maps API Javascript -->
-				        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
-        			</div>
-			
-				</fieldset>
-			</li>
-
-			<li>
-				<fieldset>
-					<legend>Fotos</legend>
+					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="1" id="qtd_fotos"/>
-					<a href='#' onclick='add_slide();'>Adicionar Foto</a>
+					<a class='novo-slide' href='#' onclick='add_slide();'>Adicionar Foto</a>
 					
 					<div id='fotos'>
-						<div class='foto' id='foto1'>
+						<div class='foto foto-xxx' id='foto1'>
 
-							<label>Foto</label><input obg="foto1" name="foto1" type="file" onchange="readURL(this);" /><img id='preview1' src='#' class='preview_foto'/>
+							<label>Foto: </label>
+							<input obg="foto1" name="foto1" type="file" onchange="readURL(this);" />
+							<img id='preview1' src='#' class='preview_foto'/><br>
 
-							<a href='#' onclick="remover_foto(this);">Remover</a>
+							<a class="btn-danger novo-slide" href='#' onclick="remover_foto(this);">Remover</a>
 
 						</div>
 					</div>
@@ -244,8 +278,8 @@ $mensagem_erro =  false;
 			</li>
 
 			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input class="btn btn-success" type="submit" value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 
 		</ul>
@@ -264,6 +298,9 @@ $mensagem_erro =  false;
 				if(isset($_POST['acao'])){
 					if($_POST['acao'] == "salvar"){
 
+						$latitude = ($_POST['latitude']=='') ? '-' : $_POST['latitude'];
+						$longitude = ($_POST['longitude']=='') ? '-' : $_POST['longitude'];
+
 						$tabela->setValor('referencia',$_POST['referencia']);
 						$tabela->setValor('tipo_imovel',$_POST['tipo_imovel']);
 						$tabela->setValor('finalidade',$_POST['finalidade']);
@@ -273,8 +310,8 @@ $mensagem_erro =  false;
 						$tabela->setValor('area_ter',$_POST['area_terreno']);
 						$tabela->setValor('perimetro_l',$_POST['largura']);
 						$tabela->setValor('perimetro_c',$_POST['comprimento']);
-						$tabela->setValor('latitude',$_POST['latitude']);
-						$tabela->setValor('longitude',$_POST['longitude']);
+						$tabela->setValor('latitude',$latitude);
+						$tabela->setValor('longitude',$longitude);
 						$tabela->setValor('suites',$_POST['suites']);
 						$tabela->setValor('banheiros',$_POST['banheiros']);
 						$tabela->setValor('categoria',$_POST['categoria']);
@@ -440,128 +477,160 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Referência</label><input obg="Referência" name="referencia" type="text" value="<?= $imovel['referencia']?>"/>
-				<div class="clear"></div>
+				<h2>DADOS GERAIS</h2>
+			<div class="container-grids">
+				<div class="container-2">
+					<div class="grid-referencia container-row-espc"><label>Referência: </label></div>
+					<div class="container-row input-ref" ><input obg="Referência" name="referencia" type="text" value="<?= $imovel['referencia']?>"/>
+</div>
+				</div>
+				<!-- divisao -->
+				<div class="container-3">
+					<div class="container-row container-row-espc">
+						<label>Tipo do Imóvel: </label><br>
+						<select obg="Tipo do Imóvel" name="tipo_imovel"><?= Funcao::gerarArraySelectOptions(array('CASA A VENDA', 'CASA PARA ALUGAR', 'TERRENO URBANO','TERRENO RURAL','AREAS PORTUARIA','LOTEAMENTO'), $imovel['tipo_imovel'])?></select>
+					</div>
+					<div class="container-row">
+						<label>Finalidade: </label><br>
+						<select obg="Finalidade" name="finalidade"><?= Funcao::gerarArraySelectOptions(array('VENDA', 'ALUGUEL'), $imovel['finalidade'])?></select>
+					</div>
+					<div class="container-row">
+						<label>Categoria: </label><br>
+						<select obg="Categoria do Imóvel" name="categoria"><?= Funcao::gerarArraySelectOptions(array('CASA TERREA', 'SOBRADO','APARTAMENTO','TERRENO'), $imovel['categoria'])?></select>
+					</div>
+				</div>
+				<!-- DIVISAO -->
+				<div class="container-4">
+					<div class="container-row container-row-espc">
+						<label>Quartos: </label><br>
+						<input obg="Quantidade de Quatos" name="quartos" type='text' value="<?= $imovel['quartos']?>">
+					</div>
+					<div class="container-row">
+						<label>Banheiros: </label><br>
+						<input obg="Quantidade de Banheiros" name="banheiros" type='text' value="<?= $imovel['banheiros']?>">				
+					</div>
+					<div class="container-row">
+						<label>Suítes: </label><br>
+						<input obg="Quantidade de Suítes" name="suites" type='text' value="<?= $imovel['suites']?>">
+					</div>
+					<div class="container-row">
+						<label>Garagem: </label><br>
+						<input obg="Vagas na Garagem" name="garagem" type='text' value="<?= $imovel['garagem']?>">
+					</div>
+				</div>
+			</div>
+			
+			<li>
+				<h2>DIMENSÕES E POSIÇÃO</h2>	
+				<div class="container-grids">
+					
+				<div class="container-4">
+					<div class="container-row container-row-espc">
+						<label>Área Edificada: </label><br>
+						<input obg="Área edificada" class='area' name="area_edificada" type='text' value="<?= $imovel['area_edi']?>">
+
+					</div>
+					<div class="container-row">
+						<label>Área do Terreno: </label><br>
+						<input obg="Área do Terreno" class='area' name="area_terreno" type='text' value="<?= $imovel['area_ter']?>">
+					</div>
+					<div class="container-row">
+						<label> Perímetro Largura: </label><br>
+					<input obg="Largura" name="largura" class='metros_medida' type='text' value="<?= $imovel['perimetro_l']?>">
+				
+					</div>
+					<div class="container-row">
+						<label>Perímetro Comprimento: </label><br>
+						<input obg="Comprimento" name="comprimento" class='metros_medida' type='text' value="<?= $imovel['perimetro_c']?>">
+					</div>
+				</div>
+				<!-- divisao -->
+				<div class="container-2">
+					<div class="container-row container-row-espc"> 
+						<label>Latitude: </label><br>
+						<input name="latitude" id='latitude' type='text' value="<?= $imovel['latitude']?>" onchange="addMarker();">
+					</div>
+					<div class="container-row">
+						<label>Longitude: </label><br>
+						<input name="longitude" id='longitude' type='text' value="<?= $imovel['longitude']?>" onchange="addMarker();">
+					</div>
+				</div>
+				<!-- divisao -->
+				<div class="container-1">
+					<div class="container-row container-row-espc"> 
+						<div id="mapa" class="mapa-imoveis">
+							<!-- Maps API Javascript -->
+					        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
+		    			</div>
+					</div>
+				</div>	
+				</div>
+
+			<li>
+				<h2>ENDEREÇO</h2>
+				<!-- divisao -->
+				<div class="container-grids">
+					<div class="container-2">
+						<div class=" container-row input-ref container-row-espc"> 
+							<label>Logradouro: </label><br>
+							<input name="logradouro" type='text' value="<?= $imovel['logradouro']?>">
+						</div>
+						<div class="container-row grid-referencia">
+							<label>Número: </label><br>
+							<input obg="Número do Imóvel" name="numero" type='text' value="<?= $imovel['num']?>">
+						</div>
+					
+					</div>
+					<!-- divisao -->
+					<div class="container-4">
+						<div class="container-row container-row-espc">
+							<label>Complemento: </label><br>
+							<input name="complemento" type='text' value="<?= $imovel['complemento']?>">
+						</div>
+						<div class="container-row">
+							<label>Bairro: </label><br>
+							<select obg="Bairro" name="bairro"><?= Funcao::gerarArraySelectOptions(array('BELA VISTA', 'BOA ESPERANÇA','BOM JARDIM', 'BOM REMÉDIO', 'CENTRO', 'FLORESTA', 'JARDIM AEROPORTO', 'JARDIM AMÉRICA', 'JARDIM DAS ARARAS', 'JARDIM TAPAJÓS', 'LIBERDADE', 'MARIA MADALENA', 'NOVA ITAITUBA', 'NOVO PARAÍSO', 'PERPÉTUO SOCORRO', 'PIRACANÃ', 'RESIDENCIAL VALE DO PIRACANÃ', 'RESIDENCIAL VIVA ITAITUBA' , 'RESIDENCIAL WIRLAND FREIRE', 'SANTO ANTÔNIO', 'SÃO FRANCISCO', 'SÃO JOSÉ', 'VALE DO TAPAJÓS', 'VALMIRLÂNDIA', 'VITÓRIA-RÉGIA' ), $imovel['bairro'])?></select>
+						</div>
+						<div class="container-row">
+							<label>Cidade: </label><br>
+							<select obg="Cidade" name="cidade"><?= Funcao::gerarArraySelectOptions(array('ITAITUBA' ), $imovel['cidade'])?></select>
+						</div>
+						<div class="container-row">
+							<label>UF: </label><br>
+							<select obg="Estado" name="uf"><?= Funcao::gerarArraySelectOptions(array('PA' ), $imovel['uf'])?></select>
+						</div>
+					</div>
+				</div>
 			</li>
 
 			<li>
-				<label>Tipo do Imóvel</label><select obg="Tipo do Imóvel" name="tipo_imovel"><?= Funcao::gerarArraySelectOptions(array('CASA A VENDA', 'CASA PARA ALUGAR', 'TERRENO URBANO','TERRENO RURAL','AREAS PORTUARIA','LOTEAMENTO'), $imovel['tipo_imovel'])?></select>
-				<div class="clear"></div>
+				<h2>VÍDEO DO IMOVEL</h2>
+				<div class="container-grids">
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Video: </label><br>
+						<input name="video" type='text' value="<?= $imovel['video']?>">
+					</div>
+				</div>
+				</div>
 			</li>
 
 			<li>
-				<label>Categoria</label><select obg="Categoria do Imóvel" name="categoria"><?= Funcao::gerarArraySelectOptions(array('CASA TERREA', 'SOBRADO','APARTAMENTO','TERRENO'), $imovel['categoria'])?></select>
-				<div class="clear"></div>
+				<h2>VÍDEO DO IMOVEL</h2>
+				<div class="container-grids">
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Descrição: </label><br>
+						<textarea class="descrissao-slide" obg="Descrição do imóvel" name="descricao"><?= $imovel['descricao']?></textarea>
+					</div>
+				</div>
+				</div>
 			</li>
-
-			<li>
-				<label>Finalidade</label><select obg="Finalidade" name="finalidade"><?= Funcao::gerarArraySelectOptions(array('VENDA', 'ALUGUEL'), $imovel['finalidade'])?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Quartos</label><input obg="Quantidade de Quatos" name="quartos" type='text' value="<?= $imovel['quartos']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Banheiros</label><input obg="Quantidade de Banheiros" name="banheiros" type='text' value="<?= $imovel['banheiros']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Suítes</label><input obg="Quantidade de Suítes" name="suites" type='text' value="<?= $imovel['suites']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Vagas na Garagem</label><input obg="Vagas na Garagem" name="garagem" type='text' value="<?= $imovel['garagem']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Logradouro</label><input name="logradouro" type='text' value="<?= $imovel['logradouro']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Número</label><input obg="Número do Imóvel" name="numero" type='text' value="<?= $imovel['num']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Complemento</label><input name="complemento" type='text' value="<?= $imovel['complemento']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Bairro</label><select obg="Bairro" name="bairro"><?= Funcao::gerarArraySelectOptions(array('BELA VISTA', 'BOA ESPERANÇA','BOM JARDIM', 'BOM REMÉDIO', 'CENTRO', 'FLORESTA', 'JARDIM AEROPORTO', 'JARDIM AMÉRICA', 'JARDIM DAS ARARAS', 'JARDIM TAPAJÓS', 'LIBERDADE', 'MARIA MADALENA', 'NOVA ITAITUBA', 'NOVO PARAÍSO', 'PERPÉTUO SOCORRO', 'PIRACANÃ', 'RESIDENCIAL VALE DO PIRACANÃ', 'RESIDENCIAL VIVA ITAITUBA' , 'RESIDENCIAL WIRLAND FREIRE', 'SANTO ANTÔNIO', 'SÃO FRANCISCO', 'SÃO JOSÉ', 'VALE DO TAPAJÓS', 'VALMIRLÂNDIA', 'VITÓRIA-RÉGIA' ), $imovel['bairro'])?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Cidade</label><select obg="Cidade" name="cidade"><?= Funcao::gerarArraySelectOptions(array('ITAITUBA' ), $imovel['cidade'])?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Uf</label><select obg="Estado" name="uf"><?= Funcao::gerarArraySelectOptions(array('PA' ), $imovel['uf'])?></select>
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Área Edificada</label><input obg="Área edificada" class='area' name="area_edificada" type='text' value="<?= $imovel['area_edi']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Área do Terreno</label><input obg="Área do Terreno" class='area' name="area_terreno" type='text' value="<?= $imovel['area_ter']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Largura</label><input obg="Largura" name="largura" class='metros_medida' type='text' value="<?= $imovel['perimetro_l']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Comprimento</label><input obg="Comprimento" name="comprimento" class='metros_medida' type='text' value="<?= $imovel['perimetro_c']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Video</label><input name="video" type='text' value="<?= $imovel['video']?>">
-				<div class="clear"></div>
-			</li>
-
-			<li>
-				<label>Descrição</label><textarea obg="Descrição do imóvel" name="descricao"><?= $imovel['descricao']?></textarea>
-				<div class="clear"></div>
-			</li>
-
 			<li>
 				<fieldset>
-					<legend>Mapa</legend>
-
-					<label>Latitude</label><input name="latitude" id='latitude' type='text' value="<?= $imovel['latitude']?>" onchange="addMarker();">
-					<div class="clear"></div>
-			
-					<label>Longitude</label><input name="longitude" id='longitude' type='text' value="<?= $imovel['longitude']?>" onchange="addMarker();">
-					<div class="clear"></div>
-
-					<div id="mapa" style="height: 500px; width: 700px;border: solid 1px">
-						<!-- Maps API Javascript -->
-				        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCg1ogHawJGuDbw7nd6qBz9yYxYPoGTWQo&sensor=false"></script>
-        			</div>
-			
-				</fieldset>
-			</li>
-
-			<li>
-				<fieldset>
-					<legend>Fotos</legend>
+					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="<?= $tabela2->getLinhasAfetadas()?>" id="qtd_fotos"/>
-					<a href='#' onclick='add_slide();'>Adicionar Foto</a>
+					<a class='novo-slide' href='#' onclick='add_slide();'>Adicionar Foto</a>
 					
 					<div id='fotos'>
 					<?php
@@ -574,13 +643,13 @@ $mensagem_erro =  false;
 								$destaque = '';
 					?>
 
-					<div class='foto <?= $destaque ?>' id="foto<?=$i ?>">
+					<div class='foto <?= $destaque ?> foto-xxx' id="foto<?=$i ?>">
 
 						<input type='hidden' name="id_foto<?= $i ?>" value="<?=$foto['id'] ?>"/>
 
-						<label>Foto</label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src='<?= RAIZ.$foto['arquivo'] ?>' class='preview_foto'/>
+						<label>Foto: </label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src='<?= RAIZ.$foto['arquivo'] ?>' class='preview_foto'/><br>
 
-						<a href='#' onclick="remover_foto(this);">Remover</a>
+						<a class="btn-danger novo-slide" href='#' onclick="remover_foto(this);">Remover</a>
 
 					</div>
 
@@ -594,8 +663,8 @@ $mensagem_erro =  false;
 			</li>
 
 			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input class="btn btn-success" type="submit" value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 
 		</ul>
@@ -657,11 +726,11 @@ $mensagem_erro =  false;
 				
 				if($pagina_admin[1] == 'error'):
 					echo "<div class='mensagem_erro'>Ocorreu um erro!</div>";
-					goto lista;
+					gerarGrid($tabela_local);
 
 				elseif ($pagina_admin[1] == 'sucess'):
 					echo "<div class='mensagem_sucesso'>Operação realizada com sucesso!</div>";
-					goto lista;
+					gerarGrid($tabela_local);
 
 				elseif ($pagina_admin[1] == 'search'):
 
@@ -687,7 +756,7 @@ $mensagem_erro =  false;
 
 					else:
 
-						goto lista;
+						gerarGrid($tabela_local);
 
 					endif;
 
@@ -697,23 +766,9 @@ $mensagem_erro =  false;
 
 	else:
 
-		lista:
+		gerarGrid($tabela_local);
 
-		$grid = new Grid($tabela_local);
-		$grid->addColuna('Cod', 'id');
-		$grid->addColuna('Referência', 'referencia');
-		$grid->addColuna('Tipo de Imóvel', 'tipo_imovel');
-		$grid->addColuna('Finalidade', 'finalidade');
-		$grid->addColuna('Bairro', 'bairro');
-		$grid->addColuna('Data do Cadastro', 'data_cadastro');
-		$grid->addItemPesquisa('Referência', 'referencia');
-		$grid->addItemPesquisa('Tipo do Imóvel', 'tipo_imovel');
-		$grid->addItemPesquisa('Finalidade', 'finalidade');
-		$grid->addItemPesquisa('Bairro', 'bairro');
-		$grid->addItemPesquisa('Quartos', 'quartos');
-		$grid->addItemPesquisa('Garagem', 'garagem');
-		$grid->addItemPesquisa('Suíte', 'suites');
-		$grid->gerarGrid();
+		
 	
 	endif;//Fim; Verifica se existe uma ação
 
@@ -721,19 +776,23 @@ $mensagem_erro =  false;
 		$tabela = new Objeto('produto');
 		$tabela2 = new Objeto('foto_produto');	
 		$pontos = array();
+		$tabela->addExtras('WHERE `longitude` IS NOT NULL AND `latitude` IS NOT NULL AND `longitude`!="-" AND `latitude`!="-" ');
 		$tabela->selecionarTudo();
+
 		$i = 0;
 
 		foreach ($tabela->retornarDados() as $key => $value) {
 			$pontos[$i]['id'] = $value['id'];
 			$pontos[$i]['latitude'] = $value['latitude'];
 			$pontos[$i]['longitude'] = $value['longitude'];
-			$pontos[$i]['categoria'] = $value['categoria'];
+			$pontos[$i]['tipo_imovel'] = $value['tipo_imovel'];
+			$pontos[$i]['bairro'] = $value['bairro'];
+			$pontos[$i]['link'] = RAIZ.'imovel/'.$value['id'];
 
 			$descricao0 = str_split($value['descricao']);
 			$descricao1 = '';
 			for ($j=0; $j < count($descricao0); $j++) { 
-				if($j==81){
+				if($j==114){
 					$descricao1 .= '...';
 					break;
 				}
@@ -758,5 +817,24 @@ $mensagem_erro =  false;
 		$escreve = fwrite($json, $pontos);
 		 
 		fclose($json); 
+	}
+
+	function gerarGrid($tabela_local){
+
+		$grid = new Grid($tabela_local);
+		$grid->addColuna('Cod', 'id');
+		$grid->addColuna('Referência', 'referencia');
+		$grid->addColuna('Tipo de Imóvel', 'tipo_imovel');
+		$grid->addColuna('Finalidade', 'finalidade');
+		$grid->addColuna('Bairro', 'bairro');
+		$grid->addColuna('Data do Cadastro', 'data_cadastro');
+		$grid->addItemPesquisa('Referência', 'referencia');
+		$grid->addItemPesquisa('Tipo do Imóvel', 'tipo_imovel');
+		$grid->addItemPesquisa('Finalidade', 'finalidade');
+		$grid->addItemPesquisa('Bairro', 'bairro');
+		$grid->addItemPesquisa('Quartos', 'quartos');
+		$grid->addItemPesquisa('Garagem', 'garagem');
+		$grid->addItemPesquisa('Suíte', 'suites');
+		$grid->gerarGrid();
 	}
 ?>

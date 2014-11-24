@@ -32,7 +32,7 @@
     foreach ($slide_objeto->retornarDados() as $key => $value) {    
   ?>
       <div class="item <?= ($i==0)? 'active': ''?>">
-        <img src="<?= RAIZ.$value['slide'] ?>" alt="legenda">
+        <img src="<?= RAIZ.$value['slide'] ?>" alt="legenda" class="carousel-img">
         <div class="carousel-caption">
          <h3><?= $value['titulo']?></h3>
          <p><?= $value['descricao']?></p>
@@ -97,7 +97,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>venda"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
       </div>
       <?php } ?>
@@ -139,7 +139,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>loteamentos"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
   </div>
   <?php } ?>
@@ -180,7 +180,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>aluguel"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
   </div>
 
@@ -222,7 +222,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>terrenos-urbanos"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
   </div>
 
@@ -250,7 +250,7 @@
                   $foto = $foto_imovel->retornar();
               ?>
                 <div class="col-xs-4" >
-                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>">
                       <div class="home-imovel">
                         <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
                         <div class="home-legenda-imovel">
@@ -265,7 +265,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>terrenos-rurais"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
   </div>
 
@@ -292,7 +292,7 @@
                   $foto = $foto_imovel->retornar();
               ?>
                 <div class="col-xs-4" >
-                  <a href="<?= RAIZ ?>paginas/imovel/imovel-especifico/">
+                  <a href="<?= RAIZ ?>imovel/<?= $value['id']?>">
                       <div class="home-imovel">
                         <img src="<?= RAIZ.$foto['arquivo'] ?>" alt="...">
                         <div class="home-legenda-imovel">
@@ -307,7 +307,7 @@
                   }
                 ?>
 
-                <a href=""><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
+                <a href="<?= RAIZ ?>areas-portuarias"><h3 class="imovel-ver-mais btn-info">Ver Mais</h3></a>
             </div>
   </div>
 
@@ -318,7 +318,7 @@
   <div class="row">
     <div class="col-md-12">
       
-        <iframe src="https://mapsengine.google.com/map/embed?mid=zs4x33MW_ykM.kAOGMPy5ErTM&z=16" ></iframe>
+        <iframe class="mapa" src="https://mapsengine.google.com/map/embed?mid=zs4x33MW_ykM.kAOGMPy5ErTM&z=16" ></iframe>
       
     </div>
   </div>

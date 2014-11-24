@@ -75,28 +75,40 @@ $mensagem_erro =  false;
 					<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>
 				<?php }
 			?>
-
 			<li>
-				<label>Titulo</label><input obg="Titulo do Evento" name="titulo" type="text" />
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Descrição do Evento</label><input obg="Descrição do Evento" name="descricao_evento" type="text" />
-				<div class="clear"></div>
-			</li>
+				<h2>Empresa</h2>	
+				<div class="container-grids">
+				<!-- divisao -->
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Titulo: </label><br>
+						<input obg="Titulo do Evento" name="titulo" type="text" /> 
+					</div>
+					<div class="container-row container-row-espc">
+						<label>Descrição do Evento: </label><br>
+						<input obg="Descrição do Evento" name="descricao_evento" type="text" />
+					</div>
+				</div>
+				</div>
+			</li>	
+			
 			<li>
 				<fieldset>
-					<legend>Fotos</legend>
+					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="1" id="qtd_fotos"/>
-					<a href='#' onclick='add_foto();'>Adicionar Foto</a>
+					<a class='novo-slide' href='#' onclick='add_foto();'>Adicionar Foto</a>
 					
 					<div id='fotos'>
 
 						<div class='foto' id='foto1'>
 
-							<label>Foto</label><input obg="foto1" name="foto1" type="file" onchange="readURL(this);" /><img id='preview1' src='#' class='preview_foto'/>
+							<label>Foto: </label>
+							<input class="foto-slide" obg="foto1" name="foto1" type="file" onchange="readURL(this);" />
+							<img id='preview1' src='#' class='preview_foto'/><br>
 
-							<label>Descrição da Foto</label><textarea obg="Descrição da Foto 1" name="descricao_foto1" cols='20' rows='2'></textarea><a href='#' onclick="remover_foto(this);">Remover</a>
+							<label>Descrição da Foto:</label><br>
+							<textarea obg="Descrição da Foto 1" name="descricao_foto1" class="descrissao-slide"></textarea>
+							<a id="slide-remover" class="btn-danger novo-slide" href='#' onclick="remover_foto(this);">Remover</a>
 
 						</div>
 					</div>
@@ -105,8 +117,8 @@ $mensagem_erro =  false;
 			</li>
 
 			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input class="btn btn-success" type="submit" value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 
 		</ul>
@@ -274,18 +286,18 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Titulo</label><input obg="Titulo do Evento" name="titulo" type="text" value="<?= $evento['titulo_evento']?>"/>
+				<label>Titulo: </label><br><input obg="Titulo do Evento" name="titulo" type="text" value="<?= $evento['titulo_evento']?>"/>
 				<div class="clear"></div>
 			</li>
 			<li>
-				<label>Descrição do Evento</label><input obg="Descrição do Evento" name="descricao_evento" type="text" value="<?= $evento['descricao_evento']?>"/>
+				<label>Descrição do Evento: </label><br><input obg="Descrição do Evento" name="descricao_evento" type="text" value="<?= $evento['descricao_evento']?>"/>
 				<div class="clear"></div>
 			</li>
 			<li>
 				<fieldset>
-					<legend>Fotos</legend>
+					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="<?= $tabela2->getLinhasAfetadas()?>" id="qtd_fotos"/>
-					<a href='#' onclick='add_foto();'>Adicionar Foto</a>
+					<a class='novo-slide' href='#' onclick='add_foto();'>Adicionar Foto</a>
 					
 					<div id='fotos'>
 					<?php
@@ -297,9 +309,12 @@ $mensagem_erro =  false;
 
 							<input type='hidden' name="id_foto<?= $i ?>" value="<?=$foto['id'] ?>"/>
 
-							<label>Foto</label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src="<?= RAIZ.$foto['arquivo'] ?>" class='preview_foto'/>
+							<label>Foto: </label>
+							<input class="foto-slide" name="foto<?=$i ?>" type="file" onchange="readURL(this);" />
+							<img id='preview<?=$i ?>' src="<?= RAIZ.$foto['arquivo'] ?>" class='preview_foto'/><br>
 
-							<label>Descrição da Foto</label><textarea obg="Descrição da Foto <?=$i ?>" name="descricao_foto<?=$i ?>" cols='20' rows='2'><?= $foto['descricao_foto'] ?></textarea><a href='#' onclick="remover_foto(this);">Remover</a>
+							<label>Descrição da Foto: </label><br><textarea obg="Descrição da Foto <?=$i ?>" name="descricao_foto<?=$i ?>" class="descrissao-slide"><?= $foto['descricao_foto'] ?></textarea>
+							<a id="slide-remover" class="btn-danger novo-slide" href='#' onclick="remover_foto(this);">Remover</a>
 
 						</div>
 
@@ -313,8 +328,8 @@ $mensagem_erro =  false;
 			</li>
 
 			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input class="btn btn-success" type="submit" value="Salvar" />
+				<button class="btn btn-danger"  onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 
 		</ul>
@@ -368,11 +383,11 @@ $mensagem_erro =  false;
 				
 				if($pagina_admin[1] == 'error'):
 					echo "<div class='mensagem_erro'>Ocorreu um erro!</div>";
-					goto lista;
+					gerarGrid($tabela_local);
 
 				elseif ($pagina_admin[1] == 'sucess'):
 					echo "<div class='mensagem_sucesso'>Operação realizada com sucesso!</div>";
-					goto lista;
+					gerarGrid($tabela_local);
 
 				elseif ($pagina_admin[1] == 'search'):
 
@@ -390,7 +405,7 @@ $mensagem_erro =  false;
 
 					else:
 
-						goto lista;
+						gerarGrid($tabela_local);
 
 					endif;
 
@@ -401,7 +416,12 @@ $mensagem_erro =  false;
 
 	else:
 
-		lista:
+		gerarGrid($tabela_local);
+
+
+	endif;//Fim; Verifica se existe uma ação
+
+	function gerarGrid($tabela_local){
 
 		$grid = new Grid($tabela_local);
 		$grid->addColuna('Cod', 'id');
@@ -410,7 +430,5 @@ $mensagem_erro =  false;
 		$grid->addColuna('Data do Cadastro', 'data_cadastro');
 		$grid->addItemPesquisa('Titulo', 'titulo_evento');
 		$grid->gerarGrid();
-	
-
-	endif;//Fim; Verifica se existe uma ação
+	}
 ?>

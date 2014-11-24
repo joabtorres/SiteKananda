@@ -148,10 +148,12 @@ $mensagem_erro =  false;
 
 
 			<li>
+				<h2>SlideShow da Pagina Inicial (Home)</h2>
+				<p class="obs">OBS: É recomendado que utilize uma imagem editada com sua largura de até 950 pixels e sua altura 380 pixels, caso contrario a imagem sera cortada pelo proprio slideshow.</p>
 				<fieldset>
-					<legend>Slideshow</legend>
+					<legend>Fotos </legend>
 					<input type="hidden" name="qtd_fotos" value="<?= $tabela->getLinhasAfetadas()?>" id="qtd_fotos"/>
-					<a href='#' onclick='add_slideshow();' class='add_link'>Adicionar Slide</a>
+					<a href='#' onclick='add_slideshow();' class='novo-slide'>Adicionar Slide</a>
 					<div id='fotos'>
 					<?php
 						$i=1;
@@ -160,15 +162,14 @@ $mensagem_erro =  false;
 					?>
 						<div class='foto' id='foto<?=$i ?>'>
 
-							<input type='hidden' name="id_foto<?= $i ?>" value="<?=$foto['id'] ?>"/>
+							<input class="foto-slide" type='hidden' name="id_foto<?= $i ?>" value="<?=$foto['id'] ?>"/>
 
-							<label>Foto</label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src="<?= RAIZ.$foto['slide'] ?>" class='preview_foto'/>
-
-							<input type='text' name="titulo<?= $i ?>" value="<?=$foto['titulo'] ?>"/>
-
-							<textarea name="descricao<?= $i ?>" cols='20' rows='2' ><?= $foto['descricao'] ?></textarea>
-
-							<a href='#' onclick="remover_foto(this);">Remover</a>
+							<label>Foto: </label><input name="foto<?=$i ?>" type="file" onchange="readURL(this);" /><img id='preview<?=$i ?>' src="<?= RAIZ.$foto['slide'] ?>" class='preview_foto'/>
+							
+							<input class="slide-title" type='text' name="titulo<?= $i ?>" value="<?=$foto['titulo'] ?>"/>
+							
+							<textarea name="descricao<?= $i ?>" class="descrissao-slide"><?= $foto['descricao'] ?></textarea>
+							<a href='#' id="slide-remover" class="btn-danger novo-slide" onclick="remover_foto(this);">Remover</a>
 
 						</div>
 
@@ -177,14 +178,13 @@ $mensagem_erro =  false;
 					}
 					?>
 					</div>
-
 				</fieldset>
 			</li>
 		
 
 			<li>
-				<input type="submit" value="Salvar" />
-				<button onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
+				<input class="btn btn-success" type="submit" value="Salvar" />
+				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
 			</li>
 			
 			
