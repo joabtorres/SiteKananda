@@ -6,7 +6,7 @@
 <!--CATEGORIA DE IMOVEL-->
 
   <div id="imovel-home">
-          <h3 class="imovel-nome">Casas a Venda</h3>
+          <h3 class="imovel-nome">Aluguel de Casas</h3>
           <?php
 
             $imovel = new Objeto('produto');

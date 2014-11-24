@@ -19,8 +19,13 @@
           </ul>
         </div>
         <div class="col-xs-4">
+<<<<<<< HEAD
           <p class="text-center logos-socias"><a href="https://www.facebook.com/kanandaimobiliaria" target="_blank"><img src="<?= RAIZ ?>img/facebook-icon.png" alt="Facebook da kananda imobiliaria"></a>  <a href="#"target="_blank"><img src="<?= RAIZ ?>img/youtube-icon.png" alt=""></a></p>
           <p class="text-center"><div class="fb-like-box" data-href="https://www.facebook.com/KanandaNegociosImobiliarios" data-width="288" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" style="background:white;"></div></p>
+=======
+          <p class="text-center logos-socias"><a href="https://www.facebook.com/kanandaimobiliaria" target="_blank"><img src="<?= RAIZ ?>img/facebook-icon.png" alt=""></a>  <a href="#"target="_blank"><img src="<?= RAIZ ?>img/youtube-icon.png" alt=""></a></p>
+          <p class="text-center"><div class="fb-like-box" data-href="https://www.facebook.com/KanandaNegociosImobiliarios" data-width="280" data-height="230" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" style="background: white;"></div></p>
+>>>>>>> parent of 79b8e11... pag de pesquisa
         </div>
         <div class="col-xs-4">
           <h3>CONTATOS</h3>

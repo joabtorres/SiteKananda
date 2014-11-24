@@ -24,17 +24,17 @@
   require(RAIZ."paginas/subpaginas/header.php");
 
   if($inicio){
-    include (RAIZSIMPLES."paginas/home.php");
+    include ("paginas/home.php");
   }else{
     if($notfound){
-      include (RAIZSIMPLES."paginas/subpaginas/notfound.php");
+      include ("paginas/subpaginas/notfound.php");
     } else {
       if($pagina[0]=='galeria')
-        include(RAIZSIMPLES."paginas/galeria/index.php");
+        include("paginas/galeria/index.php");
       elseif($pagina[0]=='imovel')
-        include(RAIZSIMPLES."paginas/imovel/index.php");
+        include("paginas/imovel/index.php");
       else
-        include(RAIZSIMPLES."paginas/".$pagina[0].".php");
+        include("paginas/".$pagina[0].".php");
     }
   }
   require RAIZ."paginas/subpaginas/footer.php" 

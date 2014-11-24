@@ -60,7 +60,7 @@
 				                    <option value="SÃO JOSÉ">São José</option>	
 				                    <option value="VALE DO TAPAJÓS">Vale do Tapajós</option>	
 				                    <option value="VALMIRLÂNDIA">Valmirlândia</option>	
-				                    <option value="VITÓRIA-RÉGIA">Vitória-Régia</option>
+				                    <option value="VITÓRIA-RÉGIA">Vitória-Régia</option>	
 				                </select>
 							</div>
 							<div class="form-group col-xs-4">

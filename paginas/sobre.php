@@ -3,7 +3,8 @@
 <div class="row" id="interface-servico">
 	<div class="col-xs-12">
 
-		
+		<!--FILTRO-->
+		<?php require RAIZ."/paginas/subpaginas/buscar.php" ?>
 			<div class="row">
 				<div class="col-xs-12">
 					<h1 class="titulo-servico">Sobre</h1>
