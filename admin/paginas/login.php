@@ -1,7 +1,6 @@
 <?php
 	
-	$usuario = new Objeto('usuarios');
-
+	
 	$msg = "";	
 	
 	if(isset($_POST['email']) && isset($_POST['senha'])){
@@ -22,7 +21,6 @@
 					$msg = "E-mail ou senha incorreta!";
 			}
 		}
-<<<<<<< HEAD
 	}elseif(isset($_POST['email_reco'])){
 
 		$nova_senha =  Funcao::gerarSenha(8,1);
@@ -45,7 +43,7 @@
 			
 			$mensagem = "<meta charset='UTF-8' />
 						<title></title>
-						<p class='cant-view' style='text-align: center;font-weight: normal;font-size: 11px;color: #F0F0E1;background-color: #ffffff;margin: 0;padding: 10px 0;'>&nbsp;</p>
+						<p class='cant-view' style='text-align: center;font-weight: normal;font-size: 11px;color: #F0F0E1;background-color: #ffffff;margin: 0;padding: 10px 0;''>&nbsp;</p>
 
 						<div class='wrapper' style='background-color: #EEEEEE; padding: 30px 0;'>
 						<table align='center' border='0' cellpadding='0' cellspacing='0' width='600'>
@@ -81,7 +79,7 @@
 												<p class='text-comunicate' style='color: #968f88;font-family: Arial;font-size: 15px;margin: 0 0 40px;'>Você solicitou a alteração da senha da sua conta administrativa!<br />
 												
 												<br />
-												Acesse: <strong><a href='#' style='text-decoration: none;' title='".$config['titulo_site']."'>".RAIZ."admin</a></strong><br />
+												Acesse: <strong><a href='#' style='text-decoration: none;' title='".$config['titulo_site']."'>".RAIZ."/admin</a></strong><br />
 												Login: ".$_POST['email_reco']."<br />
 												Senha: ".$nova_senha."<br />
 												<br />
@@ -122,8 +120,6 @@
 
 		
 
-=======
->>>>>>> parent of 5d3faf7... ajuste de segurança - recuperar senha do usuário administrador
 	}
 	
 
@@ -133,6 +129,40 @@
 		$display = 'display:none';
 	else
 		$display = 'display:block';
+
+	if(isset($_GET['recuperar'])){
+
+?>	
+
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='charset=utf-8'/>
+	<title>Kananda - Login</title>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="body-login">
+
+	<div id='login' class='bradius'>
+
+		<div id='message_login' class='bradius' style='<?=$display ?>'><?=$msg?></div><!-- .message -->
+
+		<div id='logo_login'><a href="<?=RAIZSIMPLES ?>"></a><img src="imagens/logo.png" id='logo_login_img' width='250' height='65'></div><!-- .logo -->
+
+		<div id='form_login'>
+			<form action='#' method='POST'>
+				<label for='email'>E-mail: </label><input id='email' class='campo_txt bradius' type='email' name='email_reco' value='' required/>
+				<input type='submit' id='btn_login' class='bradius' value='Enviar nova senha'>
+			</form>
+		</div><!-- .acomodar -->
+
+	</div><!-- #login -->
+
+</body>
+</html>
+
+<?php	
+	}else{
 
 ?>
 
@@ -156,6 +186,7 @@
 				<label for='email'>E-mail: </label><input id='email' class='campo_txt bradius' type='text' name='email' value=''/>
 				<label for='senha'>Senha: </label><input id='senha' class='campo_txt bradius' type='password' name='senha' value=''/>
 				<input type='submit' id='btn_login' class='bradius' value='Entrar'>
+				<span id='recupera_senha'><a href='?recuperar' >Não lembra a senha?</a></span>
 			</form>
 		</div><!-- .acomodar -->
 
@@ -163,3 +194,5 @@
 
 </body>
 </html>
+
+<?php } ?>

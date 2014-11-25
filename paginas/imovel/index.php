@@ -119,7 +119,7 @@
 						  			<p class="text-left">Quantidade de suite(s): <span><?= $imovel['suites']?></span></p>
 						  		</li>
 						  		<li>
-						  			
+						  			<p class="text-left">Descrição: <span>xxxxxxxxxxxxx</span></p>
 						  			<p class="text-left">Quantidade de Garagem: <span><?= $imovel['garagem']?></span></p>
 						  		</li>
 						  	</ul>
