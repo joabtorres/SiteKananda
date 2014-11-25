@@ -1,6 +1,7 @@
 <?php
 	
-	
+	$usuario = new Objeto('usuarios');
+
 	$msg = "";	
 	
 	if(isset($_POST['email']) && isset($_POST['senha'])){
@@ -21,6 +22,7 @@
 					$msg = "E-mail ou senha incorreta!";
 			}
 		}
+<<<<<<< HEAD
 	}elseif(isset($_POST['email_reco'])){
 
 		$nova_senha =  Funcao::gerarSenha(8,1);
@@ -120,6 +122,8 @@
 
 		
 
+=======
+>>>>>>> parent of 5d3faf7... ajuste de segurança - recuperar senha do usuário administrador
 	}
 	
 
@@ -129,40 +133,6 @@
 		$display = 'display:none';
 	else
 		$display = 'display:block';
-
-	if(isset($_GET['recuperar'])){
-
-?>	
-
-<html>
-<head>
-	<meta http-equiv='Content-Type' content='charset=utf-8'/>
-	<title>Kananda - Login</title>
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body class="body-login">
-
-	<div id='login' class='bradius'>
-
-		<div id='message_login' class='bradius' style='<?=$display ?>'><?=$msg?></div><!-- .message -->
-
-		<div id='logo_login'><a href="<?=RAIZSIMPLES ?>"></a><img src="imagens/logo.png" id='logo_login_img' width='250' height='65'></div><!-- .logo -->
-
-		<div id='form_login'>
-			<form action='#' method='POST'>
-				<label for='email'>E-mail: </label><input id='email' class='campo_txt bradius' type='email' name='email_reco' value='' required/>
-				<input type='submit' id='btn_login' class='bradius' value='Enviar nova senha'>
-			</form>
-		</div><!-- .acomodar -->
-
-	</div><!-- #login -->
-
-</body>
-</html>
-
-<?php	
-	}else{
 
 ?>
 
@@ -186,7 +156,6 @@
 				<label for='email'>E-mail: </label><input id='email' class='campo_txt bradius' type='text' name='email' value=''/>
 				<label for='senha'>Senha: </label><input id='senha' class='campo_txt bradius' type='password' name='senha' value=''/>
 				<input type='submit' id='btn_login' class='bradius' value='Entrar'>
-				<span id='recupera_senha'><a href='?recuperar' >Não lembra a senha?</a></span>
 			</form>
 		</div><!-- .acomodar -->
 
@@ -194,5 +163,3 @@
 
 </body>
 </html>
-
-<?php } ?>

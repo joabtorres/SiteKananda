@@ -126,7 +126,7 @@ class Funcao{
 				$envio = true;
 				$email->ClearAddresses();  
 			}else{
-				echo $email->ErrorInfo;
+				echo $mail->ErrorInfo;
 				$envio = false;
 			}
 
