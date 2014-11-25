@@ -34,8 +34,8 @@
         foreach ($fotos_evento->retornarDados() as $key => $value) {
                   
       ?>
-
-      <a href="<?= RAIZ.$value['arquivo'] ?>"><img src="/img/test1.jpg"></a>
+      <!-- data-caption="texto" -->
+      <a href="<?= RAIZ.$value['arquivo'] ?>" data-caption="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, eveniet aspernatur maiores obcaecati dolore vitae omnis."></a>
 
       <?php } ?>
        

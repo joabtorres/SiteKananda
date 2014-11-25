@@ -6,7 +6,7 @@
         <div class="col-xs-4">
             <ul>
               <li><h3>IMÓVEIS</h3></li>
-              <li><a href="<?= RAIZ ?>areas-portuarias">Áreas Portuarías</a></li>
+              <li><a href="<?= RAIZ ?>areas-portuarias">Áreas Portuárias</a></li>
               <li><a href="<?= RAIZ ?>aluguel">Casas para Aluguar</a></li>
               <li><a href="<?= RAIZ ?>venda">Casas a Venda</a></li>
               <li><a href="<?= RAIZ ?>loteamentos">Loteamentos</a></li>
@@ -19,18 +19,8 @@
           </ul>
         </div>
         <div class="col-xs-4">
-
-          <div
-  class="fb-like"
-  data-send="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-          <!-- <p class="text-center logos-socias"><a href="https://www.facebook.com/kanandaimobiliaria" target="_blank"><img src="<?= RAIZ ?>img/facebook-icon.png" alt=""></a>  <a href="#"target="_blank"><img src="<?= RAIZ ?>img/youtube-icon.png" alt=""></a></p>
-          <p class="text-center"><div class="fb-like-box" data-href="https://www.facebook.com/KanandaNegociosImobiliarios" data-width="280" data-height="230" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" style="background: white;"></div></p> -->
-
-          <p class="text-center logos-socias"><a href="https://www.facebook.com/kanandaimobiliaria" target="_blank"><img src="<?= RAIZ ?>img/facebook-icon.png" alt="Facebook da kananda imobiliaria"></a>  <a href="#"target="_blank"><img src="<?= RAIZ ?>img/youtube-icon.png" alt=""></a></p>
-          <p class="text-center"><div class="fb-like-box" data-href="https://www.facebook.com/KanandaNegociosImobiliarios" data-width="280" data-height="230" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" style="background: white;"></div></p>
+           <p class="text-center logos-socias"><a href="https://www.facebook.com/kanandaimobiliaria" target="_blank"><img src="<?= RAIZ ?>img/facebook-icon.png" alt="Facebook da kananda imobiliaria"></a>  <a href="#"target="_blank"><img src="<?= RAIZ ?>img/youtube-icon.png" alt=""></a></p>
+          <p class="text-center logos-socias"><div class="fb-like-box" data-href="https://www.facebook.com/KanandaNegociosImobiliarios" data-width="290" data-height="" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" style="background: white;"></div></p>
 
         </div>
         <div class="col-xs-4">
