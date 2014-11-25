@@ -77,14 +77,20 @@ $mensagem_erro =  false;
 			?>
 
 			<li>
-				<label>Titulo: </label><br>
-				<input obg="Titulo do Evento" name="titulo" type="text" />
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Descrição do Evento: </label><br>
-				<input obg="Descrição do Evento" name="descricao_evento" type="text" />
-				<div class="clear"></div>
+				<h2>Empresa</h2>	
+				<div class="container-grids">
+				<!-- divisao -->
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Titulo: </label><br>
+						<input obg="Titulo do Evento" name="titulo" type="text" /> 
+					</div>
+					<div class="container-row container-row-espc">
+						<label>Descrição do Evento: </label><br>
+						<input obg="Descrição do Evento" name="descricao_evento" type="text" />
+					</div>
+				</div>
+				</div>
 			</li>
 			<li>
 				<fieldset>
@@ -278,14 +284,21 @@ $mensagem_erro =  false;
 					<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>
 				<?php }
 			?>
-
 			<li>
-				<label>Titulo: </label><br><input obg="Titulo do Evento" name="titulo" type="text" value="<?= $evento['titulo_evento']?>"/>
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Descrição do Evento: </label><br><input obg="Descrição do Evento" name="descricao_evento" type="text" value="<?= $evento['descricao_evento']?>"/>
-				<div class="clear"></div>
+				<h2>Empresa</h2>	
+				<div class="container-grids">
+				<!-- divisao -->
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Titulo: </label><br>
+						<input obg="Titulo do Evento" name="titulo" type="text" value="<?= $evento['titulo_evento']?>"/>
+					</div>
+					<div class="container-row container-row-espc">
+						<label>Descrição do Evento: </label><br>
+						<input obg="Descrição do Evento" name="descricao_evento" type="text" value="<?= $evento['descricao_evento']?>"/>
+					</div>
+				</div>
+				</div>
 			</li>
 			<li>
 				<fieldset>
