@@ -245,7 +245,7 @@ $mensagem_erro =  false;
 			</li>
 
 			<li>
-				<h2>VÍDEO DO IMOVEL</h2>
+				<h2>DESCRIÇÃO DAS ESPECIFICAÇÕES</h2>
 				<div class="container-grids">
 				<div class="container-1">
 					<div class="container-row container-row-espc">
@@ -616,7 +616,7 @@ $mensagem_erro =  false;
 			</li>
 
 			<li>
-				<h2>VÍDEO DO IMOVEL</h2>
+				<h2>DESCRIÇÃO DAS ESPECIFICAÇÕES</h2>
 				<div class="container-grids">
 				<div class="container-1">
 					<div class="container-row container-row-espc">

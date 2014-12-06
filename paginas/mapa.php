@@ -33,7 +33,7 @@
 							</div>
 						</div>
 						<div class="form-group col-xs-12" id="form-2">
-							<label for="cBairro" class="col-xs-1 col-xs-offset-1 control-label">Bairro:</label>
+							<label for="cBairro" class="col-xs-1 col-xs-offset-2 control-label">Bairro:</label>
 							<div class="col-xs-5">
 								<select name="select" id="selecionaBairro" class="form-control" onChange='aplica_filtro_bairro(this);'>
 									<option value="BELA VISTA">Bela Vista</option>
@@ -63,8 +63,7 @@
 				                    <option value="VITÓRIA-RÉGIA">Vitória-Régia</option>
 				                </select>
 							</div>
-							<div class="form-group col-xs-4">
-								<button type="submit" name="tBuscar" id="cBuscar" class="btn btn-info">Buscar</button>
+							<div class="form-group col-xs-2">
 							</div>
 						</div>
 					</form>
