@@ -70,7 +70,7 @@
       if($imovel->getLinhasAfetadas()>0){
     ?>
       <div id="imovel-home">
-          <h3 class="imovel-nome">A Venda</h3>
+          <h3 class="imovel-nome">Casas a Venda</h3>
             <div class="row">
               <?php
 

@@ -91,8 +91,16 @@ body.body-login{
 	background-image:-ms-linear-gradient(-180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
 	background-image:linear-gradient(-180deg,rgb(0,154,225) 0%,rgb(0,148,235) 100%);
 }
-
-
+#recupera_senha > a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: green;
+	padding-top: 5px;
+}
+#recupera_senha > a:hover{
+	text-decoration: underline;
+}
 /*-------------------------------------------------------------------------
 								Área administrativa
 ----------------------------------------------------------------------------*/

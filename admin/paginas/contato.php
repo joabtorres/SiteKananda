@@ -26,28 +26,41 @@ $mensagem_erro =  false;
 					<li><div class='mensagem_erro'>Ocorreu um erro!</div></li>
 				<?php }
 			?>
-
 			<li>
-				<label >Nome: </label><br><input obg="Nome" name="nome" type="text" value="<?= $contato['nome'] ?>" readonly/>
-				<div class="clear"></div>
+				<h2>Ler E-mail</h2>	
+				<div class="container-grids grid-in-line" >
+				<!-- divisao -->
+				<div class="container-1">
+					<div class="container-row container-row-espc"> 
+						<label >Nome: </label><br>
+						<input obg="Nome" name="nome" type="text" value="<?= $contato['nome'] ?>" readonly/>
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>E-mail: </label><br>
+						<input class="email" obg="E-mail" name="email" value="<?= $contato['email'] ?>" type="text" readonly/>
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Telefone: </label><br>
+						<input class="imovel" obg="telefone" name="telefone" type="text" value="<?= $contato['telefone'] ?>" readonly/>
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Imóvel: </label><br>
+						<input class="imovel"  name="imovel" type="text" value="<?= $contato['imovel'] ?>" readonly/>
+					</div>
+				</div>
+				<div class="container-1">
+					<div class="container-row container-row-espc">
+						<label>Mensagem: </label><br>
+						<textarea class="mensagem descrissao-slide" obg="mensagem" readonly name="c-senha" rows='10' cols='30'><?= $contato['mensagem'] ?></textarea>
+					</div>
+				</div>
 			</li>
-			<li>
-				<label>E-mail: </label><br><input class="email" obg="E-mail" name="email" value="<?= $contato['email'] ?>" type="text" readonly/>
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Telefone: </label><br><input class="imovel" obg="telefone" name="telefone" type="text" value="<?= $contato['telefone'] ?>" readonly/>
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Imóvel: </label><br><input class="imovel"  name="imovel" type="text" value="<?= $contato['imovel'] ?>" readonly/>
-				<div class="clear"></div>
-			</li>
-			<li>
-				<label>Mensagem: </label><br><textarea class="mensagem" obg="mensagem" readonly name="c-senha" rows='10' cols='30'><?= $contato['mensagem'] ?></textarea>
-				<div class="clear"></div>
-			</li>
-
 			<li>
 				<!-- <input type="submit" class="btn btn-success"  value="Salvar" /> -->
 				<button class="btn btn-danger" onclick="location='<?= RAIZ.'admin/'.$pagina_admin[0] ?>'; return false;">Cancelar</button>
