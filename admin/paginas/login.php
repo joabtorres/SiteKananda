@@ -43,7 +43,7 @@
 			
 			$mensagem = "<meta charset='UTF-8' />
 						<title></title>
-						<p class='cant-view' style='text-align: center;font-weight: normal;font-size: 11px;color: #F0F0E1;background-color: #ffffff;margin: 0;padding: 10px 0;''>&nbsp;</p>
+						<p class='cant-view' style='text-align: center;font-weight: normal;font-size: 11px;color: #F0F0E1;background-color: #ffffff;margin: 0;padding: 10px 0;'>&nbsp;</p>
 
 						<div class='wrapper' style='background-color: #EEEEEE; padding: 30px 0;'>
 						<table align='center' border='0' cellpadding='0' cellspacing='0' width='600'>
@@ -79,7 +79,7 @@
 												<p class='text-comunicate' style='color: #968f88;font-family: Arial;font-size: 15px;margin: 0 0 40px;'>Você solicitou a alteração da senha da sua conta administrativa!<br />
 												
 												<br />
-												Acesse: <strong><a href='#' style='text-decoration: none;' title='".$config['titulo_site']."'>".RAIZ."/admin</a></strong><br />
+												Acesse: <strong><a href='#' style='text-decoration: none;' title='".$config['titulo_site']."'>".RAIZ."admin</a></strong><br />
 												Login: ".$_POST['email_reco']."<br />
 												Senha: ".$nova_senha."<br />
 												<br />
